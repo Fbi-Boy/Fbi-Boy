@@ -255,28 +255,28 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
         return "".join(rows)
 
     stats_rows = list_rows([
-        ("Stars Earned", fmt_num(stars)),
+        ("SE", fmt_num(stars)),
         ("Commits", fmt_num(commits)),
-        ("Pull Requests", fmt_num(prs)),
+        ("PR", fmt_num(prs)),
         ("Issues", fmt_num(issues)),
-        ("Repositories", fmt_num(repo_count)),
-    ], 180, 294)
+        ("Repos", fmt_num(repo_count)),
+    ], 154, 294)
 
     contribution_rows = list_rows([
         ("Commits", fmt_num(calendar_commit := commits)),
-        ("Pull Requests", fmt_num(calendar_prs if calendar_prs is not None else prs)),
+        ("PR", fmt_num(calendar_prs if calendar_prs is not None else prs)),
         ("Issues", fmt_num(calendar_issues if calendar_issues is not None else issues)),
         ("Reviews", fmt_num(reviews if reviews is not None else 0)),
-        ("Repositories", fmt_num(repo_contributions if repo_contributions is not None else 0)),
-    ], 472, 586)
+        ("Repos", fmt_num(repo_contributions if repo_contributions is not None else 0)),
+    ], 454, 586)
 
     streak_rows = list_rows([
-        ("Current Streak", f"{current} days"),
-        ("Longest Streak", f"{longest} days"),
-        ("Active Days", fmt_num(active_days)),
+        ("Current", f"{current} d"),
+        ("Longest", f"{longest} d"),
+        ("Active", f"{active_days} d"),
         ("Best Day", fmt_num(best_day)),
         ("Contributions", fmt_num(contributions)),
-    ], 764, 878)
+    ], 746, 878)
 
     lang_rows = []
     y = 312
