@@ -6,7 +6,7 @@ on:
     branches:
       - main
     paths-ignore:
-      - "assets/github-analytics-v18.svg"
+      - "assets/github-analytics-v19.svg"
   schedule:
     - cron: "*/5 * * * *"
 
@@ -37,7 +37,7 @@ jobs:
 
           python3 scripts/generate_github_analytics.py
 
-          git add assets/github-analytics-v18.svg
+          git add assets/github-analytics-v19.svg
           if git diff --cached --quiet; then
             echo "Analytics unchanged."
             exit 0
