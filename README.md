@@ -75,37 +75,33 @@
 
 <div align="center">
 
-### Languages
+### 💻 Languages
 
-<a href="https://github.com/search?q=user%3AFbi-Boy+language%3APython&type=code">
-  <img src="https://skillicons.dev/icons?i=python" width="52" title="Python"/>
-</a>
-&nbsp;
-<a href="https://github.com/search?q=user%3AFbi-Boy+language%3APHP&type=code">
-  <img src="https://skillicons.dev/icons?i=php" width="52" title="PHP"/>
-</a>
-&nbsp;
-<a href="https://github.com/search?q=user%3AFbi-Boy+language%3AJavaScript&type=code">
-  <img src="https://skillicons.dev/icons?i=javascript" width="52" title="JavaScript"/>
-</a>
+<img src="https://skillicons.dev/icons?i=php,python,js,kotlin,dart,cpp,html,css,bash,sql" height="52" alt="PHP Python JavaScript Kotlin Dart C++ HTML CSS Bash SQL"/>
 
-<br><br>
+<br>
 
-### Frameworks · Frontend · Runtime
+### ⚙️ Frameworks & Libraries
 
-<a href="https://github.com/search?q=user%3AFbi-Boy+Laravel&type=repositories"><img src="https://skillicons.dev/icons?i=laravel" width="52"/></a>
-&nbsp;
-<a href="https://github.com/search?q=user%3AFbi-Boy+Tailwind&type=repositories"><img src="https://skillicons.dev/icons?i=tailwind" width="52"/></a>
-&nbsp;
-<a href="https://github.com/search?q=user%3AFbi-Boy+Alpine.js&type=repositories"><img src="https://skillicons.dev/icons?i=alpinejs" width="52"/></a>
-&nbsp;
-<a href="https://github.com/search?q=user%3AFbi-Boy+Vite&type=repositories"><img src="https://skillicons.dev/icons?i=vite" width="52"/></a>
+<img src="https://skillicons.dev/icons?i=laravel,codeigniter,nodejs,react,nextjs,tailwind,bootstrap,alpinejs,flutter,androidstudio" height="52" alt="Laravel CodeIgniter Node.js React Next.js Tailwind Bootstrap Alpine.js Flutter Android Studio"/>
 
-<br><br>
+<br>
 
-### Developer Tools
+### 🛠️ Developer Tools
 
-<img src="https://skillicons.dev/icons?i=git,github,vscode,linux,docker" height="52" alt="Git GitHub VS Code Linux Docker"/>
+<img src="https://skillicons.dev/icons?i=git,github,vscode,phpstorm,pycharm,androidstudio,docker,linux,postman,npm,pnpm,vite,figma" height="52" alt="Git GitHub VS Code PhpStorm PyCharm Android Studio Docker Linux Postman npm pnpm Vite Figma"/>
+
+<br>
+
+### 🗄️ Databases
+
+<img src="https://skillicons.dev/icons?i=mysql,postgresql,sqlite,mongodb,redis,firebase,supabase" height="52" alt="MySQL PostgreSQL SQLite MongoDB Redis Firebase Supabase"/>
+
+<br>
+
+### ☁️ DevOps & Cloud
+
+<img src="https://skillicons.dev/icons?i=githubactions,nginx,vercel,aws,cloudflare" height="52" alt="GitHub Actions Nginx Vercel AWS Cloudflare"/>
 
 </div>
 
