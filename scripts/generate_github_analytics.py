@@ -211,9 +211,10 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
   <!-- CARD 1 -->
   <rect x="28" y="28" width="280" height="214" rx="12" fill="{card}" stroke="{border}"/>
   <text x="46" y="54" font-size="14" font-weight="700" fill="{green}">F4B0Y GitHub Stats</text>
-  <circle cx="82" cy="135" r="38" fill="none" stroke="{green}" stroke-width="2"/>
+  <circle cx="82" cy="135" r="46" fill="none" stroke="{track}" stroke-width="7"/>
+  <circle cx="82" cy="135" r="46" fill="none" stroke="{green}" stroke-width="3"/>
   <text x="82" y="128" font-size="8" fill="{muted}" text-anchor="middle">COMMITS</text>
-  <text x="82" y="148" font-size="20" font-weight="800" fill="{bright}" text-anchor="middle">{fmt_num(commits)}</text>
+  <text x="82" y="148" font-size="21" font-weight="800" fill="{bright}" text-anchor="middle">{fmt_num(commits)}</text>
   {''.join(stat_rows)}
   <text x="82" y="191" font-size="7" fill="{muted}" text-anchor="middle">TOTAL</text>
 
