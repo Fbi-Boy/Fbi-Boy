@@ -75,11 +75,19 @@
 
 <div align="center">
 
-<p>
-  <code>Languages & Tools That I Used</code>
-</p>
-
-<img src="https://skillicons.dev/icons?i=php,python,js,kotlin,dart,cpp,html,css,bash,sql,laravel,codeigniter,nodejs,react,nextjs,tailwind,bootstrap,alpinejs,flutter,git,github,vscode,phpstorm,pycharm,docker,linux,postman,npm,pnpm,vite,figma,mysql,postgresql,sqlite,mongodb,redis,firebase,supabase,githubactions,nginx,vercel,aws,cloudflare&perline=16" alt="Languages and tools used"/>
+<img src="https://skillicons.dev/icons?i=php,python,js,ts,kotlin,dart,cpp,c,java,cs,go,rust,ruby,swift&perline=14" alt="Languages used"/>
+<br>
+<img src="https://skillicons.dev/icons?i=html,css,bash,powershell,sql,laravel,codeigniter,symfony,nodejs,express,react,nextjs,vue,angular&perline=14" alt="Languages and web technologies used"/>
+<br>
+<img src="https://skillicons.dev/icons?i=tailwind,bootstrap,alpinejs,flutter,android,spring,dotnet&perline=14" alt="Frameworks and libraries used"/>
+<br>
+<img src="https://skillicons.dev/icons?i=git,github,gitlab,vscode,androidstudio,intellij,pycharm,phpstorm,docker,linux,postman,insomnia,npm,yarn&perline=14" alt="Developer tools used"/>
+<br>
+<img src="https://skillicons.dev/icons?i=pnpm,bun,vite,figma,jira&perline=14" alt="Development tools used"/>
+<br>
+<img src="https://skillicons.dev/icons?i=mysql,postgresql,sqlite,mongodb,redis,mariadb,firebase,supabase,oracle&perline=14" alt="Databases used"/>
+<br>
+<img src="https://skillicons.dev/icons?i=githubactions,jenkins,nginx,kubernetes,terraform,aws,vercel,cloudflare&perline=14" alt="Cloud and DevOps tools used"/>
 
 </div>
 
