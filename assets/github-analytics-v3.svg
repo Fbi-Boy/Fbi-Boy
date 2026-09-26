@@ -9,8 +9,8 @@
   <circle cx="82" cy="135" r="46" fill="none" stroke="#183126" stroke-width="7"/>
   <circle cx="82" cy="135" r="46" fill="none" stroke="#41ff88" stroke-width="3"/>
   <text x="82" y="128" font-size="8" fill="#73b88c" text-anchor="middle">COMMITS</text>
-  <text x="82" y="148" font-size="21" font-weight="800" fill="#00ff9a" text-anchor="middle">551</text>
-  <text x="134" y="89" font-size="10" fill="#73b88c">Stars Earned</text><text x="198" y="89" font-size="11" font-weight="700" fill="#00ff9a" text-anchor="end">4</text><text x="134" y="115" font-size="10" fill="#73b88c">Commits</text><text x="198" y="115" font-size="11" font-weight="700" fill="#00ff9a" text-anchor="end">551</text><text x="134" y="141" font-size="10" fill="#73b88c">Pull Requests</text><text x="198" y="141" font-size="11" font-weight="700" fill="#00ff9a" text-anchor="end">252</text><text x="134" y="167" font-size="10" fill="#73b88c">Issues</text><text x="198" y="167" font-size="11" font-weight="700" fill="#00ff9a" text-anchor="end">9</text><text x="134" y="193" font-size="10" fill="#73b88c">Repositories</text><text x="198" y="193" font-size="11" font-weight="700" fill="#00ff9a" text-anchor="end">11</text>
+  <text x="82" y="148" font-size="21" font-weight="800" fill="#00ff9a" text-anchor="middle">553</text>
+  <text x="134" y="89" font-size="10" fill="#73b88c">Stars Earned</text><text x="198" y="89" font-size="11" font-weight="700" fill="#00ff9a" text-anchor="end">4</text><text x="134" y="115" font-size="10" fill="#73b88c">Commits</text><text x="198" y="115" font-size="11" font-weight="700" fill="#00ff9a" text-anchor="end">553</text><text x="134" y="141" font-size="10" fill="#73b88c">Pull Requests</text><text x="198" y="141" font-size="11" font-weight="700" fill="#00ff9a" text-anchor="end">254</text><text x="134" y="167" font-size="10" fill="#73b88c">Issues</text><text x="198" y="167" font-size="11" font-weight="700" fill="#00ff9a" text-anchor="end">10</text><text x="134" y="193" font-size="10" fill="#73b88c">Repositories</text><text x="198" y="193" font-size="11" font-weight="700" fill="#00ff9a" text-anchor="end">11</text>
   <text x="82" y="191" font-size="7" fill="#73b88c" text-anchor="middle">TOTAL</text>
 
   <!-- CARD 2 -->
@@ -19,10 +19,10 @@
   
     <circle cx="406" cy="122" r="46" fill="none" stroke="#183126" stroke-width="7"/>
     <circle cx="406" cy="122" r="46" fill="none" stroke="#41ff88" stroke-width="7"
-            stroke-linecap="round" stroke-dasharray="250.66 289.03"
+            stroke-linecap="round" stroke-dasharray="252.24 289.03"
             transform="rotate(-90 406 122)"/>
     
-  <text x="406" y="117" font-size="21" font-weight="800" fill="#00ff9a" text-anchor="middle">954</text>
+  <text x="406" y="117" font-size="21" font-weight="800" fill="#00ff9a" text-anchor="middle">960</text>
   <text x="406" y="134" font-size="8" fill="#73b88c" text-anchor="middle">LAST 365 DAYS</text>
   <text x="489" y="104" font-size="8" fill="#73b88c">CURRENT STREAK</text>
   <text x="489" y="131" font-size="23" font-weight="800" fill="#00ff9a">11</text>
@@ -41,7 +41,7 @@
   <text x="697" y="117" font-size="21" font-weight="800" fill="#00ff9a" text-anchor="middle">11</text>
   <text x="697" y="134" font-size="8" fill="#73b88c" text-anchor="middle">LONGEST STREAK</text>
   <text x="780" y="104" font-size="8" fill="#73b88c">CONTRIBUTIONS</text>
-  <text x="780" y="131" font-size="23" font-weight="800" fill="#00ff9a">954</text>
+  <text x="780" y="131" font-size="23" font-weight="800" fill="#00ff9a">960</text>
   <text x="780" y="149" font-size="8" fill="#73b88c">LAST 365 DAYS</text>
   <text x="630" y="210" font-size="8" fill="#73b88c">Independent streak calculation</text>
 
@@ -50,9 +50,9 @@
   <text x="46" y="285" font-size="14" font-weight="700" fill="#41ff88">Most Used Languages</text>
   <text x="874" y="285" font-size="8" fill="#73b88c" text-anchor="end">Repository language bytes</text>
   <line x1="46" y1="294" x2="874" y2="294" stroke="#284637"/>
-  <text x="58" y="312" font-size="10" fill="#b8ffcc">Blade  57.2%</text><rect x="220" y="304" width="570" height="7" rx="3.5" fill="#183126"/><rect x="220" y="304" width="326.0" height="7" rx="3.5" fill="#41ff88"/><text x="58" y="332" font-size="10" fill="#b8ffcc">PHP  25.3%</text><rect x="220" y="324" width="570" height="7" rx="3.5" fill="#183126"/><rect x="220" y="324" width="144.0" height="7" rx="3.5" fill="#41ff88"/><text x="58" y="352" font-size="10" fill="#b8ffcc">Python  10.5%</text><rect x="220" y="344" width="570" height="7" rx="3.5" fill="#183126"/><rect x="220" y="344" width="59.8" height="7" rx="3.5" fill="#41ff88"/><text x="58" y="372" font-size="10" fill="#b8ffcc">Dart  2.7%</text><rect x="220" y="364" width="570" height="7" rx="3.5" fill="#183126"/><rect x="220" y="364" width="15.4" height="7" rx="3.5" fill="#41ff88"/><text x="58" y="392" font-size="10" fill="#b8ffcc">JavaScript  1.9%</text><rect x="220" y="384" width="570" height="7" rx="3.5" fill="#183126"/><rect x="220" y="384" width="10.9" height="7" rx="3.5" fill="#41ff88"/>
+  <text x="58" y="312" font-size="10" fill="#b8ffcc">Blade  57.1%</text><rect x="220" y="304" width="570" height="7" rx="3.5" fill="#183126"/><rect x="220" y="304" width="325.4" height="7" rx="3.5" fill="#41ff88"/><text x="58" y="332" font-size="10" fill="#b8ffcc">PHP  25.3%</text><rect x="220" y="324" width="570" height="7" rx="3.5" fill="#183126"/><rect x="220" y="324" width="144.3" height="7" rx="3.5" fill="#41ff88"/><text x="58" y="352" font-size="10" fill="#b8ffcc">Python  10.6%</text><rect x="220" y="344" width="570" height="7" rx="3.5" fill="#183126"/><rect x="220" y="344" width="60.2" height="7" rx="3.5" fill="#41ff88"/><text x="58" y="372" font-size="10" fill="#b8ffcc">Dart  2.7%</text><rect x="220" y="364" width="570" height="7" rx="3.5" fill="#183126"/><rect x="220" y="364" width="15.3" height="7" rx="3.5" fill="#41ff88"/><text x="58" y="392" font-size="10" fill="#b8ffcc">JavaScript  1.9%</text><rect x="220" y="384" width="570" height="7" rx="3.5" fill="#183126"/><rect x="220" y="384" width="10.9" height="7" rx="3.5" fill="#41ff88"/>
 </g>
 
 <text x="46" y="431" font-size="8" fill="#73b88c"
-      font-family="Consolas, 'Courier New', monospace">F4B0Y Analytics Engine · Updated 2026-09-26 14:39 UTC</text>
+      font-family="Consolas, 'Courier New', monospace">F4B0Y Analytics Engine · Updated 2026-09-26 14:41 UTC</text>
 </svg>
