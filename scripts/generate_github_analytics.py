@@ -301,9 +301,8 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
   <line x1="168" y1="70" x2="168" y2="214" stroke="{card}" stroke-width="1"/>
   <circle cx="94" cy="140" r="46" fill="none" stroke="{track}" stroke-width="7"/>
   <circle cx="94" cy="140" r="46" fill="none" stroke="{green}" stroke-width="3"/>
-  <text x="94" y="133" font-size="8" fill="{muted}" text-anchor="middle">COMMITS</text>
-  <text x="94" y="154" font-size="21" font-weight="800" fill="{bright}" text-anchor="middle">{fmt_num(commits)}</text>
-  <text x="94" y="198" font-size="7" fill="{muted}" text-anchor="middle">TOTAL</text>
+  <text x="94" y="147" font-size="22" font-weight="800" fill="{bright}" text-anchor="middle">{fmt_num(commits)}</text>
+  <text x="94" y="205" font-size="8" fill="{muted}" font-weight="700" text-anchor="middle">COMMITS</text>
   {stats_rows}
 
   <!-- CARD 2: title centered; bottom split into left metric + right contribution list -->
@@ -311,8 +310,8 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
   <text x="460" y="55" font-size="14" font-weight="700" fill="{green}" text-anchor="middle">Contribution Activity</text>
   <line x1="460" y1="70" x2="460" y2="214" stroke="{card}" stroke-width="1"/>
   {ring(392,140,46,contribution_pct,green,7)}
-  <text x="392" y="133" font-size="19" font-weight="800" fill="{bright}" text-anchor="middle">{fmt_num(contributions)}</text>
-  <text x="392" y="153" font-size="7.5" fill="{muted}" text-anchor="middle">CONTRIBUTIONS</text>
+  <text x="392" y="147" font-size="21" font-weight="800" fill="{bright}" text-anchor="middle">{fmt_num(contributions)}</text>
+  <text x="392" y="205" font-size="8" fill="{muted}" font-weight="700" text-anchor="middle">CONTRIBUTIONS</text>
   {contribution_rows}
 
   <!-- CARD 3: title centered; bottom split into left metric + right streak list -->
@@ -320,8 +319,8 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
   <text x="752" y="55" font-size="14" font-weight="700" fill="{green}" text-anchor="middle">Streak Record</text>
   <line x1="752" y1="70" x2="752" y2="214" stroke="{card}" stroke-width="1"/>
   {ring(684,140,46,record_pct,bright,7)}
-  <text x="684" y="133" font-size="21" font-weight="800" fill="{bright}" text-anchor="middle">{longest}</text>
-  <text x="684" y="153" font-size="7.5" fill="{muted}" text-anchor="middle">LONGEST DAYS</text>
+  <text x="684" y="147" font-size="22" font-weight="800" fill="{bright}" text-anchor="middle">{longest}</text>
+  <text x="684" y="205" font-size="8" fill="{muted}" font-weight="700" text-anchor="middle">LONGEST STREAK</text>
   {streak_rows}
 
   <!-- CARD 4: languages -->
