@@ -249,8 +249,8 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
     for i, (label, value) in enumerate(stats):
         yy = 89 + i * 26
         stat_rows.append(
-            f'<text x="134" y="{yy}" font-size="10" fill="{muted}">{esc(label)}</text>'
-            f'<text x="198" y="{yy}" font-size="11" font-weight="700" fill="{bright}" text-anchor="end">{esc(value)}</text>'
+            f'<text x="180" y="{yy}" font-size="10" fill="{muted}">{esc(label)}</text>'
+            f'<text x="294" y="{yy}" font-size="11" font-weight="700" fill="{bright}" text-anchor="end">{esc(value)}</text>'
         )
 
     lang_rows = []
@@ -270,36 +270,39 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
 <rect x="12" y="12" width="896" height="406" rx="18" fill="{bg}" stroke="{border}"/>
 
 <g font-family="Consolas, 'Courier New', monospace">
-  <!-- CARD 1: two-column layout (metric zone | detail zone), no divider -->
+  <!-- CARD 1: two equal 140px zones; separator intentionally invisible -->
+  <line x1="168" y1="70" x2="168" y2="210" stroke="{card}" stroke-width="1"/>
   <rect x="28" y="28" width="280" height="214" rx="12" fill="{card}" stroke="{border}"/>
   <text x="46" y="54" font-size="14" font-weight="700" fill="{green}">F4B0Y GitHub Stats</text>
-  <circle cx="82" cy="135" r="46" fill="none" stroke="{track}" stroke-width="7"/>
-  <circle cx="82" cy="135" r="46" fill="none" stroke="{green}" stroke-width="3"/>
-  <text x="82" y="128" font-size="8" fill="{muted}" text-anchor="middle">COMMITS</text>
-  <text x="82" y="148" font-size="21" font-weight="800" fill="{bright}" text-anchor="middle">{fmt_num(commits)}</text>
+  <circle cx="98" cy="135" r="46" fill="none" stroke="{track}" stroke-width="7"/>
+  <circle cx="98" cy="135" r="46" fill="none" stroke="{green}" stroke-width="3"/>
+  <text x="98" y="128" font-size="8" fill="{muted}" text-anchor="middle">COMMITS</text>
+  <text x="98" y="148" font-size="21" font-weight="800" fill="{bright}" text-anchor="middle">{fmt_num(commits)}</text>
   {''.join(stat_rows)}
-  <text x="82" y="191" font-size="7" fill="{muted}" text-anchor="middle">TOTAL</text>
+  <text x="98" y="191" font-size="7" fill="{muted}" text-anchor="middle">TOTAL</text>
 
-  <!-- CARD 2: two-column layout (metric zone | detail zone), no divider -->
+  <!-- CARD 2: two equal 140px zones; separator intentionally invisible -->
+  <line x1="460" y1="70" x2="460" y2="210" stroke="{card}" stroke-width="1"/>
   <rect x="320" y="28" width="280" height="214" rx="12" fill="{card}" stroke="{border}"/>
   <text x="338" y="54" font-size="14" font-weight="700" fill="{green}">Contribution Activity</text>
   {ring(406,122,46,contribution_pct,green,7)}
-  <text x="406" y="117" font-size="21" font-weight="800" fill="{bright}" text-anchor="middle">{fmt_num(contributions)}</text>
-  <text x="406" y="134" font-size="8" fill="{muted}" text-anchor="middle">LAST 365 DAYS</text>
-  <text x="486" y="104" font-size="8" fill="{muted}">CURRENT STREAK</text>
-  <text x="486" y="131" font-size="23" font-weight="800" fill="{bright}">{current}</text>
-  <text x="486" y="149" font-size="8" fill="{muted}">DAYS</text>
+  <text x="390" y="117" font-size="21" font-weight="800" fill="{bright}" text-anchor="middle">{fmt_num(contributions)}</text>
+  <text x="390" y="134" font-size="8" fill="{muted}" text-anchor="middle">LAST 365 DAYS</text>
+  <text x="478" y="104" font-size="8" fill="{muted}">CURRENT STREAK</text>
+  <text x="478" y="131" font-size="23" font-weight="800" fill="{bright}">{current}</text>
+  <text x="478" y="149" font-size="8" fill="{muted}">DAYS</text>
   <text x="338" y="210" font-size="8" fill="{muted}">GitHub contribution calendar</text>
 
-  <!-- CARD 3: two-column layout (metric zone | detail zone), no divider -->
+  <!-- CARD 3: two equal 140px zones; separator intentionally invisible -->
+  <line x1="752" y1="70" x2="752" y2="210" stroke="{card}" stroke-width="1"/>
   <rect x="612" y="28" width="280" height="214" rx="12" fill="{card}" stroke="{border}"/>
   <text x="630" y="54" font-size="14" font-weight="700" fill="{green}">Streak Record</text>
   {ring(697,122,46,record_pct,bright,7)}
-  <text x="697" y="117" font-size="21" font-weight="800" fill="{bright}" text-anchor="middle">{longest}</text>
-  <text x="697" y="134" font-size="8" fill="{muted}" text-anchor="middle">LONGEST STREAK</text>
-  <text x="776" y="104" font-size="8" fill="{muted}">CONTRIBUTIONS</text>
-  <text x="776" y="131" font-size="23" font-weight="800" fill="{bright}">{fmt_num(contributions)}</text>
-  <text x="776" y="149" font-size="8" fill="{muted}">LAST 365 DAYS</text>
+  <text x="682" y="117" font-size="21" font-weight="800" fill="{bright}" text-anchor="middle">{longest}</text>
+  <text x="682" y="134" font-size="8" fill="{muted}" text-anchor="middle">LONGEST STREAK</text>
+  <text x="770" y="104" font-size="8" fill="{muted}">CONTRIBUTIONS</text>
+  <text x="770" y="131" font-size="23" font-weight="800" fill="{bright}">{fmt_num(contributions)}</text>
+  <text x="770" y="149" font-size="8" fill="{muted}">LAST 365 DAYS</text>
   <text x="630" y="210" font-size="8" fill="{muted}">Independent streak calculation</text>
 
   <!-- CARD 4: two-column language layout, no divider -->
