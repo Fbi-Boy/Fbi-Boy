@@ -157,17 +157,14 @@
 
 ## 📊 GitHub Analytics
 
-<div align="center">
+<p align="center">
+  <img src="./assets/github-analytics.svg" width="100%" alt="Custom F4B0Y GitHub analytics"/>
+</p>
 
-<img src="https://github-readme-stats.vercel.app/api?username=Fbi-Boy&show_icons=true&include_all_commits=true&hide_border=true&rank_icon=github&theme=transparent&custom_title=GitHub%20Statistics" height="180" alt="GitHub statistics"/>
-&nbsp;
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=Fbi-Boy&hide_border=true&theme=transparent&date_format=M%20j%5B%2C%20Y%5D" height="180" alt="GitHub contribution streak"/>
+<p align="center">
+  <sub>Custom calculation engine: repository metadata + GitHub search totals + contribution calendar + language byte analysis.</sub>
+</p>
 
-<br><br>
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Fbi-Boy&layout=compact&langs_count=10&hide_border=true&theme=transparent&custom_title=Most%20Used%20Languages" height="180" alt="Most used languages"/>
-
-</div>
 
 ---
 
