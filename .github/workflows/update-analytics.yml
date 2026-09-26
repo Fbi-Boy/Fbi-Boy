@@ -23,22 +23,35 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Sync with latest main
-        run: git pull --rebase origin main
-
-      - name: Generate analytics
+      - name: Generate analytics and publish safely
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 scripts/generate_github_analytics.py
-
-      - name: Commit updated card
         run: |
+          set -e
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/github-analytics-v2.svg
-          if git diff --cached --quiet; then
-            echo "Analytics unchanged."
-            exit 0
-          fi
-          git commit -m "chore: update GitHub analytics"
-          git push
+
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            python3 scripts/generate_github_analytics.py
+            git add assets/github-analytics-v2.svg
+
+            if git diff --cached --quiet; then
+              echo "Analytics unchanged."
+              exit 0
+            fi
+
+            git commit -m "chore: update GitHub analytics"
+
+            if git push origin HEAD:main; then
+              echo "Analytics published on attempt $attempt."
+              exit 0
+            fi
+
+            echo "Push race detected; retrying from latest main."
+            git reset --hard origin/main
+          done
+
+          echo "Unable to publish analytics after retries."
+          exit 1
