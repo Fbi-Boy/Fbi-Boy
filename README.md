@@ -36,10 +36,6 @@
   I’m a <strong>Software Developer</strong> focused on building useful digital products across <strong>Web, Mobile, and AI</strong>.
 </p>
 
-<table>
-<tr>
-<td width="68%" valign="top">
-
 - 🌐 **Web Development** — Building modern, scalable, and user-focused web applications.
 - 📱 **Mobile Development** — Exploring mobile applications and practical cross-platform experiences.
 - 🤖 **Artificial Intelligence** — Developing AI-powered systems, automation, and intelligent workflows.
@@ -48,15 +44,13 @@
 - 🚀 **Builder Mindset** — I enjoy turning ideas into working systems, continuously learning, experimenting, and improving.
 - 🎯 **Goal** — Grow from building applications today toward contributing to the next generation of intelligent and quantum-powered technology.
 
-</td>
+<p align="center">
+  <img src="./assets/zenitsu-transparent.gif"
+       width="300"
+       alt="Zenitsu pixel art"/>
+</p>
 
-<td width="32%" align="center" valign="middle">
-
-<img src="https://raw.githubusercontent.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/main/working.gif"
-     width="280"
-     alt="Coding"/>
-
-<br><br>
+<div align="center">
 
 <strong>Web • Mobile • AI • Quantum</strong>
 
@@ -66,11 +60,7 @@
   <img src="https://img.shields.io/badge/GitHub-111827?style=for-the-badge&logo=github&logoColor=white"/>
 </a>
 
-</td>
-</tr>
-</table>
-
----
+</div>
 
 ## 🧰 Languages & Tools
 
