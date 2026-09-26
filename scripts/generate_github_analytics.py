@@ -18,7 +18,7 @@ import urllib.request
 from pathlib import Path
 
 OWNER = "Fbi-Boy"
-OUT = Path("assets/github-analytics-v5.svg")
+OUT = Path("assets/github-analytics-v6.svg")
 API = "https://api.github.com"
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
 
@@ -260,7 +260,7 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
         ("PR", fmt_num(prs)),
         ("Issues", fmt_num(issues)),
         ("Repos", fmt_num(repo_count)),
-    ], 150, 292)
+    ], 164, 226, 292)
 
     contribution_rows = list_rows([
         ("Commits", fmt_num(calendar_commit := commits)),
@@ -268,7 +268,7 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
         ("Issues", fmt_num(calendar_issues if calendar_issues is not None else issues)),
         ("Reviews", fmt_num(reviews if reviews is not None else 0)),
         ("Repos", fmt_num(repo_contributions if repo_contributions is not None else 0)),
-    ], 450, 584)
+    ], 462, 518, 584)
 
     streak_rows = list_rows([
         ("Current", f"{current} d"),
@@ -276,7 +276,7 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
         ("Active", f"{active_days} d"),
         ("Best Day", fmt_num(best_day)),
         ("Contributions", fmt_num(contributions)),
-    ], 742, 876)
+    ], 754, 810, 876)
 
     lang_rows = []
     y = 312
