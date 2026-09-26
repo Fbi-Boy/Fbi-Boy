@@ -18,7 +18,7 @@ import urllib.request
 from pathlib import Path
 
 OWNER = "Fbi-Boy"
-OUT = Path("assets/github-analytics-v11.svg")
+OUT = Path("assets/github-analytics-v12.svg")
 API = "https://api.github.com"
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
 
@@ -371,7 +371,7 @@ def ring(cx, cy, r, percent, stroke, width=7):
 def build_svg(repo_count, stars, commits, prs, issues, contributions, current, longest,
               calendar_prs, calendar_issues, reviews, repo_contributions,
               active_days, best_day, langs, updated, rank):
-    W, H = 920, 430
+    W, H = 920, 460
     bg = "#070c0a"
     card = "#0b1410"
     border = "#284637"
@@ -420,26 +420,28 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
     ], 754, 810, 876)
 
     lang_rows = []
-    y = 314
+    language_colors = ["#41ff88", "#00ff9a", "#5eead4", "#60a5fa", "#a78bfa", "#f472b6"]
+    y = 318
     for idx, (name, pct) in enumerate(langs[:6], start=1):
+        accent = language_colors[idx - 1]
         rank_label = f"{idx:02d}"
         bar_width = 510 * pct / 100
         row_y = y - 12
         lang_rows.append(
-            f'<rect x="46" y="{row_y}" width="828" height="20" rx="6" fill="{track}"/>'
-            f'<rect x="56" y="{row_y+3}" width="28" height="14" rx="4" fill="{border}"/>'
-            f'<text x="70" y="{y+1}" font-size="7.5" fill="{muted}" text-anchor="middle">{rank_label}</text>'
+            f'<rect x="46" y="{row_y}" width="828" height="20" rx="7" fill="{track}"/>'
+            f'<rect x="56" y="{row_y+3}" width="28" height="14" rx="4" fill="{accent}" opacity="0.18"/>'
+            f'<text x="70" y="{y+1}" font-size="7.5" font-weight="700" fill="{accent}" text-anchor="middle">{rank_label}</text>'
             f'<text x="96" y="{y+1}" font-size="10" font-weight="700" fill="{text}">{esc(name)}</text>'
             f'<rect x="246" y="{y-6}" width="510" height="8" rx="4" fill="{bg}"/>'
-            f'<rect x="246" y="{y-6}" width="{max(3, bar_width):.1f}" height="8" rx="4" fill="{green}"/>'
-            f'<text x="846" y="{y+1}" font-size="10.5" font-weight="800" fill="{bright}" text-anchor="end">{pct:.1f}%</text>'
+            f'<rect x="246" y="{y-6}" width="{max(3, bar_width):.1f}" height="8" rx="4" fill="{accent}"/>'
+            f'<text x="846" y="{y+1}" font-size="10.5" font-weight="800" fill="{accent}" text-anchor="end">{pct:.1f}%</text>'
         )
-        y += 18
+        y += 23
 
 
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
-<rect width="{W}" height="{H}" rx="18" fill="{bg}"/>
-<rect x="12" y="12" width="896" height="406" rx="18" fill="{bg}" stroke="{border}"/>
+<rect width="{W}" height="460" rx="18" fill="{bg}"/>
+<rect x="12" y="12" width="896" height="434" rx="18" fill="{bg}" stroke="{border}"/>
 
 <g font-family="Consolas, 'Courier New', monospace">
   <!-- CARD 1: title centered; bottom split into left metric + right stats -->
@@ -471,7 +473,7 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
   {streak_rows}
 
   <!-- CARD 4: dynamic language ranking -->
-  <rect x="28" y="258" width="864" height="160" rx="12" fill="{card}" stroke="{border}"/>
+  <rect x="28" y="258" width="864" height="180" rx="12" fill="{card}" stroke="{border}"/>
   <text x="46" y="285" font-size="14" font-weight="700" fill="{green}">Most Used Languages</text>
   <text x="874" y="284" font-size="8" font-weight="700" fill="{muted}" text-anchor="end">AUTO • TOP 5 + OTHERS</text>
   <text x="96" y="300" font-size="7.5" fill="{muted}">LANGUAGE</text>
