@@ -162,7 +162,7 @@ def ring(cx, cy, r, percent, stroke, width=7):
     '''
 
 def build_svg(repo_count, stars, commits, prs, issues, contributions, current, longest, langs, updated):
-    W, H = 920, 352
+    W, H = 920, 374
     bg = "#070c0a"
     card = "#0c1511"
     border = "#284637"
@@ -201,7 +201,7 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
 
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
 <rect width="{W}" height="{H}" rx="16" fill="{bg}"/>
-<rect x="12" y="12" width="896" height="328" rx="16" fill="{bg}" stroke="{border}"/>
+<rect x="12" y="12" width="896" height="350" rx="16" fill="{bg}" stroke="{border}"/>
 
 <g font-family="Consolas, Courier New, monospace">
   <!-- Stats -->
@@ -235,7 +235,7 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
   <text x="628" y="204" font-size="9" fill="{muted}">Independent streak calculation</text>
 
   <!-- Most used languages -->
-  <rect x="170" y="252" width="580" height="78" rx="11" fill="{card}" stroke="{border}"/>
+  <rect x="170" y="252" width="580" height="100" rx="11" fill="{card}" stroke="{border}"/>
   <text x="188" y="275" font-size="13" font-weight="700" fill="{green}">Most Used Languages</text>
   {''.join(lang_rows)}
 </g>
