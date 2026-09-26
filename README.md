@@ -1,20 +1,29 @@
-<!-- PROFILE HEADER -->
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=180&section=header&text=Fbi-Boy&fontSize=52&fontColor=ffffff&fontAlignY=38&desc=Software%20Developer%20%E2%80%A2%20AI%20Builder%20%E2%80%A2%20Web%20Developer&descAlignY=61&animation=fadeIn&color=0:0f172a,50:111827,100:1e293b" width="100%"/>
+<!-- PROFILE HERO : styled after the supplied reference layout -->
+<div align="center">
+
+<table width="920">
+<tr>
+<td>
+
+<p align="left">
+<sub>Fbi-Boy / GitHub Profile</sub>
 </p>
 
 <p align="center">
-  <a href="https://github.com/Fbi-Boy"><img src="https://komarev.com/ghpvc/?username=Fbi-Boy&label=PROFILE%20VIEWS&color=111827&style=flat-square" alt="Profile views"/></a>
-  <a href="https://github.com/Fbi-Boy?tab=followers"><img src="https://img.shields.io/github/followers/Fbi-Boy?label=FOLLOWERS&style=flat-square&color=111827" alt="Followers"/></a>
-  <a href="https://github.com/Fbi-Boy?tab=repositories"><img src="https://img.shields.io/github/stars/Fbi-Boy?label=STARS&style=flat-square&color=111827" alt="Stars"/></a>
+  <img src="https://raw.githubusercontent.com/zrosenbauer/art/main/art/banners/banner_art/banner_art.png" width="920" alt="Cyberpunk pixel-art city banner"/>
 </p>
 
-<h1 align="center">🔥 Fbi-Boy here!</h1>
+<h1 align="center">Fbi-Boy here 🔥 !</h1>
 
-<p align="center">
-  <b>Building software, automation and AI systems.</b><br/>
-  <sub>Think • Design • Build • Test • Review • Improve</sub>
-</p>
+<hr/>
+
+<h3 align="center">Namaste 🙏 | I'm Fbi-Boy</h3>
+
+</td>
+</tr>
+</table>
+
+</div>
 
 ---
 
