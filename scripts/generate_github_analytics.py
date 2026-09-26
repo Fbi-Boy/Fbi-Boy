@@ -162,7 +162,7 @@ def ring(cx, cy, r, percent, stroke, width=7):
     '''
 
 def build_svg(repo_count, stars, commits, prs, issues, contributions, current, longest, langs, updated):
-    W, H = 920, 430
+    W, H = 920, 450
     bg = "#070c0a"
     card = "#0b1410"
     border = "#284637"
@@ -175,75 +175,86 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
     contribution_pct = min(100, contributions / 1100 * 100)
     record_pct = min(100, longest / 30 * 100)
 
-    stat_items = [
-        ("Total Stars Earned", fmt_num(stars)),
-        ("Total Commits", fmt_num(commits)),
-        ("Total Pull Requests", fmt_num(prs)),
-        ("Total Issues", fmt_num(issues)),
-        ("Total Repositories", fmt_num(repo_count)),
+    stats = [
+        ("Stars Earned", fmt_num(stars)),
+        ("Commits", fmt_num(commits)),
+        ("Pull Requests", fmt_num(prs)),
+        ("Issues", fmt_num(issues)),
+        ("Repositories", fmt_num(repo_count)),
     ]
 
+    # Fixed row geometry prevents text/bar collisions at every data value.
     lang_rows = []
-    row_y = 300
+    y = 306
     for name, pct in langs[:5]:
-        label = f"{name} {pct:.1f}%"
-        bar_w = max(3, 590 * pct / 100)
+        label = f"{name}  {pct:.1f}%"
+        bar_width = max(4, 560 * pct / 100)
         lang_rows.append(
-            f'<text x="58" y="{row_y}" font-size="10" fill="{text}">{esc(label)}</text>'
-            f'<rect x="210" y="{row_y-8}" width="590" height="6" rx="3" fill="{track}"/>'
-            f'<rect x="210" y="{row_y-8}" width="{bar_w:.1f}" height="6" rx="3" fill="{green}"/>'
+            f'<text x="58" y="{y}" font-size="11" fill="{text}">{esc(label)}</text>'
+            f'<rect x="220" y="{y-9}" width="560" height="7" rx="3.5" fill="{track}"/>'
+            f'<rect x="220" y="{y-9}" width="{bar_width:.1f}" height="7" rx="3.5" fill="{green}"/>'
         )
-        row_y += 20
+        y += 22
+
+    stat_text = []
+    for i, (label, value) in enumerate(stats):
+        yy = 88 + i * 27
+        stat_text.append(
+            f'<text x="48" y="{yy}" font-size="11" fill="{muted}">{esc(label)}</text>'
+            f'<text x="190" y="{yy}" font-size="12" font-weight="700" fill="{bright}" text-anchor="end">{esc(value)}</text>'
+        )
 
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
 <rect width="{W}" height="{H}" rx="18" fill="{bg}"/>
-<rect x="12" y="12" width="896" height="406" rx="18" fill="{bg}" stroke="{border}"/>
+<rect x="12" y="12" width="896" height="426" rx="18" fill="{bg}" stroke="{border}"/>
 
 <g font-family="Consolas, 'Courier New', monospace">
-  <!-- LEFT: stats -->
+  <!-- CARD 1 -->
   <rect x="28" y="28" width="280" height="214" rx="12" fill="{card}" stroke="{border}"/>
-  <text x="44" y="53" font-size="14" font-weight="700" fill="{green}">F4B0Y GitHub Stats</text>
-  {''.join(
-      f'<text x="44" y="{82+i*26}" font-size="10" fill="{muted}">{esc(k)}</text>'
-      f'<text x="204" y="{82+i*26}" font-size="12" font-weight="700" fill="{bright}" text-anchor="end">{esc(v)}</text>'
-      for i,(k,v) in enumerate(stat_items)
-  )}
-  <circle cx="259" cy="144" r="31" fill="none" stroke="{green}" stroke-width="2"/>
-  <text x="259" y="141" font-size="8" fill="{muted}" text-anchor="middle">FOCUS</text>
-  <text x="259" y="155" font-size="13" font-weight="800" fill="{bright}" text-anchor="middle">DEV</text>
+  <text x="46" y="54" font-size="14" font-weight="700" fill="{green}">F4B0Y GitHub Stats</text>
+  {''.join(stat_text)}
+  <line x1="213" y1="68" x2="213" y2="215" stroke="{border}"/>
+  <text x="258" y="122" font-size="9" fill="{muted}" text-anchor="middle">FOCUS</text>
+  <text x="258" y="148" font-size="22" font-weight="800" fill="{bright}" text-anchor="middle">DEV</text>
+  <circle cx="258" cy="148" r="47" fill="none" stroke="{green}" stroke-width="2"/>
+  <text x="258" y="197" font-size="8" fill="{muted}" text-anchor="middle">BUILD • SHIP • IMPROVE</text>
 
-  <!-- CENTER: contribution -->
+  <!-- CARD 2 -->
   <rect x="320" y="28" width="280" height="214" rx="12" fill="{card}" stroke="{border}"/>
-  <text x="336" y="53" font-size="14" font-weight="700" fill="{green}">Contribution Activity</text>
-  {ring(408,122,48,contribution_pct,green,7)}
-  <text x="408" y="117" font-size="22" font-weight="800" fill="{bright}" text-anchor="middle">{fmt_num(contributions)}</text>
-  <text x="408" y="135" font-size="9" fill="{muted}" text-anchor="middle">LAST 365 DAYS</text>
-  <text x="490" y="107" font-size="9" fill="{muted}">CURRENT STREAK</text>
-  <text x="490" y="130" font-size="22" font-weight="800" fill="{bright}">{current}</text>
-  <text x="490" y="147" font-size="9" fill="{muted}">DAYS</text>
-  <text x="336" y="210" font-size="9" fill="{muted}">GitHub contribution calendar</text>
+  <text x="338" y="54" font-size="14" font-weight="700" fill="{green}">Contribution Activity</text>
+  {ring(406,121,47,contribution_pct,green,7)}
+  <text x="406" y="116" font-size="22" font-weight="800" fill="{bright}" text-anchor="middle">{fmt_num(contributions)}</text>
+  <text x="406" y="134" font-size="9" fill="{muted}" text-anchor="middle">LAST 365 DAYS</text>
+  <line x1="467" y1="72" x2="467" y2="190" stroke="{border}"/>
+  <text x="490" y="103" font-size="9" fill="{muted}">CURRENT STREAK</text>
+  <text x="490" y="132" font-size="24" font-weight="800" fill="{bright}">{current}</text>
+  <text x="490" y="150" font-size="9" fill="{muted}">DAYS</text>
+  <text x="338" y="210" font-size="9" fill="{muted}">GitHub contribution calendar</text>
 
-  <!-- RIGHT: streak -->
+  <!-- CARD 3 -->
   <rect x="612" y="28" width="280" height="214" rx="12" fill="{card}" stroke="{border}"/>
-  <text x="628" y="53" font-size="14" font-weight="700" fill="{green}">Streak Record</text>
-  {ring(699,122,48,record_pct,bright,7)}
-  <text x="699" y="117" font-size="22" font-weight="800" fill="{bright}" text-anchor="middle">{longest}</text>
-  <text x="699" y="135" font-size="9" fill="{muted}" text-anchor="middle">LONGEST STREAK</text>
-  <text x="780" y="107" font-size="9" fill="{muted}">365D CONTRIBUTIONS</text>
-  <text x="780" y="130" font-size="22" font-weight="800" fill="{bright}">{fmt_num(contributions)}</text>
-  <text x="628" y="210" font-size="9" fill="{muted}">Independent streak calculation</text>
+  <text x="630" y="54" font-size="14" font-weight="700" fill="{green}">Streak Record</text>
+  {ring(697,121,47,record_pct,bright,7)}
+  <text x="697" y="116" font-size="22" font-weight="800" fill="{bright}" text-anchor="middle">{longest}</text>
+  <text x="697" y="134" font-size="9" fill="{muted}" text-anchor="middle">LONGEST STREAK</text>
+  <line x1="758" y1="72" x2="758" y2="190" stroke="{border}"/>
+  <text x="780" y="103" font-size="9" fill="{muted}">CONTRIBUTIONS</text>
+  <text x="780" y="132" font-size="24" font-weight="800" fill="{bright}">{fmt_num(contributions)}</text>
+  <text x="780" y="150" font-size="9" fill="{muted}">LAST 365 DAYS</text>
+  <text x="630" y="210" font-size="9" fill="{muted}">Independent streak calculation</text>
 
-  <!-- BOTTOM: languages -->
-  <rect x="28" y="258" width="864" height="144" rx="12" fill="{card}" stroke="{border}"/>
-  <text x="46" y="284" font-size="14" font-weight="700" fill="{green}">Most Used Languages</text>
+  <!-- CARD 4 -->
+  <rect x="28" y="258" width="864" height="160" rx="12" fill="{card}" stroke="{border}"/>
+  <text x="46" y="285" font-size="14" font-weight="700" fill="{green}">Most Used Languages</text>
+  <text x="780" y="285" font-size="9" fill="{muted}" text-anchor="end">Repository language bytes</text>
+  <line x1="46" y1="293" x2="874" y2="293" stroke="{border}"/>
   {''.join(lang_rows)}
 </g>
 
-<text x="46" y="421" font-size="8" fill="{muted}"
+<text x="46" y="432" font-size="8" fill="{muted}"
       font-family="Consolas, 'Courier New', monospace">F4B0Y Analytics Engine · Updated {esc(updated)}</text>
 </svg>'''
     return svg
-
 def main():
     repos = get_json(f"/users/{OWNER}/repos", query={"per_page":"100", "type":"owner", "sort":"updated"})
     stars = sum(int(repo.get("stargazers_count", 0)) for repo in repos)
