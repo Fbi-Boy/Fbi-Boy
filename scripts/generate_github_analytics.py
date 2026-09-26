@@ -18,7 +18,7 @@ import urllib.request
 from pathlib import Path
 
 OWNER = "Fbi-Boy"
-OUT = Path("assets/github-analytics-v18.svg")
+OUT = Path("assets/github-analytics-v19.svg")
 API = "https://api.github.com"
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
 
@@ -371,7 +371,7 @@ def ring(cx, cy, r, percent, stroke, width=7):
 def build_svg(repo_count, stars, commits, prs, issues, contributions, current, longest,
               calendar_prs, calendar_issues, reviews, repo_contributions,
               active_days, best_day, langs, updated, rank):
-    W, H = 920, 500
+    W, H = 920, 510
     bg = "#0b0f14"
     card = "#121820"
     border = "#4b5563"
@@ -421,27 +421,36 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
 
     lang_rows = []
     language_colors = ["#41ff88", "#00ff9a", "#5eead4", "#60a5fa", "#a78bfa", "#f472b6"]
-    y = 325
+    language_marks = {
+        "Blade": "B", "PHP": "PHP", "Python": "Py", "Dart": "D",
+        "JavaScript": "JS", "TypeScript": "TS", "C++": "C++", "C": "C",
+        "Java": "J", "Go": "Go", "Rust": "Rs", "Ruby": "Rb", "Kotlin": "K",
+        "HTML": "5", "CSS": "#", "SQL": "DB", "Shell": "$"
+    }
+    y = 327
     for idx, (name, pct) in enumerate(langs[:6], start=1):
         accent = language_colors[idx - 1]
         rank_label = f"{idx:02d}"
-        bar_width = 510 * pct / 100
-        row_y = y - 12
+        mark = language_marks.get(name, esc(name[:2].upper()))
+        bar_width = 500 * pct / 100
+        row_y = y - 13
         lang_rows.append(
-            f'<rect x="46" y="{row_y}" width="828" height="20" rx="7" fill="{track}"/>'
-            f'<rect x="56" y="{row_y+3}" width="28" height="14" rx="4" fill="{accent}" opacity="0.18"/>'
-            f'<text x="70" y="{y+1}" font-size="7.5" font-weight="700" fill="{accent}" text-anchor="middle">{rank_label}</text>'
-            f'<text x="96" y="{y+1}" font-size="10" font-weight="700" fill="{text}">{esc(name)}</text>'
-            f'<rect x="246" y="{y-6}" width="510" height="8" rx="4" fill="{bg}"/>'
-            f'<rect x="246" y="{y-6}" width="{max(3, bar_width):.1f}" height="8" rx="4" fill="{accent}"/>'
-            f'<text x="846" y="{y+1}" font-size="10.5" font-weight="800" fill="{accent}" text-anchor="end">{pct:.1f}%</text>'
+            f'<rect x="46" y="{row_y}" width="828" height="24" rx="8" fill="{track}"/>'
+            f'<rect x="54" y="{row_y+3}" width="30" height="18" rx="6" fill="{accent}" opacity="0.16" stroke="{accent}"/>'
+            f'<text x="69" y="{y+2}" font-size="7.5" font-weight="800" fill="{accent}" text-anchor="middle">{rank_label}</text>'
+            f'<rect x="92" y="{row_y+3}" width="30" height="18" rx="6" fill="#171d26" stroke="{accent}" stroke-width="1"/>'
+            f'<text x="107" y="{y+2}" font-size="7" font-weight="800" fill="{accent}" text-anchor="middle">{mark}</text>'
+            f'<text x="136" y="{y+2}" font-size="10" font-weight="700" fill="{text}">{esc(name)}</text>'
+            f'<rect x="260" y="{y-6}" width="500" height="8" rx="4" fill="{bg}"/>'
+            f'<rect x="260" y="{y-6}" width="{max(3, bar_width):.1f}" height="8" rx="4" fill="{accent}"/>'
+            f'<text x="846" y="{y+2}" font-size="10.5" font-weight="800" fill="{accent}" text-anchor="end">{pct:.1f}%</text>'
         )
-        y += 20
+        y += 27
 
 
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
-<rect width="{W}" height="500" rx="18" fill="{bg}"/>
-<rect x="12" y="12" width="896" height="476" rx="18" fill="{bg}" stroke="{border}"/>
+<rect width="{W}" height="510" rx="18" fill="{bg}"/>
+<rect x="12" y="12" width="896" height="486" rx="18" fill="{bg}" stroke="{border}"/>
 
 <g font-family="Consolas, 'Courier New', monospace">
   <!-- CARD 1: title centered; bottom split into left metric + right stats -->
@@ -473,7 +482,7 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
   {streak_rows}
 
   <!-- CARD 4: dynamic language ranking -->
-  <rect x="28" y="258" width="864" height="210" rx="12" fill="#141922" stroke="#596273"/>
+  <rect x="28" y="258" width="864" height="215" rx="12" fill="#141922" stroke="#596273"/>
   <rect x="46" y="271" width="28" height="24" rx="7" fill="#202631" stroke="#737b88"/>
   <text x="60" y="288" font-size="12" font-weight="800" fill="#d6dbe3" text-anchor="middle">&lt;/&gt;</text>
   <text x="86" y="285" font-size="14" font-weight="700" fill="#e1e5ea">Most Used Languages</text>
