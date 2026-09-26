@@ -158,7 +158,7 @@
 ## 📊 GitHub Analytics
 
 <p align="center">
-  <img src="./assets/github-analytics-v6.svg" width="100%" alt="Custom F4B0Y GitHub analytics"/>
+  <img src="./assets/github-analytics-v7.svg" width="100%" alt="Custom F4B0Y GitHub analytics"/>
 </p>
 
 
