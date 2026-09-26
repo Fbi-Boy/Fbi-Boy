@@ -76,6 +76,12 @@ def contribution_data():
     query($login:String!, $from:DateTime!, $to:DateTime!) {
       user(login:$login) {
         contributionsCollection(from:$from, to:$to) {
+          totalContributions
+          totalCommitContributions
+          totalIssueContributions
+          totalPullRequestContributions
+          totalPullRequestReviewContributions
+          totalRepositoryContributions
           contributionCalendar {
             totalContributions
             weeks {
@@ -97,7 +103,8 @@ def contribution_data():
             "to": f"{end.isoformat()}T23:59:59Z",
         },
     )
-    calendar = data["user"]["contributionsCollection"]["contributionCalendar"]
+    collection = data["user"]["contributionsCollection"]
+    calendar = collection["contributionCalendar"]
     days = []
     for week in calendar["weeks"]:
         for day in week["contributionDays"]:
@@ -106,7 +113,15 @@ def contribution_data():
                 "count": int(day["contributionCount"]),
             })
     days.sort(key=lambda x: x["date"])
-    return int(calendar["totalContributions"]), days, start, end
+    return (
+        int(calendar["totalContributions"]),
+        int(collection["totalCommitContributions"]),
+        int(collection["totalPullRequestContributions"]),
+        int(collection["totalIssueContributions"]),
+        days,
+        start,
+        end,
+    )
 
 def streaks(days: list[dict]):
     by_date = {x["date"]: x["count"] for x in days}
@@ -257,11 +272,15 @@ def main():
     stars = sum(int(repo.get("stargazers_count", 0)) for repo in repos)
     repo_count = len(repos)
 
-    commits = commit_total()
-    prs = search_total(f"author:{OWNER} type:pr")
-    issues = search_total(f"author:{OWNER} type:issue")
-
-    contributions, days, start, end = contribution_data()
+    (
+        contributions,
+        commits,
+        prs,
+        issues,
+        days,
+        start,
+        end,
+    ) = contribution_data()
     current, longest = streaks(days)
     langs = language_percentages(repos)
 
@@ -282,6 +301,7 @@ def main():
         "longest_streak": longest,
         "languages": langs,
         "period": f"{start}..{end}",
+        "metric_scope": "GitHub contribution collection for the last year",
     }, indent=2))
 
 if __name__ == "__main__":
