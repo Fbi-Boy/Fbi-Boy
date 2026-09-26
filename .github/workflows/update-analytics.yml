@@ -38,4 +38,5 @@ jobs:
             exit 0
           fi
           git commit -m "chore: update GitHub analytics"
+          git pull --rebase origin main
           git push
