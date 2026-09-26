@@ -18,7 +18,7 @@ import urllib.request
 from pathlib import Path
 
 OWNER = "Fbi-Boy"
-OUT = Path("assets/github-analytics-v14.svg")
+OUT = Path("assets/github-analytics-v15.svg")
 API = "https://api.github.com"
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
 
@@ -374,7 +374,7 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
     W, H = 920, 490
     bg = "#070c0a"
     card = "#0b1410"
-    border = "#284637"
+    border = "#626873"
     text = "#b8ffcc"
     green = "#41ff88"
     bright = "#00ff9a"
@@ -481,7 +481,7 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
   {''.join(lang_rows)}
 </g>
 
-<text x="46" y="484" font-size="8" fill="#8a8f98"
+<text x="46" y="484" font-size="8" fill="{border}"
       font-family="Consolas, 'Courier New', monospace">F4B0Y Analytics Engine · Updated {esc(updated)}</text>
 </svg>'''
     return svg
