@@ -3,33 +3,36 @@
 <rect x="12" y="12" width="896" height="406" rx="18" fill="#070c0a" stroke="#284637"/>
 
 <g font-family="Consolas, 'Courier New', monospace">
-  <!-- CARD 1: two-column layout (metric zone | detail zone), no divider -->
+  <!-- CARD 1: two equal 140px zones; separator intentionally invisible -->
+  <line x1="168" y1="70" x2="168" y2="210" stroke="#0b1410" stroke-width="1"/>
   <rect x="28" y="28" width="280" height="214" rx="12" fill="#0b1410" stroke="#284637"/>
   <text x="46" y="54" font-size="14" font-weight="700" fill="#41ff88">F4B0Y GitHub Stats</text>
-  <circle cx="82" cy="135" r="46" fill="none" stroke="#183126" stroke-width="7"/>
-  <circle cx="82" cy="135" r="46" fill="none" stroke="#41ff88" stroke-width="3"/>
-  <text x="82" y="128" font-size="8" fill="#73b88c" text-anchor="middle">COMMITS</text>
-  <text x="82" y="148" font-size="21" font-weight="800" fill="#00ff9a" text-anchor="middle">554</text>
-  <text x="134" y="89" font-size="10" fill="#73b88c">Stars Earned</text><text x="198" y="89" font-size="11" font-weight="700" fill="#00ff9a" text-anchor="end">4</text><text x="134" y="115" font-size="10" fill="#73b88c">Commits</text><text x="198" y="115" font-size="11" font-weight="700" fill="#00ff9a" text-anchor="end">554</text><text x="134" y="141" font-size="10" fill="#73b88c">Pull Requests</text><text x="198" y="141" font-size="11" font-weight="700" fill="#00ff9a" text-anchor="end">254</text><text x="134" y="167" font-size="10" fill="#73b88c">Issues</text><text x="198" y="167" font-size="11" font-weight="700" fill="#00ff9a" text-anchor="end">10</text><text x="134" y="193" font-size="10" fill="#73b88c">Repositories</text><text x="198" y="193" font-size="11" font-weight="700" fill="#00ff9a" text-anchor="end">11</text>
-  <text x="82" y="191" font-size="7" fill="#73b88c" text-anchor="middle">TOTAL</text>
+  <circle cx="98" cy="135" r="46" fill="none" stroke="#183126" stroke-width="7"/>
+  <circle cx="98" cy="135" r="46" fill="none" stroke="#41ff88" stroke-width="3"/>
+  <text x="98" y="128" font-size="8" fill="#73b88c" text-anchor="middle">COMMITS</text>
+  <text x="98" y="148" font-size="21" font-weight="800" fill="#00ff9a" text-anchor="middle">555</text>
+  <text x="180" y="89" font-size="10" fill="#73b88c">Stars Earned</text><text x="294" y="89" font-size="11" font-weight="700" fill="#00ff9a" text-anchor="end">4</text><text x="180" y="115" font-size="10" fill="#73b88c">Commits</text><text x="294" y="115" font-size="11" font-weight="700" fill="#00ff9a" text-anchor="end">555</text><text x="180" y="141" font-size="10" fill="#73b88c">Pull Requests</text><text x="294" y="141" font-size="11" font-weight="700" fill="#00ff9a" text-anchor="end">254</text><text x="180" y="167" font-size="10" fill="#73b88c">Issues</text><text x="294" y="167" font-size="11" font-weight="700" fill="#00ff9a" text-anchor="end">10</text><text x="180" y="193" font-size="10" fill="#73b88c">Repositories</text><text x="294" y="193" font-size="11" font-weight="700" fill="#00ff9a" text-anchor="end">11</text>
+  <text x="98" y="191" font-size="7" fill="#73b88c" text-anchor="middle">TOTAL</text>
 
-  <!-- CARD 2: two-column layout (metric zone | detail zone), no divider -->
+  <!-- CARD 2: two equal 140px zones; separator intentionally invisible -->
+  <line x1="460" y1="70" x2="460" y2="210" stroke="#0b1410" stroke-width="1"/>
   <rect x="320" y="28" width="280" height="214" rx="12" fill="#0b1410" stroke="#284637"/>
   <text x="338" y="54" font-size="14" font-weight="700" fill="#41ff88">Contribution Activity</text>
   
     <circle cx="406" cy="122" r="46" fill="none" stroke="#183126" stroke-width="7"/>
     <circle cx="406" cy="122" r="46" fill="none" stroke="#41ff88" stroke-width="7"
-            stroke-linecap="round" stroke-dasharray="252.50 289.03"
+            stroke-linecap="round" stroke-dasharray="252.77 289.03"
             transform="rotate(-90 406 122)"/>
     
-  <text x="406" y="117" font-size="21" font-weight="800" fill="#00ff9a" text-anchor="middle">961</text>
-  <text x="406" y="134" font-size="8" fill="#73b88c" text-anchor="middle">LAST 365 DAYS</text>
-  <text x="486" y="104" font-size="8" fill="#73b88c">CURRENT STREAK</text>
-  <text x="486" y="131" font-size="23" font-weight="800" fill="#00ff9a">11</text>
-  <text x="486" y="149" font-size="8" fill="#73b88c">DAYS</text>
+  <text x="390" y="117" font-size="21" font-weight="800" fill="#00ff9a" text-anchor="middle">962</text>
+  <text x="390" y="134" font-size="8" fill="#73b88c" text-anchor="middle">LAST 365 DAYS</text>
+  <text x="478" y="104" font-size="8" fill="#73b88c">CURRENT STREAK</text>
+  <text x="478" y="131" font-size="23" font-weight="800" fill="#00ff9a">11</text>
+  <text x="478" y="149" font-size="8" fill="#73b88c">DAYS</text>
   <text x="338" y="210" font-size="8" fill="#73b88c">GitHub contribution calendar</text>
 
-  <!-- CARD 3: two-column layout (metric zone | detail zone), no divider -->
+  <!-- CARD 3: two equal 140px zones; separator intentionally invisible -->
+  <line x1="752" y1="70" x2="752" y2="210" stroke="#0b1410" stroke-width="1"/>
   <rect x="612" y="28" width="280" height="214" rx="12" fill="#0b1410" stroke="#284637"/>
   <text x="630" y="54" font-size="14" font-weight="700" fill="#41ff88">Streak Record</text>
   
@@ -38,11 +41,11 @@
             stroke-linecap="round" stroke-dasharray="105.98 289.03"
             transform="rotate(-90 697 122)"/>
     
-  <text x="697" y="117" font-size="21" font-weight="800" fill="#00ff9a" text-anchor="middle">11</text>
-  <text x="697" y="134" font-size="8" fill="#73b88c" text-anchor="middle">LONGEST STREAK</text>
-  <text x="776" y="104" font-size="8" fill="#73b88c">CONTRIBUTIONS</text>
-  <text x="776" y="131" font-size="23" font-weight="800" fill="#00ff9a">961</text>
-  <text x="776" y="149" font-size="8" fill="#73b88c">LAST 365 DAYS</text>
+  <text x="682" y="117" font-size="21" font-weight="800" fill="#00ff9a" text-anchor="middle">11</text>
+  <text x="682" y="134" font-size="8" fill="#73b88c" text-anchor="middle">LONGEST STREAK</text>
+  <text x="770" y="104" font-size="8" fill="#73b88c">CONTRIBUTIONS</text>
+  <text x="770" y="131" font-size="23" font-weight="800" fill="#00ff9a">962</text>
+  <text x="770" y="149" font-size="8" fill="#73b88c">LAST 365 DAYS</text>
   <text x="630" y="210" font-size="8" fill="#73b88c">Independent streak calculation</text>
 
   <!-- CARD 4: two-column language layout, no divider -->
@@ -50,9 +53,9 @@
   <text x="46" y="285" font-size="14" font-weight="700" fill="#41ff88">Most Used Languages</text>
   <text x="874" y="285" font-size="8" fill="#73b88c" text-anchor="end">Repository language bytes</text>
 
-  <text x="58" y="312" font-size="10" fill="#b8ffcc">Blade  57.1%</text><rect x="220" y="304" width="570" height="7" rx="3.5" fill="#183126"/><rect x="220" y="304" width="325.4" height="7" rx="3.5" fill="#41ff88"/><text x="58" y="332" font-size="10" fill="#b8ffcc">PHP  25.3%</text><rect x="220" y="324" width="570" height="7" rx="3.5" fill="#183126"/><rect x="220" y="324" width="144.3" height="7" rx="3.5" fill="#41ff88"/><text x="58" y="352" font-size="10" fill="#b8ffcc">Python  10.6%</text><rect x="220" y="344" width="570" height="7" rx="3.5" fill="#183126"/><rect x="220" y="344" width="60.2" height="7" rx="3.5" fill="#41ff88"/><text x="58" y="372" font-size="10" fill="#b8ffcc">Dart  2.7%</text><rect x="220" y="364" width="570" height="7" rx="3.5" fill="#183126"/><rect x="220" y="364" width="15.3" height="7" rx="3.5" fill="#41ff88"/><text x="58" y="392" font-size="10" fill="#b8ffcc">JavaScript  1.9%</text><rect x="220" y="384" width="570" height="7" rx="3.5" fill="#183126"/><rect x="220" y="384" width="10.9" height="7" rx="3.5" fill="#41ff88"/>
+  <text x="58" y="312" font-size="10" fill="#b8ffcc">Blade  57.1%</text><rect x="220" y="304" width="570" height="7" rx="3.5" fill="#183126"/><rect x="220" y="304" width="325.3" height="7" rx="3.5" fill="#41ff88"/><text x="58" y="332" font-size="10" fill="#b8ffcc">PHP  25.3%</text><rect x="220" y="324" width="570" height="7" rx="3.5" fill="#183126"/><rect x="220" y="324" width="144.3" height="7" rx="3.5" fill="#41ff88"/><text x="58" y="352" font-size="10" fill="#b8ffcc">Python  10.6%</text><rect x="220" y="344" width="570" height="7" rx="3.5" fill="#183126"/><rect x="220" y="344" width="60.3" height="7" rx="3.5" fill="#41ff88"/><text x="58" y="372" font-size="10" fill="#b8ffcc">Dart  2.7%</text><rect x="220" y="364" width="570" height="7" rx="3.5" fill="#183126"/><rect x="220" y="364" width="15.3" height="7" rx="3.5" fill="#41ff88"/><text x="58" y="392" font-size="10" fill="#b8ffcc">JavaScript  1.9%</text><rect x="220" y="384" width="570" height="7" rx="3.5" fill="#183126"/><rect x="220" y="384" width="10.9" height="7" rx="3.5" fill="#41ff88"/>
 </g>
 
 <text x="46" y="431" font-size="8" fill="#73b88c"
-      font-family="Consolas, 'Courier New', monospace">F4B0Y Analytics Engine · Updated 2026-09-26 14:45 UTC</text>
+      font-family="Consolas, 'Courier New', monospace">F4B0Y Analytics Engine · Updated 2026-09-26 14:46 UTC</text>
 </svg>
