@@ -378,4 +378,154 @@ Modern Laravel website built around a clean frontend workflow.
 
 </details>
 
+<details>
+<summary>🚀 <strong>Laravel</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/laravel.svg" width="390" alt="Laravel usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• <a href="https://github.com/Fbi-Boy/madura-mart">Madura Mart</a><br>• <a href="https://github.com/Fbi-Boy/pt-putra-prananta-website">PT Putra Prananta</a></td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🧩 <strong>CodeIgniter</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/codeigniter.svg" width="390" alt="CodeIgniter usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• No tracked project yet</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🟢 <strong>Node.js</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/nodejs.svg" width="390" alt="Node.js usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• No tracked project yet</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>⚛️ <strong>React</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/react.svg" width="390" alt="React usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• No tracked project yet</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>▲ <strong>Next.js</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/nextjs.svg" width="390" alt="Next.js usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• No tracked project yet</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🎨 <strong>Tailwind CSS</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/tailwind.svg" width="390" alt="Tailwind CSS usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• <a href="https://github.com/Fbi-Boy/pt-putra-prananta-website">PT Putra Prananta</a><br>• <a href="https://github.com/Fbi-Boy/madura-mart">Madura Mart</a></td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🅱️ <strong>Bootstrap</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/bootstrap.svg" width="390" alt="Bootstrap usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• No tracked project yet</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🏔️ <strong>Alpine.js</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/alpinejs.svg" width="390" alt="Alpine.js usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• <a href="https://github.com/Fbi-Boy/pt-putra-prananta-website">PT Putra Prananta</a><br>• <a href="https://github.com/Fbi-Boy/madura-mart">Madura Mart</a></td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>📱 <strong>Flutter</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/flutter.svg" width="390" alt="Flutter usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• latihan_flutter</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🔀 <strong>Git</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/git.svg" width="390" alt="Git usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• <a href="https://github.com/Fbi-Boy/universal-task-ai">Universal Task AI</a><br>• <a href="https://github.com/Fbi-Boy/madura-mart">Madura Mart</a><br>• <a href="https://github.com/Fbi-Boy/pt-putra-prananta-website">PT Putra Prananta</a></td>
+</tr>
+</table>
+
+</details>
+
 
