@@ -224,7 +224,6 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
   {ring(406,122,45,contribution_pct,green,7)}
   <text x="406" y="117" font-size="21" font-weight="800" fill="{bright}" text-anchor="middle">{fmt_num(contributions)}</text>
   <text x="406" y="134" font-size="8" fill="{muted}" text-anchor="middle">LAST 365 DAYS</text>
-  <line x1="470" y1="78" x2="470" y2="190" stroke="{border}"/>
   <text x="489" y="104" font-size="8" fill="{muted}">CURRENT STREAK</text>
   <text x="489" y="132" font-size="23" font-weight="800" fill="{bright}">{current}</text>
   <text x="489" y="150" font-size="8" fill="{muted}">DAYS</text>
@@ -236,7 +235,6 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
   {ring(697,122,45,record_pct,bright,7)}
   <text x="697" y="117" font-size="21" font-weight="800" fill="{bright}" text-anchor="middle">{longest}</text>
   <text x="697" y="134" font-size="8" fill="{muted}" text-anchor="middle">LONGEST STREAK</text>
-  <line x1="760" y1="78" x2="760" y2="190" stroke="{border}"/>
   <text x="780" y="104" font-size="8" fill="{muted}">CONTRIBUTIONS</text>
   <text x="780" y="132" font-size="23" font-weight="800" fill="{bright}">{fmt_num(contributions)}</text>
   <text x="780" y="150" font-size="8" fill="{muted}">LAST 365 DAYS</text>
