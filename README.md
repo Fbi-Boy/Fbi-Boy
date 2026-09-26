@@ -75,15 +75,15 @@
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=php,python,js,ts,kotlin,dart,cpp,c,java,cs,go,rust,ruby,swift&perline=14" alt="Languages and tools"/>
+<img src="https://skillicons.dev/icons?i=php,python,js,ts,kotlin,dart,cpp,c,java,cs,go,rust,ruby,swift&perline=14" alt="Languages and tools used"/>
 <br>
-<img src="https://skillicons.dev/icons?i=html,css,bash,powershell,sql,laravel,symfony,nodejs,express,react,nextjs,vue,angular,tailwind&perline=14" alt="Languages and frameworks"/>
+<img src="https://skillicons.dev/icons?i=html,css,bash,powershell,sql,laravel,symfony,nodejs,express,react,nextjs,vue,angular,tailwind&perline=14" alt="Languages and tools used"/>
 <br>
-<img src="https://skillicons.dev/icons?i=bootstrap,alpinejs,flutter,androidstudio,spring,dotnet,git,github,gitlab,vscode,pycharm,phpstorm,docker,linux&perline=14" alt="Frameworks and developer tools"/>
+<img src="https://skillicons.dev/icons?i=bootstrap,alpinejs,flutter,androidstudio,spring,dotnet,git,github,gitlab,vscode,pycharm,phpstorm,docker,linux&perline=14" alt="Languages and tools used"/>
 <br>
-<img src="https://skillicons.dev/icons?i=postman,npm,yarn,pnpm,bun,vite,figma,mysql,postgres,sqlite,mongodb,redis,firebase,supabase&perline=14" alt="Developer tools and databases"/>
+<img src="https://skillicons.dev/icons?i=postman,npm,yarn,pnpm,bun,vite,figma,mysql,postgres,sqlite,mongodb,redis,firebase,supabase&perline=14" alt="Languages and tools used"/>
 <br>
-<img src="https://skillicons.dev/icons?i=ansible,arduino,astro,django,fastapi,pytorch,tensorflow,threejs,unity,unreal,vim,webpack,wordpress,selenium&perline=14" alt="Additional technologies"/>
+<img src="https://skillicons.dev/icons?i=ansible,arduino,astro,django,fastapi,pytorch,tensorflow,threejs,unity,unreal,vim,webpack,wordpress,selenium&perline=14" alt="Languages and tools used"/>
 
 </div>
 
