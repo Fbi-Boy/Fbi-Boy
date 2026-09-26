@@ -7,7 +7,7 @@
 
 <p>
   <img src="https://media1.tenor.com/m/rCaIUO0MP-EAAAAd/mario-pixel-art.gif"
-       width="100%"
+       width="88%"
        alt="F4B0Y pixel-art gaming room"/>
 </p>
 
