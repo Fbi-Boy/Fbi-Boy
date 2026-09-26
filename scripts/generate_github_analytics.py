@@ -162,7 +162,7 @@ def ring(cx, cy, r, percent, stroke, width=7):
     '''
 
 def build_svg(repo_count, stars, commits, prs, issues, contributions, current, longest, langs, updated):
-    W, H = 920, 420
+    W, H = 920, 430
     bg = "#070c0a"
     card = "#0b1410"
     border = "#284637"
@@ -184,65 +184,62 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
     ]
 
     lang_rows = []
-    row_y = 301
+    row_y = 300
     for name, pct in langs[:5]:
         label = f"{name} {pct:.1f}%"
-        bar_w = max(3, 330 * pct / 100)
+        bar_w = max(3, 590 * pct / 100)
         lang_rows.append(
-            f'<text x="282" y="{row_y}" font-size="11" fill="{text}">{esc(label)}</text>'
-            f'<rect x="440" y="{row_y-8}" width="330" height="6" rx="3" fill="{track}"/>'
-            f'<rect x="440" y="{row_y-8}" width="{bar_w:.1f}" height="6" rx="3" fill="{green}"/>'
+            f'<text x="58" y="{row_y}" font-size="10" fill="{text}">{esc(label)}</text>'
+            f'<rect x="210" y="{row_y-8}" width="590" height="6" rx="3" fill="{track}"/>'
+            f'<rect x="210" y="{row_y-8}" width="{bar_w:.1f}" height="6" rx="3" fill="{green}"/>'
         )
         row_y += 20
 
-    def label_value(x, y, label, value):
-        return (
-            f'<text x="{x}" y="{y}" font-size="10" fill="{muted}">{esc(label)}</text>'
-            f'<text x="{x}" y="{y+15}" font-size="19" font-weight="800" fill="{bright}">{esc(value)}</text>'
-        )
-
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
 <rect width="{W}" height="{H}" rx="18" fill="{bg}"/>
-<rect x="12" y="12" width="896" height="396" rx="18" fill="{bg}" stroke="{border}"/>
+<rect x="12" y="12" width="896" height="406" rx="18" fill="{bg}" stroke="{border}"/>
 
 <g font-family="Consolas, 'Courier New', monospace">
-  <!-- CARD 1 -->
+  <!-- LEFT: stats -->
   <rect x="28" y="28" width="280" height="214" rx="12" fill="{card}" stroke="{border}"/>
   <text x="44" y="53" font-size="14" font-weight="700" fill="{green}">F4B0Y GitHub Stats</text>
   {''.join(
-      f'<text x="44" y="{82+i*29}" font-size="10" fill="{muted}">{esc(k)}</text>'
-      f'<text x="204" y="{82+i*29}" font-size="12" font-weight="700" fill="{bright}" text-anchor="end">{esc(v)}</text>'
+      f'<text x="44" y="{82+i*26}" font-size="10" fill="{muted}">{esc(k)}</text>'
+      f'<text x="204" y="{82+i*26}" font-size="12" font-weight="700" fill="{bright}" text-anchor="end">{esc(v)}</text>'
       for i,(k,v) in enumerate(stat_items)
   )}
-  <circle cx="258" cy="190" r="30" fill="none" stroke="{green}" stroke-width="2"/>
-  <text x="258" y="187" font-size="8" fill="{muted}" text-anchor="middle">FOCUS</text>
-  <text x="258" y="201" font-size="13" font-weight="800" fill="{bright}" text-anchor="middle">DEV</text>
+  <circle cx="259" cy="144" r="31" fill="none" stroke="{green}" stroke-width="2"/>
+  <text x="259" y="141" font-size="8" fill="{muted}" text-anchor="middle">FOCUS</text>
+  <text x="259" y="155" font-size="13" font-weight="800" fill="{bright}" text-anchor="middle">DEV</text>
 
-  <!-- CARD 2 -->
+  <!-- CENTER: contribution -->
   <rect x="320" y="28" width="280" height="214" rx="12" fill="{card}" stroke="{border}"/>
   <text x="336" y="53" font-size="14" font-weight="700" fill="{green}">Contribution Activity</text>
-  {ring(405,122,48,contribution_pct,green,7)}
-  <text x="405" y="117" font-size="22" font-weight="800" fill="{bright}" text-anchor="middle">{fmt_num(contributions)}</text>
-  <text x="405" y="135" font-size="9" fill="{muted}" text-anchor="middle">LAST 365 DAYS</text>
-  {label_value(490, 106, "CURRENT STREAK", f"{current} DAYS")}
-  <text x="336" y="210" font-size="9" fill="{muted}">Source: GitHub contribution calendar</text>
+  {ring(408,122,48,contribution_pct,green,7)}
+  <text x="408" y="117" font-size="22" font-weight="800" fill="{bright}" text-anchor="middle">{fmt_num(contributions)}</text>
+  <text x="408" y="135" font-size="9" fill="{muted}" text-anchor="middle">LAST 365 DAYS</text>
+  <text x="490" y="107" font-size="9" fill="{muted}">CURRENT STREAK</text>
+  <text x="490" y="130" font-size="22" font-weight="800" fill="{bright}">{current}</text>
+  <text x="490" y="147" font-size="9" fill="{muted}">DAYS</text>
+  <text x="336" y="210" font-size="9" fill="{muted}">GitHub contribution calendar</text>
 
-  <!-- CARD 3 -->
+  <!-- RIGHT: streak -->
   <rect x="612" y="28" width="280" height="214" rx="12" fill="{card}" stroke="{border}"/>
   <text x="628" y="53" font-size="14" font-weight="700" fill="{green}">Streak Record</text>
-  {ring(697,122,48,record_pct,bright,7)}
-  <text x="697" y="117" font-size="22" font-weight="800" fill="{bright}" text-anchor="middle">{longest}</text>
-  <text x="697" y="135" font-size="9" fill="{muted}" text-anchor="middle">LONGEST STREAK</text>
-  {label_value(782, 106, "365D CONTRIBUTIONS", fmt_num(contributions))}
+  {ring(699,122,48,record_pct,bright,7)}
+  <text x="699" y="117" font-size="22" font-weight="800" fill="{bright}" text-anchor="middle">{longest}</text>
+  <text x="699" y="135" font-size="9" fill="{muted}" text-anchor="middle">LONGEST STREAK</text>
+  <text x="780" y="107" font-size="9" fill="{muted}">365D CONTRIBUTIONS</text>
+  <text x="780" y="130" font-size="22" font-weight="800" fill="{bright}">{fmt_num(contributions)}</text>
   <text x="628" y="210" font-size="9" fill="{muted}">Independent streak calculation</text>
 
-  <!-- LANGUAGE CARD -->
-  <rect x="170" y="258" width="580" height="137" rx="12" fill="{card}" stroke="{border}"/>
-  <text x="188" y="284" font-size="13" font-weight="700" fill="{green}">Most Used Languages</text>
+  <!-- BOTTOM: languages -->
+  <rect x="28" y="258" width="864" height="144" rx="12" fill="{card}" stroke="{border}"/>
+  <text x="46" y="284" font-size="14" font-weight="700" fill="{green}">Most Used Languages</text>
   {''.join(lang_rows)}
 </g>
 
-<text x="892" y="404" font-size="8" fill="{muted}" text-anchor="end"
+<text x="46" y="421" font-size="8" fill="{muted}"
       font-family="Consolas, 'Courier New', monospace">F4B0Y Analytics Engine · Updated {esc(updated)}</text>
 </svg>'''
     return svg
