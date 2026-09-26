@@ -528,4 +528,169 @@ Modern Laravel website built around a clean frontend workflow.
 
 </details>
 
+<details>
+<summary>🐙 <strong>GitHub</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/github.svg" width="390" alt="GitHub usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• <a href="https://github.com/Fbi-Boy/universal-task-ai">Universal Task AI</a><br>• <a href="https://github.com/Fbi-Boy/madura-mart">Madura Mart</a><br>• <a href="https://github.com/Fbi-Boy/pt-putra-prananta-website">PT Putra Prananta</a></td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>💻 <strong>VS Code</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/vscode.svg" width="390" alt="VS Code usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• <a href="https://github.com/Fbi-Boy/universal-task-ai">Universal Task AI</a><br>• <a href="https://github.com/Fbi-Boy/madura-mart">Madura Mart</a><br>• <a href="https://github.com/Fbi-Boy/pt-putra-prananta-website">PT Putra Prananta</a></td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🧠 <strong>PhpStorm</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/phpstorm.svg" width="390" alt="PhpStorm usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• <a href="https://github.com/Fbi-Boy/madura-mart">Madura Mart</a><br>• <a href="https://github.com/Fbi-Boy/pt-putra-prananta-website">PT Putra Prananta</a></td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🐍 <strong>PyCharm</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/pycharm.svg" width="390" alt="PyCharm usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• <a href="https://github.com/Fbi-Boy/universal-task-ai">Universal Task AI</a></td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🐳 <strong>Docker</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/docker.svg" width="390" alt="Docker usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• <a href="https://github.com/Fbi-Boy/universal-task-ai">Universal Task AI</a></td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🐧 <strong>Linux</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/linux.svg" width="390" alt="Linux usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• <a href="https://github.com/Fbi-Boy/universal-task-ai">Universal Task AI</a></td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>📬 <strong>Postman</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/postman.svg" width="390" alt="Postman usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• No tracked project yet</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>📦 <strong>npm</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/npm.svg" width="390" alt="npm usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• <a href="https://github.com/Fbi-Boy/pt-putra-prananta-website">PT Putra Prananta</a><br>• <a href="https://github.com/Fbi-Boy/madura-mart">Madura Mart</a></td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>📦 <strong>pnpm</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/pnpm.svg" width="390" alt="pnpm usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• No tracked project yet</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>⚡ <strong>Vite</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/vite.svg" width="390" alt="Vite usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• <a href="https://github.com/Fbi-Boy/pt-putra-prananta-website">PT Putra Prananta</a><br>• <a href="https://github.com/Fbi-Boy/madura-mart">Madura Mart</a></td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🎨 <strong>Figma</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/figma.svg" width="390" alt="Figma usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• No tracked repository project yet</td>
+</tr>
+</table>
+
+</details>
+
 
