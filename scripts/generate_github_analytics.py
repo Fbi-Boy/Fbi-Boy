@@ -18,7 +18,7 @@ import urllib.request
 from pathlib import Path
 
 OWNER = "Fbi-Boy"
-OUT = Path("assets/github-analytics-v8.svg")
+OUT = Path("assets/github-analytics-v9.svg")
 API = "https://api.github.com"
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
 
@@ -311,6 +311,40 @@ def language_percentages(repos):
     total_bytes = sum(totals.values())
     return [(name, safe_percent(count, total_bytes)) for name, count in ranked[:5]]
 
+def pixel_text(text_value, cx, cy, scale=4, fill="#00ff9a"):
+    """Render short text as crisp pixel blocks so SVG rendering does not depend
+    on an external font being installed or loaded."""
+    glyphs = {
+        "A": ["01110","10001","10001","11111","10001","10001","10001"],
+        "B": ["11110","10001","10001","11110","10001","10001","11110"],
+        "C": ["01111","10000","10000","10000","10000","10000","01111"],
+        "D": ["11110","10001","10001","10001","10001","10001","11110"],
+        "E": ["11111","10000","10000","11110","10000","10000","11111"],
+        "F": ["11111","10000","10000","11110","10000","10000","10000"],
+        "S": ["01111","10000","10000","01110","00001","00001","11110"],
+        "+": ["00100","00100","11111","00100","00100","00000","00000"],
+        "-": ["00000","00000","11111","00000","00000","00000","00000"],
+    }
+    chars = [glyphs.get(ch.upper(), glyphs["-"]) for ch in str(text_value)]
+    gap = 2
+    total_cols = sum(len(g[0]) for g in chars) + gap * (len(chars) - 1)
+    total_w = total_cols * scale
+    total_h = 7 * scale
+    x0 = cx - total_w / 2
+    y0 = cy - total_h / 2
+    rects = []
+    cursor = x0
+    for glyph in chars:
+        for row, bits in enumerate(glyph):
+            for col, bit in enumerate(bits):
+                if bit == "1":
+                    rects.append(
+                        f'<rect x="{cursor + col * scale:.1f}" y="{y0 + row * scale:.1f}" '
+                        f'width="{scale}" height="{scale}" fill="{fill}"/>'
+                    )
+        cursor += (len(glyph[0]) + gap) * scale
+    return "".join(rects)
+
 def ring(cx, cy, r, percent, stroke, width=7):
     circumference = 2 * 3.141592653589793 * r
     percent = min(max(percent, 0), 100)
@@ -396,7 +430,7 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
   <line x1="168" y1="70" x2="168" y2="214" stroke="{card}" stroke-width="1"/>
   <circle cx="94" cy="140" r="46" fill="none" stroke="{track}" stroke-width="7"/>
   <circle cx="94" cy="140" r="46" fill="none" stroke="{green}" stroke-width="3"/>
-  <text x="94" y="151" font-size="23" font-weight="800" fill="{bright}" text-anchor="middle">{esc(rank)}</text>
+  {pixel_text(rank, 94, 149, scale=4, fill=bright)}
   <text x="94" y="205" font-size="8" fill="{muted}" font-weight="700" text-anchor="middle">RANK</text>
   {stats_rows}
 
