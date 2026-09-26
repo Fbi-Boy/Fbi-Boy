@@ -75,33 +75,25 @@
 
 <div align="center">
 
-### 💻 Languages
+<p><strong>💻 Languages</strong><br>
+<img src="https://skillicons.dev/icons?i=php,python,js,kotlin,dart,cpp,html,css,bash,sql&perline=10" height="30" alt="Languages"/>
+</p>
 
-<img src="https://skillicons.dev/icons?i=php,python,js,kotlin,dart,cpp,html,css,bash,sql" height="52" alt="PHP Python JavaScript Kotlin Dart C++ HTML CSS Bash SQL"/>
+<p><strong>⚙️ Frameworks & Libraries</strong><br>
+<img src="https://skillicons.dev/icons?i=laravel,codeigniter,nodejs,react,nextjs,tailwind,bootstrap,alpinejs,flutter&perline=9" height="30" alt="Frameworks and Libraries"/>
+</p>
 
-<br>
+<p><strong>🛠️ Developer Tools</strong><br>
+<img src="https://skillicons.dev/icons?i=git,github,vscode,phpstorm,pycharm,docker,linux,postman,npm,pnpm,vite,figma&perline=12" height="30" alt="Developer Tools"/>
+</p>
 
-### ⚙️ Frameworks & Libraries
+<p><strong>🗄️ Databases</strong><br>
+<img src="https://skillicons.dev/icons?i=mysql,postgresql,sqlite,mongodb,redis,firebase,supabase&perline=7" height="30" alt="Databases"/>
+</p>
 
-<img src="https://skillicons.dev/icons?i=laravel,codeigniter,nodejs,react,nextjs,tailwind,bootstrap,alpinejs,flutter,androidstudio" height="52" alt="Laravel CodeIgniter Node.js React Next.js Tailwind Bootstrap Alpine.js Flutter Android Studio"/>
-
-<br>
-
-### 🛠️ Developer Tools
-
-<img src="https://skillicons.dev/icons?i=git,github,vscode,phpstorm,pycharm,androidstudio,docker,linux,postman,npm,pnpm,vite,figma" height="52" alt="Git GitHub VS Code PhpStorm PyCharm Android Studio Docker Linux Postman npm pnpm Vite Figma"/>
-
-<br>
-
-### 🗄️ Databases
-
-<img src="https://skillicons.dev/icons?i=mysql,postgresql,sqlite,mongodb,redis,firebase,supabase" height="52" alt="MySQL PostgreSQL SQLite MongoDB Redis Firebase Supabase"/>
-
-<br>
-
-### ☁️ DevOps & Cloud
-
-<img src="https://skillicons.dev/icons?i=githubactions,nginx,vercel,aws,cloudflare" height="52" alt="GitHub Actions Nginx Vercel AWS Cloudflare"/>
+<p><strong>☁️ Cloud & DevOps</strong><br>
+<img src="https://skillicons.dev/icons?i=githubactions,nginx,vercel,aws,cloudflare&perline=5" height="30" alt="Cloud and DevOps"/>
+</p>
 
 </div>
 
