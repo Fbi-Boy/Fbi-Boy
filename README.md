@@ -56,8 +56,6 @@
      width="300"
      alt="Zenitsu pixel art"/>
 
-<br>
-
 <strong>Web • Mobile • AI • Quantum</strong>
 
 <br>
