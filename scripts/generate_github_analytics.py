@@ -18,7 +18,7 @@ import urllib.request
 from pathlib import Path
 
 OWNER = "Fbi-Boy"
-OUT = Path("assets/github-analytics-v9.svg")
+OUT = Path("assets/github-analytics-v10.svg")
 API = "https://api.github.com"
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
 
@@ -312,8 +312,7 @@ def language_percentages(repos):
     return [(name, safe_percent(count, total_bytes)) for name, count in ranked[:5]]
 
 def pixel_text(text_value, cx, cy, scale=4, fill="#00ff9a"):
-    """Render short text as crisp pixel blocks so SVG rendering does not depend
-    on an external font being installed or loaded."""
+    """Render short rank labels as crisp pixel blocks centered on (cx, cy)."""
     glyphs = {
         "A": ["01110","10001","10001","11111","10001","10001","10001"],
         "B": ["11110","10001","10001","11110","10001","10001","11110"],
@@ -326,24 +325,26 @@ def pixel_text(text_value, cx, cy, scale=4, fill="#00ff9a"):
         "-": ["00000","00000","11111","00000","00000","00000","00000"],
     }
     chars = [glyphs.get(ch.upper(), glyphs["-"]) for ch in str(text_value)]
-    gap = 2
-    total_cols = sum(len(g[0]) for g in chars) + gap * (len(chars) - 1)
-    total_w = total_cols * scale
+    glyph_width = 5 * scale
+    gap_width = scale
+    total_w = len(chars) * glyph_width + max(0, len(chars) - 1) * gap_width
     total_h = 7 * scale
     x0 = cx - total_w / 2
     y0 = cy - total_h / 2
+
     rects = []
-    cursor = x0
-    for glyph in chars:
+    for glyph_index, glyph in enumerate(chars):
+        base_x = x0 + glyph_index * (glyph_width + gap_width)
         for row, bits in enumerate(glyph):
             for col, bit in enumerate(bits):
                 if bit == "1":
                     rects.append(
-                        f'<rect x="{cursor + col * scale:.1f}" y="{y0 + row * scale:.1f}" '
+                        f'<rect x="{base_x + col * scale:.1f}" '
+                        f'y="{y0 + row * scale:.1f}" '
                         f'width="{scale}" height="{scale}" fill="{fill}"/>'
                     )
-        cursor += (len(glyph[0]) + gap) * scale
     return "".join(rects)
+
 
 def ring(cx, cy, r, percent, stroke, width=7):
     circumference = 2 * 3.141592653589793 * r
@@ -430,7 +431,7 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
   <line x1="168" y1="70" x2="168" y2="214" stroke="{card}" stroke-width="1"/>
   <circle cx="94" cy="140" r="46" fill="none" stroke="{track}" stroke-width="7"/>
   <circle cx="94" cy="140" r="46" fill="none" stroke="{green}" stroke-width="3"/>
-  {pixel_text(rank, 94, 149, scale=4, fill=bright)}
+  {pixel_text(rank, 94, 140, scale=4, fill=bright)}
   <text x="94" y="205" font-size="8" fill="{muted}" font-weight="700" text-anchor="middle">RANK</text>
   {stats_rows}
 
