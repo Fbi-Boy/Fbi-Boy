@@ -66,7 +66,7 @@ const groups=[
 ["Databases",["mysql","postgresql","redis"]],
 ["Cloud & DevOps",["nginx","aws"]]
 ];
-function icon(id){return "https://skillicons.dev/icons?i="+id}
+function icon(id){return id==="sql"?"../assets/sql.svg":"https://skillicons.dev/icons?i="+id}
 function render(){
 document.getElementById("toolbox").innerHTML=groups.map(g=>'<div class="group"><div class="gt">'+g[0]+'</div><div class="icons">'+g[1].map(id=>'<button class="tech" data-id="'+id+'" title="'+data[id].n+'"><img src="'+icon(data[id].i)+'" alt="'+data[id].n+'"></button>').join("")+'</div></div>').join("");
 document.querySelectorAll(".tech").forEach(b=>b.addEventListener("click",()=>select(b.dataset.id)));
@@ -83,7 +83,10 @@ s.m.forEach((m,i)=>x+='<circle cx="'+a[i][0]+'" cy="'+a[i][1]+'" r="3" fill="#c4
 return x+"</svg>";
 }
 function select(id){
-const s=data[id]||data.php;
+const catalog={
+ts:["TypeScript","Language","ts"],c:["C","Language","c"],java:["Java","Language","java"],cs:["C#","Language","cs"],go:["Go","Language","go"],rust:["Rust","Language","rust"],ruby:["Ruby","Language","ruby"],swift:["Swift","Language","swift"],html:["HTML","Markup","html"],css:["CSS","Styling","css"],bash:["Bash","Shell","bash"],powershell:["PowerShell","Shell","powershell"],sql:["SQL","Query Language","sql"],symfony:["Symfony","Framework","symfony"],nodejs:["Node.js","Runtime","nodejs"],express:["Express","Framework","express"],react:["React","Library","react"],nextjs:["Next.js","Framework","nextjs"],vue:["Vue","Framework","vue"],angular:["Angular","Framework","angular"],tailwind:["Tailwind CSS","Styling","tailwind"],bootstrap:["Bootstrap","Styling","bootstrap"],alpinejs:["Alpine.js","Library","alpinejs"],androidstudio:["Android Studio","IDE","androidstudio"],spring:["Spring","Framework","spring"],dotnet:[" .NET".trim(),"Framework","dotnet"],gitlab:["GitLab","Developer Tool","gitlab"],pycharm:["PyCharm","IDE","pycharm"],phpstorm:["PhpStorm","IDE","phpstorm"],linux:["Linux","OS","linux"],postman:["Postman","API Tool","postman"],npm:["npm","Package Manager","npm"],yarn:["Yarn","Package Manager","yarn"],pnpm:["pnpm","Package Manager","pnpm"],bun:["Bun","Runtime","bun"],vite:["Vite","Build Tool","vite"],figma:["Figma","Design Tool","figma"],sqlite:["SQLite","Database","sqlite"],mongodb:["MongoDB","Database","mongodb"],firebase:["Firebase","Backend Platform","firebase"],supabase:["Supabase","Backend Platform","supabase"],ansible:["Ansible","Automation","ansible"],arduino:["Arduino","Hardware","arduino"],astro:["Astro","Framework","astro"],django:["Django","Framework","django"],fastapi:["FastAPI","Framework","fastapi"],pytorch:["PyTorch","AI Framework","pytorch"],tensorflow:["TensorFlow","AI Framework","tensorflow"],threejs:["Three.js","3D Library","threejs"],unity:["Unity","Game Engine","unity"],unreal:["Unreal Engine","Game Engine","unreal"],vim:["Vim","Editor","vim"],webpack:["Webpack","Build Tool","webpack"],wordpress:["WordPress","CMS","wordpress"],selenium:["Selenium","Automation Tool","selenium"]};
+const fallback=catalog[id]||[id.toUpperCase(),"Technology",id];
+const s=data[id]||{n:fallback[0],t:fallback[1],i:fallback[2],l:"Reference",s:[["Tracked repositories","—"],["Tracked projects","—"],["Usage","Reference"],["Evidence","See project links"]],m:["Project usage","Code evidence","Ecosystem fit","Related tooling","Profile reference"],v:[50,50,50,50,50],p:[],r:[]};
 document.querySelectorAll(".tech").forEach(b=>b.classList.toggle("active",b.dataset.id===id));
 const stats=s.s.map(x=>'<div class="stat"><div class="k">'+x[0]+'</div><div class="v">'+x[1]+'</div></div>').join("");
 const metrics=s.m.map((m,i)=>'<div>'+m+'</div><b>'+s.v[i]+'/100</b>').join("");
