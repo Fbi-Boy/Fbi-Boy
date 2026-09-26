@@ -693,4 +693,109 @@ Modern Laravel website built around a clean frontend workflow.
 
 </details>
 
+<details>
+<summary>🐬 <strong>MySQL</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/mysql.svg" width="390" alt="MySQL usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• <a href="https://github.com/Fbi-Boy/madura-mart">Madura Mart</a><br>• <a href="https://github.com/Fbi-Boy/pt-putra-prananta-website">PT Putra Prananta</a></td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🐘 <strong>PostgreSQL</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/postgresql.svg" width="390" alt="PostgreSQL usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• No tracked project yet</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🪶 <strong>SQLite</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/sqlite.svg" width="390" alt="SQLite usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• <a href="https://github.com/Fbi-Boy/madura-mart">Madura Mart</a><br>• <a href="https://github.com/Fbi-Boy/latihan_flutter">latihan_flutter</a></td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🍃 <strong>MongoDB</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/mongodb.svg" width="390" alt="MongoDB usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• No tracked project yet</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🔴 <strong>Redis</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/redis.svg" width="390" alt="Redis usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• <a href="https://github.com/Fbi-Boy/universal-task-ai">Universal Task AI</a></td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🔥 <strong>Firebase</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/firebase.svg" width="390" alt="Firebase usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• No tracked project yet</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>⚡ <strong>Supabase</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/supabase.svg" width="390" alt="Supabase usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• No tracked project yet</td>
+</tr>
+</table>
+
+</details>
+
 
