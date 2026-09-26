@@ -1,52 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="920" height="330" viewBox="0 0 920 330">
-<rect width="920" height="330" rx="14" fill="#0d1117"/>
-<rect x="12" y="12" width="896" height="306" rx="14" fill="#0d1117" stroke="#3a4652"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="352" viewBox="0 0 920 352">
+<rect width="920" height="352" rx="16" fill="#070c0a"/>
+<rect x="12" y="12" width="896" height="328" rx="16" fill="#070c0a" stroke="#284637"/>
 
-<!-- left stats -->
-<rect x="28" y="28" width="300" height="196" rx="10" fill="#11161d" stroke="#3a4652"/>
-<text x="44" y="49" font-size="13" font-weight="700" fill="#f0f6fc">F4B0Y GitHub Stats</text>
-<text x="44" y="70" font-size="9" fill="#8b949e">Total Stars Earned</text><text x="180" y="70" font-size="11" font-weight="700" fill="#f0f6fc" text-anchor="end">4</text><text x="44" y="99" font-size="9" fill="#8b949e">Total Commits</text><text x="180" y="99" font-size="11" font-weight="700" fill="#f0f6fc" text-anchor="end">831</text><text x="44" y="128" font-size="9" fill="#8b949e">Total Pull Requests</text><text x="180" y="128" font-size="11" font-weight="700" fill="#f0f6fc" text-anchor="end">246</text><text x="44" y="157" font-size="9" fill="#8b949e">Total Issues</text><text x="180" y="157" font-size="11" font-weight="700" fill="#f0f6fc" text-anchor="end">8</text><text x="44" y="186" font-size="9" fill="#8b949e">Total Repositories</text><text x="180" y="186" font-size="11" font-weight="700" fill="#f0f6fc" text-anchor="end">11</text>
-<circle cx="274" cy="105" r="36" fill="none" stroke="#7dd3fc" stroke-width="2"/>
-<text x="274" y="102" font-size="10" fill="#8b949e" text-anchor="middle">Focus</text>
-<text x="274" y="118" font-size="18" font-weight="800" fill="#f0f6fc" text-anchor="middle">DEV</text>
+<g font-family="Consolas, Courier New, monospace">
+  <rect x="28" y="28" width="280" height="208" rx="11" fill="#0c1511" stroke="#284637"/>
+  <text x="44" y="51" font-size="14" font-weight="700" fill="#41ff88">F4B0Y GitHub Stats</text>
+  <text x="44" y="78" font-size="10" fill="#73b88c">Total Stars Earned</text><text x="224" y="78" font-size="12" font-weight="700" fill="#00ff9a" text-anchor="end">4</text>
+  <text x="44" y="107" font-size="10" fill="#73b88c">Total Commits</text><text x="224" y="107" font-size="12" font-weight="700" fill="#00ff9a" text-anchor="end">831</text>
+  <text x="44" y="136" font-size="10" fill="#73b88c">Total Pull Requests</text><text x="224" y="136" font-size="12" font-weight="700" fill="#00ff9a" text-anchor="end">246</text>
+  <text x="44" y="165" font-size="10" fill="#73b88c">Total Issues</text><text x="224" y="165" font-size="12" font-weight="700" fill="#00ff9a" text-anchor="end">8</text>
+  <text x="44" y="194" font-size="10" fill="#73b88c">Total Repositories</text><text x="224" y="194" font-size="12" font-weight="700" fill="#00ff9a" text-anchor="end">11</text>
+  <circle cx="264" cy="120" r="38" fill="none" stroke="#41ff88" stroke-width="2"/>
+  <text x="264" y="116" font-size="10" fill="#73b88c" text-anchor="middle">FOCUS</text><text x="264" y="134" font-size="18" font-weight="800" fill="#00ff9a" text-anchor="middle">DEV</text>
 
-<!-- contributions -->
-<rect x="338" y="28" width="272" height="196" rx="10" fill="#11161d" stroke="#3a4652"/>
-<text x="354" y="49" font-size="13" font-weight="700" fill="#f0f6fc">Contribution Activity</text>
-<circle cx="430" cy="118" r="47" fill="none" stroke="#28323d" stroke-width="6"/>
+  <rect x="320" y="28" width="280" height="208" rx="11" fill="#0c1511" stroke="#284637"/>
+  <text x="336" y="51" font-size="14" font-weight="700" fill="#41ff88">Contribution Activity</text>
+  <circle cx="412" cy="121" r="47" fill="none" stroke="#183126" stroke-width="7"/>
+  <circle cx="412" cy="121" r="47" fill="none" stroke="#41ff88" stroke-width="7" stroke-linecap="round" stroke-dasharray="244.75 295.31" transform="rotate(-90 412 121)"/>
+  <text x="412" y="116" font-size="22" font-weight="800" fill="#00ff9a" text-anchor="middle">904</text><text x="412" y="134" font-size="9" fill="#73b88c" text-anchor="middle">LAST 365 DAYS</text>
+  <text x="512" y="103" font-size="9" fill="#73b88c" text-anchor="middle">CURRENT STREAK</text><text x="512" y="130" font-size="23" font-weight="800" fill="#00ff9a" text-anchor="middle">11</text><text x="512" y="149" font-size="9" fill="#73b88c" text-anchor="middle">DAYS</text>
+  <text x="336" y="204" font-size="9" fill="#73b88c">GitHub contribution calendar</text>
 
-    <circle cx="430" cy="118" r="47" fill="none" stroke="#28323d" stroke-width="6"/>
-    <circle cx="430" cy="118" r="47" fill="none" stroke="#7dd3fc" stroke-width="6"
-            stroke-linecap="round" stroke-dasharray="295.31 295.31"
-            transform="rotate(-90 430 118)"/>
-    
-<text x="430" y="113" font-size="22" font-weight="800" fill="#f0f6fc" text-anchor="middle">904</text>
-<text x="430" y="130" font-size="9" fill="#8b949e" text-anchor="middle">Last 365 Days</text>
-<text x="520" y="105" font-size="9" fill="#8b949e" text-anchor="middle">Current Streak</text>
-<text x="520" y="132" font-size="21" font-weight="800" fill="#f0f6fc" text-anchor="middle">11</text>
-<text x="520" y="151" font-size="9" fill="#8b949e" text-anchor="middle">days</text>
-<text x="354" y="191" font-size="9" fill="#8b949e">Calculated from GitHub contribution calendar</text>
+  <rect x="612" y="28" width="280" height="208" rx="11" fill="#0c1511" stroke="#284637"/>
+  <text x="628" y="51" font-size="14" font-weight="700" fill="#41ff88">Streak Record</text>
+  <circle cx="704" cy="121" r="47" fill="none" stroke="#183126" stroke-width="7"/>
+  <circle cx="704" cy="121" r="47" fill="none" stroke="#00ff9a" stroke-width="7" stroke-linecap="round" stroke-dasharray="108.28 295.31" transform="rotate(-90 704 121)"/>
+  <text x="704" y="116" font-size="22" font-weight="800" fill="#00ff9a" text-anchor="middle">11</text><text x="704" y="134" font-size="9" fill="#73b88c" text-anchor="middle">LONGEST STREAK</text>
+  <text x="816" y="103" font-size="9" fill="#73b88c" text-anchor="middle">365D</text><text x="816" y="130" font-size="20" font-weight="800" fill="#00ff9a" text-anchor="middle">904</text><text x="816" y="149" font-size="9" fill="#73b88c" text-anchor="middle">CONTRIBUTIONS</text>
+  <text x="628" y="204" font-size="9" fill="#73b88c">Independent streak calculation</text>
 
-<!-- longest streak -->
-<rect x="620" y="28" width="272" height="196" rx="10" fill="#11161d" stroke="#3a4652"/>
-<text x="636" y="49" font-size="13" font-weight="700" fill="#f0f6fc">Streak Record</text>
-
-    <circle cx="710" cy="116" r="47" fill="none" stroke="#28323d" stroke-width="6"/>
-    <circle cx="710" cy="116" r="47" fill="none" stroke="#7dd3fc" stroke-width="6"
-            stroke-linecap="round" stroke-dasharray="162.42 295.31"
-            transform="rotate(-90 710 116)"/>
-    
-<text x="710" y="112" font-size="22" font-weight="800" fill="#f0f6fc" text-anchor="middle">11</text>
-<text x="710" y="130" font-size="9" fill="#8b949e" text-anchor="middle">Longest Streak</text>
-<text x="812" y="105" font-size="9" fill="#8b949e" text-anchor="middle">365D</text>
-<text x="812" y="131" font-size="16" font-weight="800" fill="#f0f6fc" text-anchor="middle">904</text>
-<text x="812" y="151" font-size="9" fill="#8b949e" text-anchor="middle">contributions</text>
-<text x="636" y="191" font-size="9" fill="#8b949e">Independent streak calculation</text>
-
-<!-- languages -->
-<rect x="250" y="240" width="420" height="62" rx="10" fill="#11161d" stroke="#3a4652"/>
-<text x="266" y="259" font-size="12" font-weight="700" fill="#f0f6fc">Most Used Languages</text>
-<text x="356" y="277" font-size="9" fill="#f0f6fc">Blade 57.5%</text><rect x="356" y="280" width="255" height="4" rx="2" fill="#28323d"/><rect x="356" y="280" width="146.6" height="4" rx="2" fill="#67e8f9"/><text x="356" y="287" font-size="9" fill="#f0f6fc">PHP 25.3%</text><rect x="356" y="290" width="255" height="4" rx="2" fill="#28323d"/><rect x="356" y="290" width="64.5" height="4" rx="2" fill="#67e8f9"/><text x="356" y="297" font-size="9" fill="#f0f6fc">Python 10.4%</text><rect x="356" y="300" width="255" height="4" rx="2" fill="#28323d"/><rect x="356" y="300" width="26.5" height="4" rx="2" fill="#67e8f9"/><text x="356" y="307" font-size="9" fill="#f0f6fc">Dart 2.7%</text><rect x="356" y="310" width="255" height="4" rx="2" fill="#28323d"/><rect x="356" y="310" width="7.0" height="4" rx="2" fill="#67e8f9"/><text x="356" y="317" font-size="9" fill="#f0f6fc">JavaScript 1.7%</text><rect x="356" y="320" width="255" height="4" rx="2" fill="#28323d"/><rect x="356" y="320" width="4.3" height="4" rx="2" fill="#67e8f9"/>
-
-<text x="892" y="312" font-size="8" fill="#8b949e" text-anchor="end">F4B0Y Analytics Engine · Updated 2026-09-26 14:13 UTC</text>
+  <rect x="170" y="252" width="580" height="78" rx="11" fill="#0c1511" stroke="#284637"/>
+  <text x="188" y="275" font-size="13" font-weight="700" fill="#41ff88">Most Used Languages</text>
+  <text x="292" y="287" font-size="10" fill="#b8ffcc">Blade 57.5%</text><rect x="450" y="279" width="310" height="5" rx="2.5" fill="#183126"/><rect x="450" y="279" width="178.3" height="5" rx="2.5" fill="#41ff88"/>
+  <text x="292" y="300" font-size="10" fill="#b8ffcc">PHP 25.3%</text><rect x="450" y="292" width="310" height="5" rx="2.5" fill="#183126"/><rect x="450" y="292" width="78.4" height="5" rx="2.5" fill="#41ff88"/>
+  <text x="292" y="313" font-size="10" fill="#b8ffcc">Python 10.4%</text><rect x="450" y="305" width="310" height="5" rx="2.5" fill="#183126"/><rect x="450" y="305" width="32.2" height="5" rx="2.5" fill="#41ff88"/>
+  <text x="292" y="326" font-size="10" fill="#b8ffcc">Dart 2.7%</text><rect x="450" y="318" width="310" height="5" rx="2.5" fill="#183126"/><rect x="450" y="318" width="8.4" height="5" rx="2.5" fill="#41ff88"/>
+  <text x="292" y="339" font-size="10" fill="#b8ffcc">JavaScript 1.7%</text><rect x="450" y="331" width="310" height="5" rx="2.5" fill="#183126"/><rect x="450" y="331" width="5.3" height="5" rx="2.5" fill="#41ff88"/>
+</g>
+<text x="892" y="344" font-size="8" fill="#73b88c" text-anchor="end" font-family="Consolas, Courier New, monospace">F4B0Y Analytics Engine · Updated 2026-09-26 14:13 UTC</text>
 </svg>
