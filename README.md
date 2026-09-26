@@ -798,4 +798,79 @@ Modern Laravel website built around a clean frontend workflow.
 
 </details>
 
+<details>
+<summary>🤖 <strong>GitHub Actions</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/githubactions.svg" width="390" alt="GitHub Actions usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• <a href="https://github.com/Fbi-Boy/universal-task-ai">Universal Task AI</a></td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🌐 <strong>Nginx</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/nginx.svg" width="390" alt="Nginx usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• No tracked project yet</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>▲ <strong>Vercel</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/vercel.svg" width="390" alt="Vercel usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• No tracked project yet</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>☁️ <strong>AWS</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/aws.svg" width="390" alt="AWS usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• No tracked project yet</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🛡️ <strong>Cloudflare</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/cloudflare.svg" width="390" alt="Cloudflare usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• No tracked project yet</td>
+</tr>
+</table>
+
+</details>
+
 
