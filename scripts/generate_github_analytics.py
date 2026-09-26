@@ -270,7 +270,7 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
 <rect x="12" y="12" width="896" height="406" rx="18" fill="{bg}" stroke="{border}"/>
 
 <g font-family="Consolas, 'Courier New', monospace">
-  <!-- CARD 1 -->
+  <!-- CARD 1: two-column layout (metric zone | detail zone), no divider -->
   <rect x="28" y="28" width="280" height="214" rx="12" fill="{card}" stroke="{border}"/>
   <text x="46" y="54" font-size="14" font-weight="700" fill="{green}">F4B0Y GitHub Stats</text>
   <circle cx="82" cy="135" r="46" fill="none" stroke="{track}" stroke-width="7"/>
@@ -280,33 +280,33 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
   {''.join(stat_rows)}
   <text x="82" y="191" font-size="7" fill="{muted}" text-anchor="middle">TOTAL</text>
 
-  <!-- CARD 2 -->
+  <!-- CARD 2: two-column layout (metric zone | detail zone), no divider -->
   <rect x="320" y="28" width="280" height="214" rx="12" fill="{card}" stroke="{border}"/>
   <text x="338" y="54" font-size="14" font-weight="700" fill="{green}">Contribution Activity</text>
   {ring(406,122,46,contribution_pct,green,7)}
   <text x="406" y="117" font-size="21" font-weight="800" fill="{bright}" text-anchor="middle">{fmt_num(contributions)}</text>
   <text x="406" y="134" font-size="8" fill="{muted}" text-anchor="middle">LAST 365 DAYS</text>
-  <text x="489" y="104" font-size="8" fill="{muted}">CURRENT STREAK</text>
-  <text x="489" y="131" font-size="23" font-weight="800" fill="{bright}">{current}</text>
-  <text x="489" y="149" font-size="8" fill="{muted}">DAYS</text>
+  <text x="486" y="104" font-size="8" fill="{muted}">CURRENT STREAK</text>
+  <text x="486" y="131" font-size="23" font-weight="800" fill="{bright}">{current}</text>
+  <text x="486" y="149" font-size="8" fill="{muted}">DAYS</text>
   <text x="338" y="210" font-size="8" fill="{muted}">GitHub contribution calendar</text>
 
-  <!-- CARD 3 -->
+  <!-- CARD 3: two-column layout (metric zone | detail zone), no divider -->
   <rect x="612" y="28" width="280" height="214" rx="12" fill="{card}" stroke="{border}"/>
   <text x="630" y="54" font-size="14" font-weight="700" fill="{green}">Streak Record</text>
   {ring(697,122,46,record_pct,bright,7)}
   <text x="697" y="117" font-size="21" font-weight="800" fill="{bright}" text-anchor="middle">{longest}</text>
   <text x="697" y="134" font-size="8" fill="{muted}" text-anchor="middle">LONGEST STREAK</text>
-  <text x="780" y="104" font-size="8" fill="{muted}">CONTRIBUTIONS</text>
-  <text x="780" y="131" font-size="23" font-weight="800" fill="{bright}">{fmt_num(contributions)}</text>
-  <text x="780" y="149" font-size="8" fill="{muted}">LAST 365 DAYS</text>
+  <text x="776" y="104" font-size="8" fill="{muted}">CONTRIBUTIONS</text>
+  <text x="776" y="131" font-size="23" font-weight="800" fill="{bright}">{fmt_num(contributions)}</text>
+  <text x="776" y="149" font-size="8" fill="{muted}">LAST 365 DAYS</text>
   <text x="630" y="210" font-size="8" fill="{muted}">Independent streak calculation</text>
 
-  <!-- CARD 4 -->
+  <!-- CARD 4: two-column language layout, no divider -->
   <rect x="28" y="258" width="864" height="160" rx="12" fill="{card}" stroke="{border}"/>
   <text x="46" y="285" font-size="14" font-weight="700" fill="{green}">Most Used Languages</text>
   <text x="874" y="285" font-size="8" fill="{muted}" text-anchor="end">Repository language bytes</text>
-  <line x1="46" y1="294" x2="874" y2="294" stroke="{border}"/>
+
   {''.join(lang_rows)}
 </g>
 
