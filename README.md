@@ -11,10 +11,9 @@
 
 <!-- Wide hero: intentionally taller to create a stronger visual opening -->
 <p>
-  <img src="https://raw.githubusercontent.com/zrosenbauer/art/main/art/banners/banner_art/banner_art.png"
+  <img src="https://raw.githubusercontent.com/Fbi-Boy/Fbi-Boy/main/assets/f4boy-banner.webp"
        width="100%"
-       height="390"
-       alt="Cyberpunk pixel-art city at night"/>
+       alt="F4B0Y modern tech cyberpunk banner"/>
 </p>
 
 <h1>Fbi-Boy here 🔥</h1>
@@ -50,35 +49,39 @@
 
 <table>
 <tr>
-<td width="64%" valign="top">
+<td width="68%" valign="top">
 
-### Software Developer · AI Builder
-
-I build software with a focus on **AI, automation, web applications, architecture, security, and developer productivity**.
-
-- 🤖 Building a hybrid **AI task assistant** for local + browser workflows
-- 🌐 Developing modern full-stack web applications
-- 🧠 Exploring AI-assisted programming and task orchestration
-- 🧩 Designing modular, maintainable architectures
-- 🔐 Applying security-first and least-privilege principles
-- 🧪 Treating testing and validation as part of development
-- ⚙️ Turning complex requirements into clear execution flows
+<p>
+  <img src="https://komarev.com/ghpvc/?username=Fbi-Boy&style=flat-square&color=4c1d95&label=Profile%20Views"/>
+</p>
 
 <br>
 
-> **Build → Test → Review → Improve**
+<p>
+  🌟 <strong>Began the Journey with Software Development in 2024.</strong><br><br>
+  🌙 I work on front-end development and web designing when I am focused on building a clean and functional digital experience.<br><br>
+  🌱 I am currently pursuing a degree in Computer Science.<br><br>
+  🎓 I worked on .NET Framework and Hands-on experience in Full Stack development.<br><br>
+  🔎 Ask me about Microsoft .NET framework, Full Stack Development, Python.<br><br>
+  🔥 Interest in Artificial Intelligence, Machine Learning, Deep Learning, Data Science, Automation.<br><br>
+  ✨ I really like perfection.
+</p>
 
 </td>
 
-<td width="36%" align="center" valign="middle">
+<td width="32%" align="center" valign="middle">
 
 <img src="https://raw.githubusercontent.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/main/working.gif"
-     width="300"
-     alt="Developer coding animation"/>
+     width="280"
+     alt="Coding"/>
 
 <br><br>
 
-<sub>Focused on building useful software.</sub>
+<p><strong>🌟 Follow Me on:</strong></p>
+
+<a href="https://github.com/Fbi-Boy">
+  <img src="https://img.shields.io/badge/GitHub-111827?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
 
 </td>
 </tr>
