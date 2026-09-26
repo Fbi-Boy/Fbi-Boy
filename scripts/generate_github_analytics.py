@@ -162,7 +162,7 @@ def ring(cx, cy, r, percent, stroke, width=7):
     '''
 
 def build_svg(repo_count, stars, commits, prs, issues, contributions, current, longest, langs, updated):
-    W, H = 920, 440
+    W, H = 920, 430
     bg = "#070c0a"
     card = "#0b1410"
     border = "#284637"
@@ -183,72 +183,72 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
         ("Repositories", fmt_num(repo_count)),
     ]
 
-    stat_text = []
+    stat_rows = []
     for i, (label, value) in enumerate(stats):
-        yy = 91 + i * 27
-        stat_text.append(
+        yy = 86 + i * 26
+        stat_rows.append(
             f'<text x="46" y="{yy}" font-size="10" fill="{muted}">{esc(label)}</text>'
-            f'<text x="196" y="{yy}" font-size="11" font-weight="700" fill="{bright}" text-anchor="end">{esc(value)}</text>'
+            f'<text x="184" y="{yy}" font-size="11" font-weight="700" fill="{bright}" text-anchor="end">{esc(value)}</text>'
         )
 
     lang_rows = []
     y = 312
     for name, pct in langs[:5]:
         label = f"{name}  {pct:.1f}%"
-        bar_width = max(4, 560 * pct / 100)
+        bar_width = 570 * pct / 100
         lang_rows.append(
             f'<text x="58" y="{y}" font-size="10" fill="{text}">{esc(label)}</text>'
-            f'<rect x="220" y="{y-8}" width="560" height="7" rx="3.5" fill="{track}"/>'
-            f'<rect x="220" y="{y-8}" width="{bar_width:.1f}" height="7" rx="3.5" fill="{green}"/>'
+            f'<rect x="220" y="{y-8}" width="570" height="7" rx="3.5" fill="{track}"/>'
+            f'<rect x="220" y="{y-8}" width="{max(4, bar_width):.1f}" height="7" rx="3.5" fill="{green}"/>'
         )
         y += 20
 
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
 <rect width="{W}" height="{H}" rx="18" fill="{bg}"/>
-<rect x="12" y="12" width="896" height="416" rx="18" fill="{bg}" stroke="{border}"/>
+<rect x="12" y="12" width="896" height="406" rx="18" fill="{bg}" stroke="{border}"/>
 
 <g font-family="Consolas, 'Courier New', monospace">
-  <!-- TOP LEFT -->
+  <!-- Stats card -->
   <rect x="28" y="28" width="280" height="214" rx="12" fill="{card}" stroke="{border}"/>
   <text x="46" y="54" font-size="14" font-weight="700" fill="{green}">F4B0Y GitHub Stats</text>
-  {''.join(stat_text)}
-  <line x1="214" y1="72" x2="214" y2="208" stroke="{border}"/>
-  <circle cx="256" cy="143" r="34" fill="none" stroke="{green}" stroke-width="2"/>
-  <text x="256" y="135" font-size="8" fill="{muted}" text-anchor="middle">FOCUS</text>
-  <text x="256" y="153" font-size="18" font-weight="800" fill="{bright}" text-anchor="middle">DEV</text>
+  {''.join(stat_rows)}
+  <rect x="216" y="86" width="76" height="104" rx="10" fill="#0a1711" stroke="{green}"/>
+  <text x="254" y="119" font-size="8" fill="{muted}" text-anchor="middle">FOCUS</text>
+  <text x="254" y="148" font-size="22" font-weight="800" fill="{bright}" text-anchor="middle">DEV</text>
+  <text x="254" y="170" font-size="7" fill="{muted}" text-anchor="middle">BUILD / SHIP</text>
+  <text x="254" y="181" font-size="7" fill="{muted}" text-anchor="middle">/ IMPROVE</text>
 
-  <!-- TOP CENTER -->
+  <!-- Contribution card -->
   <rect x="320" y="28" width="280" height="214" rx="12" fill="{card}" stroke="{border}"/>
   <text x="338" y="54" font-size="14" font-weight="700" fill="{green}">Contribution Activity</text>
   {ring(406,122,45,contribution_pct,green,7)}
   <text x="406" y="117" font-size="21" font-weight="800" fill="{bright}" text-anchor="middle">{fmt_num(contributions)}</text>
   <text x="406" y="134" font-size="8" fill="{muted}" text-anchor="middle">LAST 365 DAYS</text>
-  <line x1="470" y1="78" x2="470" y2="188" stroke="{border}"/>
+  <line x1="470" y1="78" x2="470" y2="190" stroke="{border}"/>
   <text x="489" y="104" font-size="8" fill="{muted}">CURRENT STREAK</text>
-  <text x="489" y="131" font-size="23" font-weight="800" fill="{bright}">{current}</text>
-  <text x="489" y="149" font-size="8" fill="{muted}">DAYS</text>
+  <text x="489" y="132" font-size="23" font-weight="800" fill="{bright}">{current}</text>
+  <text x="489" y="150" font-size="8" fill="{muted}">DAYS</text>
   <text x="338" y="210" font-size="8" fill="{muted}">GitHub contribution calendar</text>
 
-  <!-- TOP RIGHT -->
+  <!-- Streak card -->
   <rect x="612" y="28" width="280" height="214" rx="12" fill="{card}" stroke="{border}"/>
   <text x="630" y="54" font-size="14" font-weight="700" fill="{green}">Streak Record</text>
   {ring(697,122,45,record_pct,bright,7)}
   <text x="697" y="117" font-size="21" font-weight="800" fill="{bright}" text-anchor="middle">{longest}</text>
   <text x="697" y="134" font-size="8" fill="{muted}" text-anchor="middle">LONGEST STREAK</text>
-  <line x1="760" y1="78" x2="760" y2="188" stroke="{border}"/>
+  <line x1="760" y1="78" x2="760" y2="190" stroke="{border}"/>
   <text x="780" y="104" font-size="8" fill="{muted}">CONTRIBUTIONS</text>
-  <text x="780" y="131" font-size="23" font-weight="800" fill="{bright}">{fmt_num(contributions)}</text>
-  <text x="780" y="149" font-size="8" fill="{muted}">LAST 365 DAYS</text>
+  <text x="780" y="132" font-size="23" font-weight="800" fill="{bright}">{fmt_num(contributions)}</text>
+  <text x="780" y="150" font-size="8" fill="{muted}">LAST 365 DAYS</text>
   <text x="630" y="210" font-size="8" fill="{muted}">Independent streak calculation</text>
 
-  <!-- BOTTOM -->
+  <!-- Languages card -->
   <rect x="28" y="258" width="864" height="160" rx="12" fill="{card}" stroke="{border}"/>
   <text x="46" y="285" font-size="14" font-weight="700" fill="{green}">Most Used Languages</text>
   <text x="874" y="285" font-size="8" fill="{muted}" text-anchor="end">Repository language bytes</text>
   <line x1="46" y1="294" x2="874" y2="294" stroke="{border}"/>
   {''.join(lang_rows)}
 </g>
-
 <text x="46" y="431" font-size="8" fill="{muted}"
       font-family="Consolas, 'Courier New', monospace">F4B0Y Analytics Engine · Updated {esc(updated)}</text>
 </svg>'''
