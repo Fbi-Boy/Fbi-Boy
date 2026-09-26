@@ -1,46 +1,36 @@
 <!-- ═══════════════════════════════════════════════════════════════
-     Fbi-Boy · GitHub Profile
+     F4B0Y · GitHub Profile
      Premium developer profile layout
      ═══════════════════════════════════════════════════════════════ -->
 
 <div align="center">
 
 <p>
-  <sub>Fbi-Boy / GitHub Profile</sub>
-</p>
-
-<!-- Wide hero: intentionally taller to create a stronger visual opening -->
-<p>
-  <img src="https://raw.githubusercontent.com/Fbi-Boy/Fbi-Boy/main/assets/f4boy-banner.webp"
+  <img src="https://media1.tenor.com/m/rCaIUO0MP-EAAAAd/mario-pixel-art.gif"
        width="100%"
-       alt="F4B0Y modern tech cyberpunk banner"/>
+       alt="F4B0Y pixel-art gaming room"/>
 </p>
 
-<h1>Fbi-Boy here 🔥</h1>
+<h1>F4B0Y Here !</h1>
 
 <p>
-  <strong>Software Developer</strong> &nbsp;•&nbsp;
-  <strong>AI Builder</strong> &nbsp;•&nbsp;
-  <strong>Web Developer</strong>
+  <code>Software Developer</code>
+  &nbsp;•&nbsp;
+  <code>AI Builder</code>
+  &nbsp;•&nbsp;
+  <code>Web Developer</code>
 </p>
 
-<p>
-  <a href="https://github.com/Fbi-Boy">
-    <img src="https://img.shields.io/badge/GitHub-Fbi--Boy-111827?style=flat-square&logo=github&logoColor=white"/>
-  </a>
-  <img src="https://komarev.com/ghpvc/?username=Fbi-Boy&style=flat-square&color=111827&label=PROFILE+VIEWS"/>
-</p>
-
-</div>
-
----
-
-<div align="center">
-
-<h2>Namaste 🙏 &nbsp;|&nbsp; I'm Fbi-Boy</h2>
+<hr>
 
 <p>
-  <em>Building practical software, exploring AI, and turning complex ideas into structured systems.</em>
+  <img src="https://komarev.com/ghpvc/?username=Fbi-Boy&style=for-the-badge&color=111827&label=PROFILE+VIEWS"/>
+  &nbsp;
+  <img src="https://img.shields.io/github/followers/Fbi-Boy?style=for-the-badge&label=FOLLOWERS&color=111827"/>
+  &nbsp;
+  <img src="https://img.shields.io/github/stars/Fbi-Boy?style=for-the-badge&label=STARS&color=111827"/>
+  &nbsp;
+  <img src="https://img.shields.io/badge/REPOSITORIES-8-111827?style=for-the-badge&logo=github&logoColor=white"/>
 </p>
 
 </div>
@@ -50,12 +40,6 @@
 <table>
 <tr>
 <td width="68%" valign="top">
-
-<p>
-  <img src="https://komarev.com/ghpvc/?username=Fbi-Boy&style=flat-square&color=4c1d95&label=Profile%20Views"/>
-</p>
-
-<br>
 
 <p>
   🌟 <strong>Began the Journey with Software Development in 2024.</strong><br><br>
