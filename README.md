@@ -161,9 +161,6 @@
   <img src="./assets/github-analytics.svg" width="100%" alt="Custom F4B0Y GitHub analytics"/>
 </p>
 
-<p align="center">
-  <sub>Custom calculation engine: repository metadata + GitHub search totals + contribution calendar + language byte analysis.</sub>
-</p>
 
 
 ---
