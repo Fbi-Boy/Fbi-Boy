@@ -95,7 +95,7 @@
 <img src="https://skillicons.dev/icons?i=githubactions,nginx,vercel,aws,cloudflare&perline=5" height="30" alt="Cloud and DevOps"/>
 </p>
 
-<p><code>✨ Click a technology to view my proficiency</code></p>
+<p><code>✨ Click to view my proficiency</code></p>
 
 </div>
 
@@ -107,7 +107,7 @@
 <table>
 <tr>
 <td width="20%" align="center"><strong>Level</strong><br><br>Intermediate</td>
-<td width="48%" align="center"><strong>Usage Profile</strong><br><br>Projects · Code · Backend · Frameworks · Recency</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/php.svg" width="390" alt="PHP usage profile radar"/></td>
 <td width="32%" valign="top"><strong>Projects</strong><br><br>• Madura Mart<br>• PT Putra Prananta</td>
 </tr>
 </table>
@@ -115,135 +115,8 @@
 </details>
 
 
----
 
-## 📊 GitHub Analytics
-
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=Fbi-Boy&show_icons=true&include_all_commits=true&hide_border=true&rank_icon=github&theme=transparent&custom_title=GitHub%20Statistics" height="180" alt="GitHub statistics"/>
-&nbsp;
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=Fbi-Boy&hide_border=true&theme=transparent&date_format=M%20j%5B%2C%20Y%5D" height="180" alt="GitHub contribution streak"/>
-
-<br><br>
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Fbi-Boy&layout=compact&langs_count=10&hide_border=true&theme=transparent&custom_title=Most%20Used%20Languages" height="180" alt="Most used languages"/>
-
-</div>
-
----
-
-## 📈 Contribution Activity
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Fbi-Boy&bg_color=00000000&color=64748b&line=22c55e&point=22c55e&area=true&hide_border=true&custom_title=Contribution%20Activity"
-       width="100%"
-       alt="GitHub contribution activity"/>
-</p>
-
----
-
-## 🏗️ Tech Stack
-
-<div align="center">
-
-<img src="https://skillicons.dev/icons?i=python,php,js,laravel,tailwind,alpinejs,vite,git,github,docker,linux,vscode"
-     alt="Technology stack"/>
-
-</div>
-
----
-
-## ⭐ Selected Work
-
-<table>
-<tr>
-
-<td width="33%" valign="top">
-
-### 🤖 Universal Task AI
-
-Secure, modular hybrid AI assistant designed to plan, execute, review, and deliver complex tasks across local and browser environments.
-
-**Focus**
-- AI orchestration
-- Automation
-- Security
-- Execution pipelines
-
-<p><a href="https://github.com/Fbi-Boy/universal-task-ai">View repository →</a></p>
-
-</td>
-
-<td width="33%" valign="top">
-
-### 🛒 Madura Mart
-
-Laravel-based retail management system with role-aware workflows and operational modules.
-
-**Includes**
-- POS / Kasir
-- Gudang
-- Kurir
-- Purchasing
-- Reports
-- Administration
-
-<p><a href="https://github.com/Fbi-Boy/madura-mart">View repository →</a></p>
-
-</td>
-
-<td width="33%" valign="top">
-
-### 🏢 PT Putra Prananta
-
-Modern Laravel website built around a clean frontend workflow.
-
-**Stack**
-- Laravel
-- Tailwind CSS
-- Alpine.js
-- Vite
-- Lucide
-
-<p><a href="https://github.com/Fbi-Boy/pt-putra-prananta-website">View repository →</a></p>
-
-</td>
-
-</tr>
-</table>
-
----
-
-## 💬 Developer Notes
-
-<div align="center">
-
-<blockquote>
-<strong>“Build things that are useful. Make them reliable. Then make them better.”</strong>
-</blockquote>
-
-<p>
-  <a href="https://github.com/Fbi-Boy">
-    <img src="https://img.shields.io/badge/Follow%20the%20journey-111827?style=for-the-badge&logo=github&logoColor=white"/>
-  </a>
-</p>
-
-</div>
-
----
-
-<div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&height=120&section=footer&color=0:111827,50:1e293b,100:0f172a"
-     width="100%"
-     alt="Footer"/>
-
-<br>
-
-<sub><strong>Fbi-Boy</strong> · Software Developer • AI Builder • Web Developer</sub>
-
-</div><details>
+<details>
 <summary>🐍 <strong>Python</strong></summary>
 
 <hr>
@@ -874,3 +747,134 @@ Modern Laravel website built around a clean frontend workflow.
 </details>
 
 
+
+
+---
+
+## 📊 GitHub Analytics
+
+<div align="center">
+
+<img src="https://github-readme-stats.vercel.app/api?username=Fbi-Boy&show_icons=true&include_all_commits=true&hide_border=true&rank_icon=github&theme=transparent&custom_title=GitHub%20Statistics" height="180" alt="GitHub statistics"/>
+&nbsp;
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=Fbi-Boy&hide_border=true&theme=transparent&date_format=M%20j%5B%2C%20Y%5D" height="180" alt="GitHub contribution streak"/>
+
+<br><br>
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Fbi-Boy&layout=compact&langs_count=10&hide_border=true&theme=transparent&custom_title=Most%20Used%20Languages" height="180" alt="Most used languages"/>
+
+</div>
+
+---
+
+## 📈 Contribution Activity
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Fbi-Boy&bg_color=00000000&color=64748b&line=22c55e&point=22c55e&area=true&hide_border=true&custom_title=Contribution%20Activity"
+       width="100%"
+       alt="GitHub contribution activity"/>
+</p>
+
+---
+
+## 🏗️ Tech Stack
+
+<div align="center">
+
+<img src="https://skillicons.dev/icons?i=python,php,js,laravel,tailwind,alpinejs,vite,git,github,docker,linux,vscode"
+     alt="Technology stack"/>
+
+</div>
+
+---
+
+## ⭐ Selected Work
+
+<table>
+<tr>
+
+<td width="33%" valign="top">
+
+### 🤖 Universal Task AI
+
+Secure, modular hybrid AI assistant designed to plan, execute, review, and deliver complex tasks across local and browser environments.
+
+**Focus**
+- AI orchestration
+- Automation
+- Security
+- Execution pipelines
+
+<p><a href="https://github.com/Fbi-Boy/universal-task-ai">View repository →</a></p>
+
+</td>
+
+<td width="33%" valign="top">
+
+### 🛒 Madura Mart
+
+Laravel-based retail management system with role-aware workflows and operational modules.
+
+**Includes**
+- POS / Kasir
+- Gudang
+- Kurir
+- Purchasing
+- Reports
+- Administration
+
+<p><a href="https://github.com/Fbi-Boy/madura-mart">View repository →</a></p>
+
+</td>
+
+<td width="33%" valign="top">
+
+### 🏢 PT Putra Prananta
+
+Modern Laravel website built around a clean frontend workflow.
+
+**Stack**
+- Laravel
+- Tailwind CSS
+- Alpine.js
+- Vite
+- Lucide
+
+<p><a href="https://github.com/Fbi-Boy/pt-putra-prananta-website">View repository →</a></p>
+
+</td>
+
+</tr>
+</table>
+
+---
+
+## 💬 Developer Notes
+
+<div align="center">
+
+<blockquote>
+<strong>“Build things that are useful. Make them reliable. Then make them better.”</strong>
+</blockquote>
+
+<p>
+  <a href="https://github.com/Fbi-Boy">
+    <img src="https://img.shields.io/badge/Follow%20the%20journey-111827?style=for-the-badge&logo=github&logoColor=white"/>
+  </a>
+</p>
+
+</div>
+
+---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&height=120&section=footer&color=0:111827,50:1e293b,100:0f172a"
+     width="100%"
+     alt="Footer"/>
+
+<br>
+
+<sub><strong>Fbi-Boy</strong> · Software Developer • AI Builder • Web Developer</sub>
+
+</div>
