@@ -56,13 +56,13 @@
      width="300"
      alt="Zenitsu pixel art"/>
 
-<strong>Web • Mobile • AI • Quantum</strong>
-
-<br>
-
-<a href="https://github.com/Fbi-Boy">
-  <img src="https://img.shields.io/badge/GitHub-111827?style=for-the-badge&logo=github&logoColor=white"/>
-</a>
+<div align="center">
+  <strong>Web • Mobile • AI • Quantum</strong>
+  <br>
+  <a href="https://github.com/Fbi-Boy">
+    <img src="https://img.shields.io/badge/GitHub-111827?style=for-the-badge&logo=github&logoColor=white"/>
+  </a>
+</div>
 
 </td>
 </tr>
