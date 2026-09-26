@@ -8,7 +8,7 @@ on:
     paths-ignore:
       - "assets/github-analytics-v3.svg"
   schedule:
-    - cron: "7,37 * * * *"
+    - cron: "*/5 * * * *"
 
 permissions:
   contents: write
