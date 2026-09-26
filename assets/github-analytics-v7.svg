@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="430" viewBox="0 0 920 430">
+<rect width="920" height="430" rx="18" fill="#070c0a"/>
+<rect x="12" y="12" width="896" height="406" rx="18" fill="#070c0a" stroke="#284637"/>
+
+<g font-family="Consolas, 'Courier New', monospace">
+  <!-- CARD 1: title centered; bottom split into left metric + right stats -->
+  <rect x="28" y="28" width="280" height="214" rx="12" fill="#0b1410" stroke="#284637"/>
+  <text x="168" y="55" font-size="14" font-weight="700" fill="#41ff88" text-anchor="middle">F4B0Y GitHub Stats</text>
+  <line x1="168" y1="70" x2="168" y2="214" stroke="#0b1410" stroke-width="1"/>
+  <circle cx="94" cy="140" r="46" fill="none" stroke="#183126" stroke-width="7"/>
+  <circle cx="94" cy="140" r="46" fill="none" stroke="#41ff88" stroke-width="3"/>
+  <text x="94" y="147" font-size="22" font-weight="800" fill="#00ff9a" text-anchor="middle">571</text>
+  <text x="94" y="205" font-size="8" fill="#73b88c" font-weight="700" text-anchor="middle">COMMITS</text>
+  <text x="164" y="88" font-size="9.5" fill="#73b88c">SE</text><text x="228" y="88" font-size="9.5" fill="#73b88c" text-anchor="middle">:</text><text x="292" y="88" font-size="10.5" font-weight="700" fill="#00ff9a" text-anchor="end">4</text><text x="164" y="111" font-size="9.5" fill="#73b88c">Commits</text><text x="228" y="111" font-size="9.5" fill="#73b88c" text-anchor="middle">:</text><text x="292" y="111" font-size="10.5" font-weight="700" fill="#00ff9a" text-anchor="end">571</text><text x="164" y="134" font-size="9.5" fill="#73b88c">PR</text><text x="228" y="134" font-size="9.5" fill="#73b88c" text-anchor="middle">:</text><text x="292" y="134" font-size="10.5" font-weight="700" fill="#00ff9a" text-anchor="end">254</text><text x="164" y="157" font-size="9.5" fill="#73b88c">Issues</text><text x="228" y="157" font-size="9.5" fill="#73b88c" text-anchor="middle">:</text><text x="292" y="157" font-size="10.5" font-weight="700" fill="#00ff9a" text-anchor="end">10</text><text x="164" y="180" font-size="9.5" fill="#73b88c">Repos</text><text x="228" y="180" font-size="9.5" fill="#73b88c" text-anchor="middle">:</text><text x="292" y="180" font-size="10.5" font-weight="700" fill="#00ff9a" text-anchor="end">11</text>
+
+  <!-- CARD 2: title centered; bottom split into left metric + right contribution list -->
+  <rect x="320" y="28" width="280" height="214" rx="12" fill="#0b1410" stroke="#284637"/>
+  <text x="460" y="55" font-size="14" font-weight="700" fill="#41ff88" text-anchor="middle">Contribution Activity</text>
+  <line x1="460" y1="70" x2="460" y2="214" stroke="#0b1410" stroke-width="1"/>
+  
+    <circle cx="392" cy="140" r="46" fill="none" stroke="#183126" stroke-width="7"/>
+    <circle cx="392" cy="140" r="46" fill="none" stroke="#41ff88" stroke-width="7"
+            stroke-linecap="round" stroke-dasharray="256.97 289.03"
+            transform="rotate(-90 392 140)"/>
+    
+  <text x="392" y="147" font-size="21" font-weight="800" fill="#00ff9a" text-anchor="middle">978</text>
+  <text x="392" y="205" font-size="8" fill="#73b88c" font-weight="700" text-anchor="middle">CONTRIBUTIONS</text>
+  <text x="462" y="88" font-size="9.5" fill="#73b88c">Commits</text><text x="518" y="88" font-size="9.5" fill="#73b88c" text-anchor="middle">:</text><text x="584" y="88" font-size="10.5" font-weight="700" fill="#00ff9a" text-anchor="end">571</text><text x="462" y="111" font-size="9.5" fill="#73b88c">PR</text><text x="518" y="111" font-size="9.5" fill="#73b88c" text-anchor="middle">:</text><text x="584" y="111" font-size="10.5" font-weight="700" fill="#00ff9a" text-anchor="end">254</text><text x="462" y="134" font-size="9.5" fill="#73b88c">Issues</text><text x="518" y="134" font-size="9.5" fill="#73b88c" text-anchor="middle">:</text><text x="584" y="134" font-size="10.5" font-weight="700" fill="#00ff9a" text-anchor="end">10</text><text x="462" y="157" font-size="9.5" fill="#73b88c">Reviews</text><text x="518" y="157" font-size="9.5" fill="#73b88c" text-anchor="middle">:</text><text x="584" y="157" font-size="10.5" font-weight="700" fill="#00ff9a" text-anchor="end">131</text><text x="462" y="180" font-size="9.5" fill="#73b88c">Repos</text><text x="518" y="180" font-size="9.5" fill="#73b88c" text-anchor="middle">:</text><text x="584" y="180" font-size="10.5" font-weight="700" fill="#00ff9a" text-anchor="end">11</text>
+
+  <!-- CARD 3: title centered; bottom split into left metric + right streak list -->
+  <rect x="612" y="28" width="280" height="214" rx="12" fill="#0b1410" stroke="#284637"/>
+  <text x="752" y="55" font-size="14" font-weight="700" fill="#41ff88" text-anchor="middle">Streak Record</text>
+  <line x1="752" y1="70" x2="752" y2="214" stroke="#0b1410" stroke-width="1"/>
+  
+    <circle cx="684" cy="140" r="46" fill="none" stroke="#183126" stroke-width="7"/>
+    <circle cx="684" cy="140" r="46" fill="none" stroke="#00ff9a" stroke-width="7"
+            stroke-linecap="round" stroke-dasharray="105.98 289.03"
+            transform="rotate(-90 684 140)"/>
+    
+  <text x="684" y="147" font-size="22" font-weight="800" fill="#00ff9a" text-anchor="middle">11</text>
+  <text x="684" y="205" font-size="8" fill="#73b88c" font-weight="700" text-anchor="middle">LONGEST STREAK</text>
+  <text x="754" y="88" font-size="9.5" fill="#73b88c">Current</text><text x="810" y="88" font-size="9.5" fill="#73b88c" text-anchor="middle">:</text><text x="876" y="88" font-size="10.5" font-weight="700" fill="#00ff9a" text-anchor="end">11 d</text><text x="754" y="111" font-size="9.5" fill="#73b88c">Longest</text><text x="810" y="111" font-size="9.5" fill="#73b88c" text-anchor="middle">:</text><text x="876" y="111" font-size="10.5" font-weight="700" fill="#00ff9a" text-anchor="end">11 d</text><text x="754" y="134" font-size="9.5" fill="#73b88c">Active</text><text x="810" y="134" font-size="9.5" fill="#73b88c" text-anchor="middle">:</text><text x="876" y="134" font-size="10.5" font-weight="700" fill="#00ff9a" text-anchor="end">21 d</text><text x="754" y="157" font-size="9.5" fill="#73b88c">Best Day</text><text x="810" y="157" font-size="9.5" fill="#73b88c" text-anchor="middle">:</text><text x="876" y="157" font-size="10.5" font-weight="700" fill="#00ff9a" text-anchor="end">409</text><text x="754" y="180" font-size="9.5" fill="#73b88c">Contributions</text><text x="810" y="180" font-size="9.5" fill="#73b88c" text-anchor="middle">:</text><text x="876" y="180" font-size="10.5" font-weight="700" fill="#00ff9a" text-anchor="end">978</text>
+
+  <!-- CARD 4: languages -->
+  <rect x="28" y="258" width="864" height="160" rx="12" fill="#0b1410" stroke="#284637"/>
+  <text x="46" y="285" font-size="14" font-weight="700" fill="#41ff88">Most Used Languages</text>
+  <text x="874" y="285" font-size="8" fill="#73b88c" text-anchor="end">Repository language bytes</text>
+  <text x="58" y="312" font-size="10" fill="#b8ffcc">Blade  57.1%</text><rect x="220" y="304" width="570" height="7" rx="3.5" fill="#183126"/><rect x="220" y="304" width="325.2" height="7" rx="3.5" fill="#41ff88"/><text x="58" y="332" font-size="10" fill="#b8ffcc">PHP  25.3%</text><rect x="220" y="324" width="570" height="7" rx="3.5" fill="#183126"/><rect x="220" y="324" width="144.2" height="7" rx="3.5" fill="#41ff88"/><text x="58" y="352" font-size="10" fill="#b8ffcc">Python  10.6%</text><rect x="220" y="344" width="570" height="7" rx="3.5" fill="#183126"/><rect x="220" y="344" width="60.4" height="7" rx="3.5" fill="#41ff88"/><text x="58" y="372" font-size="10" fill="#b8ffcc">Dart  2.7%</text><rect x="220" y="364" width="570" height="7" rx="3.5" fill="#183126"/><rect x="220" y="364" width="15.3" height="7" rx="3.5" fill="#41ff88"/><text x="58" y="392" font-size="10" fill="#b8ffcc">JavaScript  1.9%</text><rect x="220" y="384" width="570" height="7" rx="3.5" fill="#183126"/><rect x="220" y="384" width="10.9" height="7" rx="3.5" fill="#41ff88"/>
+</g>
+
+<text x="46" y="431" font-size="8" fill="#73b88c"
+      font-family="Consolas, 'Courier New', monospace">F4B0Y Analytics Engine · Updated 2026-09-26 15:04 UTC</text>
+</svg>
