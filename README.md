@@ -174,7 +174,7 @@
 ## 📈 Contribution Activity
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Fbi-Boy&bg_color=00000000&color=64748b&line=22c55e&point=22c55e&area=true&hide_border=true&custom_title=Contribution%20Activity"
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Fbi-Boy&bg_color=00000000&color=64748b&line=a855f7&point=c084fc&area_color=7e22ce&area=true&hide_border=true&custom_title=Contribution%20Activity"
        width="100%"
        alt="GitHub contribution activity"/>
 </p>
