@@ -18,7 +18,7 @@ import urllib.request
 from pathlib import Path
 
 OWNER = "Fbi-Boy"
-OUT = Path("assets/github-analytics-v6.svg")
+OUT = Path("assets/github-analytics-v7.svg")
 API = "https://api.github.com"
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
 
@@ -244,12 +244,13 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
     contribution_pct = min(100, contributions / 1100 * 100)
     record_pct = min(100, longest / 30 * 100)
 
-    def list_rows(items, x_label, x_value, start_y=88, gap=23, max_rows=5):
+    def list_rows(items, x_label, x_colon, x_value, start_y=88, gap=23, max_rows=5):
         rows = []
         for i, (label, value) in enumerate(items[:max_rows]):
             yy = start_y + i * gap
             rows.append(
                 f'<text x="{x_label}" y="{yy}" font-size="9.5" fill="{muted}">{esc(label)}</text>'
+                f'<text x="{x_colon}" y="{yy}" font-size="9.5" fill="{muted}" text-anchor="middle">:</text>'
                 f'<text x="{x_value}" y="{yy}" font-size="10.5" font-weight="700" fill="{bright}" text-anchor="end">{esc(value)}</text>'
             )
         return "".join(rows)
@@ -260,7 +261,7 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
         ("PR", fmt_num(prs)),
         ("Issues", fmt_num(issues)),
         ("Repos", fmt_num(repo_count)),
-    ], 164, 226, 292)
+    ], 164, 228, 292, 88, 23)
 
     contribution_rows = list_rows([
         ("Commits", fmt_num(calendar_commit := commits)),
