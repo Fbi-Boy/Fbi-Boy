@@ -2,8 +2,13 @@ name: Update GitHub Analytics
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - "assets/github-analytics-v3.svg"
   schedule:
-    - cron: "17 */6 * * *"
+    - cron: "7,37 * * * *"
 
 permissions:
   contents: write
@@ -26,14 +31,20 @@ jobs:
           set -e
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
           git fetch origin main
           git reset --hard origin/main
+
           python3 scripts/generate_github_analytics.py
-          git add assets/github-analytics-v2.svg
+
+          git add assets/github-analytics-v3.svg
           if git diff --cached --quiet; then
             echo "Analytics unchanged."
             exit 0
           fi
+
           git commit -m "chore: update GitHub analytics"
-          git pull --rebase origin main
+
+          git fetch origin main
+          git rebase origin/main
           git push origin HEAD:main
