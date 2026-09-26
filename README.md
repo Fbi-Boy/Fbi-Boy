@@ -76,81 +76,31 @@
 <div align="center">
 
 <p><strong>Languages</strong><br>
-<a href="#php-details"><img src="https://skillicons.dev/icons?i=php" height="30" alt="PHP"/></a>
-<a href="#python-details"><img src="https://skillicons.dev/icons?i=python" height="30" alt="Python"/></a>
-<a href="#js-details"><img src="https://skillicons.dev/icons?i=js" height="30" alt="JavaScript"/></a>
-<a href="#kotlin-details"><img src="https://skillicons.dev/icons?i=kotlin" height="30" alt="Kotlin"/></a>
-<a href="#dart-details"><img src="https://skillicons.dev/icons?i=dart" height="30" alt="Dart"/></a>
-<a href="#cpp-details"><img src="https://skillicons.dev/icons?i=cpp" height="30" alt="C++"/></a>
-<a href="#html-details"><img src="https://skillicons.dev/icons?i=html" height="30" alt="HTML"/></a>
-<a href="#css-details"><img src="https://skillicons.dev/icons?i=css" height="30" alt="CSS"/></a>
-<a href="#bash-details"><img src="https://skillicons.dev/icons?i=bash" height="30" alt="Bash"/></a>
-<a href="#sql-details"><img src="https://skillicons.dev/icons?i=mysql" height="30" alt="SQL"/></a>
+<img src="https://skillicons.dev/icons?i=php,python,js,kotlin,dart,cpp,html,css,bash,sql&perline=10" height="30" alt="Languages"/>
 </p>
 
 <p><strong>Frameworks & Libraries</strong><br>
-<a href="#laravel-details"><img src="https://skillicons.dev/icons?i=laravel" height="30" alt="Laravel"/></a>
-<a href="#codeigniter-details"><img src="https://skillicons.dev/icons?i=codeigniter" height="30" alt="CodeIgniter"/></a>
-<a href="#nodejs-details"><img src="https://skillicons.dev/icons?i=nodejs" height="30" alt="Node.js"/></a>
-<a href="#react-details"><img src="https://skillicons.dev/icons?i=react" height="30" alt="React"/></a>
-<a href="#nextjs-details"><img src="https://skillicons.dev/icons?i=nextjs" height="30" alt="Next.js"/></a>
-<a href="#tailwind-details"><img src="https://skillicons.dev/icons?i=tailwind" height="30" alt="Tailwind CSS"/></a>
-<a href="#bootstrap-details"><img src="https://skillicons.dev/icons?i=bootstrap" height="30" alt="Bootstrap"/></a>
-<a href="#alpinejs-details"><img src="https://skillicons.dev/icons?i=alpinejs" height="30" alt="Alpine.js"/></a>
-<a href="#flutter-details"><img src="https://skillicons.dev/icons?i=flutter" height="30" alt="Flutter"/></a>
+<img src="https://skillicons.dev/icons?i=laravel,codeigniter,nodejs,react,nextjs,tailwind,bootstrap,alpinejs,flutter&perline=9" height="30" alt="Frameworks & Libraries"/>
 </p>
 
 <p><strong>Developer Tools</strong><br>
-<a href="#git-details"><img src="https://skillicons.dev/icons?i=git" height="30" alt="Git"/></a>
-<a href="#github-details"><img src="https://skillicons.dev/icons?i=github" height="30" alt="GitHub"/></a>
-<a href="#vscode-details"><img src="https://skillicons.dev/icons?i=vscode" height="30" alt="VS Code"/></a>
-<a href="#phpstorm-details"><img src="https://skillicons.dev/icons?i=phpstorm" height="30" alt="PhpStorm"/></a>
-<a href="#pycharm-details"><img src="https://skillicons.dev/icons?i=pycharm" height="30" alt="PyCharm"/></a>
-<a href="#docker-details"><img src="https://skillicons.dev/icons?i=docker" height="30" alt="Docker"/></a>
-<a href="#linux-details"><img src="https://skillicons.dev/icons?i=linux" height="30" alt="Linux"/></a>
-<a href="#postman-details"><img src="https://skillicons.dev/icons?i=postman" height="30" alt="Postman"/></a>
-<a href="#npm-details"><img src="https://skillicons.dev/icons?i=npm" height="30" alt="npm"/></a>
-<a href="#pnpm-details"><img src="https://skillicons.dev/icons?i=pnpm" height="30" alt="pnpm"/></a>
-<a href="#vite-details"><img src="https://skillicons.dev/icons?i=vite" height="30" alt="Vite"/></a>
-<a href="#figma-details"><img src="https://skillicons.dev/icons?i=figma" height="30" alt="Figma"/></a>
+<img src="https://skillicons.dev/icons?i=git,github,vscode,phpstorm,pycharm,docker,linux,postman,npm,pnpm,vite,figma&perline=12" height="30" alt="Developer Tools"/>
 </p>
 
 <p><strong>Databases</strong><br>
-<a href="#mysql-details"><img src="https://skillicons.dev/icons?i=mysql" height="30" alt="MySQL"/></a>
-<a href="#postgresql-details"><img src="https://skillicons.dev/icons?i=postgresql" height="30" alt="PostgreSQL"/></a>
-<a href="#sqlite-details"><img src="https://skillicons.dev/icons?i=sqlite" height="30" alt="SQLite"/></a>
-<a href="#mongodb-details"><img src="https://skillicons.dev/icons?i=mongodb" height="30" alt="MongoDB"/></a>
-<a href="#redis-details"><img src="https://skillicons.dev/icons?i=redis" height="30" alt="Redis"/></a>
-<a href="#firebase-details"><img src="https://skillicons.dev/icons?i=firebase" height="30" alt="Firebase"/></a>
-<a href="#supabase-details"><img src="https://skillicons.dev/icons?i=supabase" height="30" alt="Supabase"/></a>
+<img src="https://skillicons.dev/icons?i=mysql,postgresql,sqlite,mongodb,redis,firebase,supabase&perline=7" height="30" alt="Databases"/>
 </p>
 
 <p><strong>Cloud & DevOps</strong><br>
-<a href="#githubactions-details"><img src="https://skillicons.dev/icons?i=githubactions" height="30" alt="GitHub Actions"/></a>
-<a href="#nginx-details"><img src="https://skillicons.dev/icons?i=nginx" height="30" alt="Nginx"/></a>
-<a href="#vercel-details"><img src="https://skillicons.dev/icons?i=vercel" height="30" alt="Vercel"/></a>
-<a href="#aws-details"><img src="https://skillicons.dev/icons?i=aws" height="30" alt="AWS"/></a>
-<a href="#cloudflare-details"><img src="https://skillicons.dev/icons?i=cloudflare" height="30" alt="Cloudflare"/></a>
+<img src="https://skillicons.dev/icons?i=githubactions,nginx,vercel,aws,cloudflare&perline=5" height="30" alt="Cloud & DevOps"/>
 </p>
 
-<p><code>✨ Click an icon to view details below</code></p>
+<p>
+<code>✨ Click to view my skill details</code>
+</p>
+
 </div>
 
-<hr>
-
-<p id="php-details"><strong>PHP</strong></p>
-<table>
-<tr>
-<td width="20%" align="center"><strong>Level</strong><br><br>Intermediate</td>
-<td width="48%" align="center"><img src="./assets/skills/php.svg" width="360" alt="PHP statistics"/></td>
-<td width="32%" valign="top"><strong>Projects</strong><br><br>• <a href="https://github.com/Fbi-Boy/madura-mart">Madura Mart</a><br>• <a href="https://github.com/Fbi-Boy/pt-putra-prananta-website">PT Putra Prananta</a></td>
-</tr>
-</table>
-
-<details>
-<summary>More technology details</summary>
-<p>GitHub README limitation: clicking an icon can jump to a fixed detail anchor, but it cannot dynamically swap one shared panel without JavaScript.</p>
-</details>
 
 ---
 
