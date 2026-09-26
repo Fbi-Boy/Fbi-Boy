@@ -1,60 +1,54 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="920" height="450" viewBox="0 0 920 450">
 <rect width="920" height="450" rx="18" fill="#070c0a"/>
 <rect x="12" y="12" width="896" height="426" rx="18" fill="#070c0a" stroke="#284637"/>
-
 <g font-family="Consolas, 'Courier New', monospace">
-  <!-- CARD 1 -->
-  <rect x="28" y="28" width="280" height="214" rx="12" fill="#0b1410" stroke="#284637"/>
-  <text x="46" y="54" font-size="14" font-weight="700" fill="#41ff88">F4B0Y GitHub Stats</text>
-  <text x="48" y="88" font-size="11" fill="#73b88c">Stars Earned</text><text x="190" y="88" font-size="12" font-weight="700" fill="#00ff9a" text-anchor="end">4</text><text x="48" y="115" font-size="11" fill="#73b88c">Commits</text><text x="190" y="115" font-size="12" font-weight="700" fill="#00ff9a" text-anchor="end">851</text><text x="48" y="142" font-size="11" fill="#73b88c">Pull Requests</text><text x="190" y="142" font-size="12" font-weight="700" fill="#00ff9a" text-anchor="end">249</text><text x="48" y="169" font-size="11" fill="#73b88c">Issues</text><text x="190" y="169" font-size="12" font-weight="700" fill="#00ff9a" text-anchor="end">8</text><text x="48" y="196" font-size="11" fill="#73b88c">Repositories</text><text x="190" y="196" font-size="12" font-weight="700" fill="#00ff9a" text-anchor="end">11</text>
-  <line x1="213" y1="68" x2="213" y2="215" stroke="#284637"/>
-  <text x="258" y="122" font-size="9" fill="#73b88c" text-anchor="middle">FOCUS</text>
-  <text x="258" y="148" font-size="22" font-weight="800" fill="#00ff9a" text-anchor="middle">DEV</text>
-  <circle cx="258" cy="148" r="47" fill="none" stroke="#41ff88" stroke-width="2"/>
-  <text x="258" y="197" font-size="8" fill="#73b88c" text-anchor="middle">BUILD • SHIP • IMPROVE</text>
 
-  <!-- CARD 2 -->
-  <rect x="320" y="28" width="280" height="214" rx="12" fill="#0b1410" stroke="#284637"/>
-  <text x="338" y="54" font-size="14" font-weight="700" fill="#41ff88">Contribution Activity</text>
-  
-    <circle cx="406" cy="121" r="47" fill="none" stroke="#183126" stroke-width="7"/>
-    <circle cx="406" cy="121" r="47" fill="none" stroke="#41ff88" stroke-width="7"
-            stroke-linecap="round" stroke-dasharray="248.60 295.31"
-            transform="rotate(-90 406 121)"/>
-    
-  <text x="406" y="116" font-size="22" font-weight="800" fill="#00ff9a" text-anchor="middle">926</text>
-  <text x="406" y="134" font-size="9" fill="#73b88c" text-anchor="middle">LAST 365 DAYS</text>
-  <line x1="467" y1="72" x2="467" y2="190" stroke="#284637"/>
-  <text x="490" y="103" font-size="9" fill="#73b88c">CURRENT STREAK</text>
-  <text x="490" y="132" font-size="24" font-weight="800" fill="#00ff9a">11</text>
-  <text x="490" y="150" font-size="9" fill="#73b88c">DAYS</text>
-  <text x="338" y="210" font-size="9" fill="#73b88c">GitHub contribution calendar</text>
+<rect x="28" y="28" width="280" height="214" rx="12" fill="#0b1410" stroke="#284637"/>
+<text x="46" y="54" font-size="14" font-weight="700" fill="#41ff88">F4B0Y GitHub Stats</text>
+<text x="48" y="88" font-size="11" fill="#73b88c">Stars Earned</text><text x="190" y="88" font-size="12" font-weight="700" fill="#00ff9a" text-anchor="end">4</text>
+<text x="48" y="115" font-size="11" fill="#73b88c">Commits</text><text x="190" y="115" font-size="12" font-weight="700" fill="#00ff9a" text-anchor="end">838</text>
+<text x="48" y="142" font-size="11" fill="#73b88c">Pull Requests</text><text x="190" y="142" font-size="12" font-weight="700" fill="#00ff9a" text-anchor="end">247</text>
+<text x="48" y="169" font-size="11" fill="#73b88c">Issues</text><text x="190" y="169" font-size="12" font-weight="700" fill="#00ff9a" text-anchor="end">8</text>
+<text x="48" y="196" font-size="11" fill="#73b88c">Repositories</text><text x="190" y="196" font-size="12" font-weight="700" fill="#00ff9a" text-anchor="end">11</text>
+<line x1="213" y1="68" x2="213" y2="215" stroke="#284637"/>
+<circle cx="258" cy="148" r="47" fill="none" stroke="#41ff88" stroke-width="2"/>
+<text x="258" y="122" font-size="9" fill="#73b88c" text-anchor="middle">FOCUS</text>
+<text x="258" y="151" font-size="22" font-weight="800" fill="#00ff9a" text-anchor="middle">DEV</text>
+<text x="258" y="197" font-size="8" fill="#73b88c" text-anchor="middle">BUILD • SHIP • IMPROVE</text>
 
-  <!-- CARD 3 -->
-  <rect x="612" y="28" width="280" height="214" rx="12" fill="#0b1410" stroke="#284637"/>
-  <text x="630" y="54" font-size="14" font-weight="700" fill="#41ff88">Streak Record</text>
-  
-    <circle cx="697" cy="121" r="47" fill="none" stroke="#183126" stroke-width="7"/>
-    <circle cx="697" cy="121" r="47" fill="none" stroke="#00ff9a" stroke-width="7"
-            stroke-linecap="round" stroke-dasharray="108.28 295.31"
-            transform="rotate(-90 697 121)"/>
-    
-  <text x="697" y="116" font-size="22" font-weight="800" fill="#00ff9a" text-anchor="middle">11</text>
-  <text x="697" y="134" font-size="9" fill="#73b88c" text-anchor="middle">LONGEST STREAK</text>
-  <line x1="758" y1="72" x2="758" y2="190" stroke="#284637"/>
-  <text x="780" y="103" font-size="9" fill="#73b88c">CONTRIBUTIONS</text>
-  <text x="780" y="132" font-size="24" font-weight="800" fill="#00ff9a">926</text>
-  <text x="780" y="150" font-size="9" fill="#73b88c">LAST 365 DAYS</text>
-  <text x="630" y="210" font-size="9" fill="#73b88c">Independent streak calculation</text>
+<rect x="320" y="28" width="280" height="214" rx="12" fill="#0b1410" stroke="#284637"/>
+<text x="338" y="54" font-size="14" font-weight="700" fill="#41ff88">Contribution Activity</text>
+<circle cx="406" cy="121" r="47" fill="none" stroke="#183126" stroke-width="7"/>
+<circle cx="406" cy="121" r="47" fill="none" stroke="#41ff88" stroke-width="7" stroke-linecap="round" stroke-dasharray="251 295.31" transform="rotate(-90 406 121)"/>
+<text x="406" y="116" font-size="22" font-weight="800" fill="#00ff9a" text-anchor="middle">915</text>
+<text x="406" y="134" font-size="9" fill="#73b88c" text-anchor="middle">LAST 365 DAYS</text>
+<line x1="467" y1="72" x2="467" y2="190" stroke="#284637"/>
+<text x="490" y="104" font-size="9" fill="#73b88c">CURRENT STREAK</text>
+<text x="490" y="132" font-size="24" font-weight="800" fill="#00ff9a">11</text>
+<text x="490" y="151" font-size="9" fill="#73b88c">DAYS</text>
+<text x="338" y="210" font-size="9" fill="#73b88c">GitHub contribution calendar</text>
 
-  <!-- CARD 4 -->
-  <rect x="28" y="258" width="864" height="160" rx="12" fill="#0b1410" stroke="#284637"/>
-  <text x="46" y="285" font-size="14" font-weight="700" fill="#41ff88">Most Used Languages</text>
-  <text x="780" y="285" font-size="9" fill="#73b88c" text-anchor="end">Repository language bytes</text>
-  <line x1="46" y1="293" x2="874" y2="293" stroke="#284637"/>
-  <text x="58" y="306" font-size="11" fill="#b8ffcc">Blade  57.2%</text><rect x="220" y="297" width="560" height="7" rx="3.5" fill="#183126"/><rect x="220" y="297" width="320.4" height="7" rx="3.5" fill="#41ff88"/><text x="58" y="328" font-size="11" fill="#b8ffcc">PHP  25.3%</text><rect x="220" y="319" width="560" height="7" rx="3.5" fill="#183126"/><rect x="220" y="319" width="141.4" height="7" rx="3.5" fill="#41ff88"/><text x="58" y="350" font-size="11" fill="#b8ffcc">Python  10.5%</text><rect x="220" y="341" width="560" height="7" rx="3.5" fill="#183126"/><rect x="220" y="341" width="58.8" height="7" rx="3.5" fill="#41ff88"/><text x="58" y="372" font-size="11" fill="#b8ffcc">Dart  2.7%</text><rect x="220" y="363" width="560" height="7" rx="3.5" fill="#183126"/><rect x="220" y="363" width="15.1" height="7" rx="3.5" fill="#41ff88"/><text x="58" y="394" font-size="11" fill="#b8ffcc">JavaScript  1.9%</text><rect x="220" y="385" width="560" height="7" rx="3.5" fill="#183126"/><rect x="220" y="385" width="10.7" height="7" rx="3.5" fill="#41ff88"/>
+<rect x="612" y="28" width="280" height="214" rx="12" fill="#0b1410" stroke="#284637"/>
+<text x="630" y="54" font-size="14" font-weight="700" fill="#41ff88">Streak Record</text>
+<circle cx="697" cy="121" r="47" fill="none" stroke="#183126" stroke-width="7"/>
+<circle cx="697" cy="121" r="47" fill="none" stroke="#00ff9a" stroke-width="7" stroke-linecap="round" stroke-dasharray="110.58 295.31" transform="rotate(-90 697 121)"/>
+<text x="697" y="116" font-size="22" font-weight="800" fill="#00ff9a" text-anchor="middle">11</text>
+<text x="697" y="134" font-size="9" fill="#73b88c" text-anchor="middle">LONGEST STREAK</text>
+<line x1="758" y1="72" x2="758" y2="190" stroke="#284637"/>
+<text x="780" y="104" font-size="9" fill="#73b88c">CONTRIBUTIONS</text>
+<text x="780" y="132" font-size="24" font-weight="800" fill="#00ff9a">915</text>
+<text x="780" y="151" font-size="9" fill="#73b88c">LAST 365 DAYS</text>
+<text x="630" y="210" font-size="9" fill="#73b88c">Independent streak calculation</text>
+
+<rect x="28" y="258" width="864" height="160" rx="12" fill="#0b1410" stroke="#284637"/>
+<text x="46" y="285" font-size="14" font-weight="700" fill="#41ff88">Most Used Languages</text>
+<text x="874" y="285" font-size="9" fill="#73b88c" text-anchor="end">Repository language bytes</text>
+<line x1="46" y1="293" x2="874" y2="293" stroke="#284637"/>
+<text x="58" y="306" font-size="11" fill="#b8ffcc">Blade  57.6%</text><rect x="220" y="297" width="560" height="7" rx="3.5" fill="#183126"/><rect x="220" y="297" width="322.6" height="7" rx="3.5" fill="#41ff88"/>
+<text x="58" y="328" font-size="11" fill="#b8ffcc">PHP  25.3%</text><rect x="220" y="319" width="560" height="7" rx="3.5" fill="#183126"/><rect x="220" y="319" width="141.7" height="7" rx="3.5" fill="#41ff88"/>
+<text x="58" y="350" font-size="11" fill="#b8ffcc">Python  10.4%</text><rect x="220" y="341" width="560" height="7" rx="3.5" fill="#183126"/><rect x="220" y="341" width="58.2" height="7" rx="3.5" fill="#41ff88"/>
+<text x="58" y="372" font-size="11" fill="#b8ffcc">Dart  2.7%</text><rect x="220" y="363" width="560" height="7" rx="3.5" fill="#183126"/><rect x="220" y="363" width="15.1" height="7" rx="3.5" fill="#41ff88"/>
+<text x="58" y="394" font-size="11" fill="#b8ffcc">JavaScript  1.7%</text><rect x="220" y="385" width="560" height="7" rx="3.5" fill="#183126"/><rect x="220" y="385" width="9.5" height="7" rx="3.5" fill="#41ff88"/>
 </g>
-
-<text x="46" y="432" font-size="8" fill="#73b88c"
-      font-family="Consolas, 'Courier New', monospace">F4B0Y Analytics Engine · Updated 2026-09-26 14:23 UTC</text>
+<text x="46" y="432" font-size="8" fill="#73b88c" font-family="Consolas, 'Courier New', monospace">F4B0Y Analytics Engine · Updated live from GitHub</text>
 </svg>
