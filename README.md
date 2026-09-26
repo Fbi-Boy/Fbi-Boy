@@ -52,9 +52,12 @@
 
 <td width="32%" align="center" valign="middle">
 
-<img src="./assets/zenitsu-transparent.gif"
-     width="300"
-     alt="Zenitsu pixel art"/>
+<div align="center">
+  <img src="./assets/zenitsu-transparent.gif"
+       width="300"
+       alt="Zenitsu pixel art"
+       style="transform: translateX(-12px);"/>
+</div>
 
 <div align="center">
   <strong>Web • Mobile • AI • Quantum</strong>
