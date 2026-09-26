@@ -77,13 +77,13 @@ A secure, modular hybrid AI assistant for **planning, executing, reviewing and d
 ### 💻 Languages
 
 <p align="center">
-  <a href="https://github.com/search?q=user%3AFbi-Boy+language%3APython&type=commits" title="View Python commits"><img src="https://skillicons.dev/icons?i=python" width="50"/></a>
-  <a href="https://github.com/search?q=user%3AFbi-Boy+language%3APHP&type=commits" title="View PHP commits"><img src="https://skillicons.dev/icons?i=php" width="50"/></a>
-  <a href="https://github.com/search?q=user%3AFbi-Boy+language%3AJavaScript&type=commits" title="View JavaScript commits"><img src="https://skillicons.dev/icons?i=javascript" width="50"/></a>
+  <a href="https://github.com/search?q=user%3AFbi-Boy+language%3APython&type=code" title="Explore Python code"><img src="https://skillicons.dev/icons?i=python" width="50"/></a>
+  <a href="https://github.com/search?q=user%3AFbi-Boy+language%3APHP&type=code" title="Explore PHP code"><img src="https://skillicons.dev/icons?i=php" width="50"/></a>
+  <a href="https://github.com/search?q=user%3AFbi-Boy+language%3AJavaScript&type=code" title="Explore JavaScript code"><img src="https://skillicons.dev/icons?i=javascript" width="50"/></a>
 </p>
 
 <p align="center">
-  <sub>Click a language icon to open GitHub's commit search for that language.</sub>
+  <sub>Click a language icon to open GitHub code search filtered to that language.</sub>
 </p>
 
 ### 🧱 Frameworks & Frontend
@@ -106,7 +106,7 @@ A secure, modular hybrid AI assistant for **planning, executing, reviewing and d
 ## 📊 GitHub Statistics
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Fbi-Boy&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&rank_icon=github&theme=transparent&custom_title=Fbi-Boy%27s%20GitHub%20Stats" height="180" alt="GitHub stats"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=Fbi-Boy&show_icons=true&include_all_commits=true&hide_border=true&rank_icon=github&theme=transparent&custom_title=Fbi-Boy%27s%20GitHub%20Stats" height="180" alt="GitHub stats"/>
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=Fbi-Boy&hide_border=true&theme=transparent&date_format=M%20j%5B%2C%20Y%5D" height="180" alt="GitHub streak"/>
 </p>
 
