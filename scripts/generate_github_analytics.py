@@ -112,14 +112,14 @@ def contribution_data():
 
     if days:
         days.sort(key=lambda x: x["date"])
-        return total, None, None, None, days, days[0]["date"], days[-1]["date"]
+        return total, None, None, None, None, None, days, days[0]["date"], days[-1]["date"]
 
     end_date = dt.datetime.now(dt.timezone.utc).date()
     start_date = end_date - dt.timedelta(days=365)
-    _g_total, g_commits, g_prs, g_issues, g_days, g_start, g_end = contribution_data_graphql(
+    _g_total, g_commits, g_prs, g_issues, _g_reviews, _g_repos, g_days, g_start, g_end = contribution_data_graphql(
         start_date, end_date
     )
-    return total, g_commits, g_prs, g_issues, g_days, g_start, g_end
+    return total, g_commits, g_prs, g_issues, _g_reviews, _g_repos, g_days, g_start, g_end
 
 def contribution_data_graphql(start: dt.date, end: dt.date):
     query = """
@@ -129,6 +129,8 @@ def contribution_data_graphql(start: dt.date, end: dt.date):
           totalCommitContributions
           totalIssueContributions
           totalPullRequestContributions
+          totalPullRequestReviewContributions
+          totalRepositoryContributions
           contributionCalendar {
             totalContributions
             weeks {
@@ -165,6 +167,8 @@ def contribution_data_graphql(start: dt.date, end: dt.date):
         int(collection["totalCommitContributions"]),
         int(collection["totalPullRequestContributions"]),
         int(collection["totalIssueContributions"]),
+        int(collection["totalPullRequestReviewContributions"]),
+        int(collection["totalRepositoryContributions"]),
         days,
         start,
         end,
@@ -173,15 +177,12 @@ def contribution_data_graphql(start: dt.date, end: dt.date):
 def streaks(days: list[dict]):
     by_date = {x["date"]: x["count"] for x in days}
     if not days:
-        return 0, 0
+        return 0, 0, 0, 0
 
-    # Current streak: GitHub-style, ending today when today has activity,
-    # otherwise ending yesterday.
-    today = max(by_date)
-    anchor = today if by_date.get(today, 0) > 0 else today - dt.timedelta(days=1)
     current = 0
-    cursor = anchor
-    while by_date.get(cursor, 0) > 0:
+    end = max(by_date)
+    cursor = end
+    while cursor in by_date and by_date[cursor] > 0:
         current += 1
         cursor -= dt.timedelta(days=1)
 
@@ -189,14 +190,18 @@ def streaks(days: list[dict]):
     run = 0
     previous = None
     for day in sorted(by_date):
-        if by_date[day] > 0:
-            if previous is not None and day == previous + dt.timedelta(days=1):
-                run += 1
-            else:
-                run = 1
-            longest = max(longest, run)
-            previous = day
-    return current, longest
+        if previous is not None and day == previous + dt.timedelta(days=1) and by_date[day] > 0:
+            run += 1
+        elif by_date[day] > 0:
+            run = 1
+        else:
+            run = 0
+        longest = max(longest, run)
+        previous = day
+
+    active_days = sum(1 for count in by_date.values() if count > 0)
+    best_day = max(by_date.values(), default=0)
+    return current, longest, active_days, best_day
 
 def language_percentages(repos):
     totals: dict[str, int] = {}
@@ -223,7 +228,9 @@ def ring(cx, cy, r, percent, stroke, width=7):
             transform="rotate(-90 {cx} {cy})"/>
     '''
 
-def build_svg(repo_count, stars, commits, prs, issues, contributions, current, longest, langs, updated):
+def build_svg(repo_count, stars, commits, prs, issues, contributions, current, longest,
+              calendar_prs, calendar_issues, reviews, repo_contributions,
+              active_days, best_day, langs, updated):
     W, H = 920, 430
     bg = "#070c0a"
     card = "#0b1410"
@@ -237,21 +244,39 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
     contribution_pct = min(100, contributions / 1100 * 100)
     record_pct = min(100, longest / 30 * 100)
 
-    stats = [
+    def list_rows(items, x_label, x_value, start_y=88, gap=23, max_rows=5):
+        rows = []
+        for i, (label, value) in enumerate(items[:max_rows]):
+            yy = start_y + i * gap
+            rows.append(
+                f'<text x="{x_label}" y="{yy}" font-size="9.5" fill="{muted}">{esc(label)}</text>'
+                f'<text x="{x_value}" y="{yy}" font-size="10.5" font-weight="700" fill="{bright}" text-anchor="end">{esc(value)}</text>'
+            )
+        return "".join(rows)
+
+    stats_rows = list_rows([
         ("Stars Earned", fmt_num(stars)),
         ("Commits", fmt_num(commits)),
         ("Pull Requests", fmt_num(prs)),
         ("Issues", fmt_num(issues)),
         ("Repositories", fmt_num(repo_count)),
-    ]
+    ], 180, 294)
 
-    stat_rows = []
-    for i, (label, value) in enumerate(stats):
-        yy = 89 + i * 26
-        stat_rows.append(
-            f'<text x="180" y="{yy}" font-size="10" fill="{muted}">{esc(label)}</text>'
-            f'<text x="294" y="{yy}" font-size="11" font-weight="700" fill="{bright}" text-anchor="end">{esc(value)}</text>'
-        )
+    contribution_rows = list_rows([
+        ("Commits", fmt_num(calendar_commit := commits)),
+        ("Pull Requests", fmt_num(calendar_prs if calendar_prs is not None else prs)),
+        ("Issues", fmt_num(calendar_issues if calendar_issues is not None else issues)),
+        ("Reviews", fmt_num(reviews if reviews is not None else 0)),
+        ("Repositories", fmt_num(repo_contributions if repo_contributions is not None else 0)),
+    ], 472, 586)
+
+    streak_rows = list_rows([
+        ("Current Streak", f"{current} days"),
+        ("Longest Streak", f"{longest} days"),
+        ("Active Days", fmt_num(active_days)),
+        ("Best Day", fmt_num(best_day)),
+        ("Contributions", fmt_num(contributions)),
+    ], 764, 878)
 
     lang_rows = []
     y = 312
@@ -270,46 +295,39 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
 <rect x="12" y="12" width="896" height="406" rx="18" fill="{bg}" stroke="{border}"/>
 
 <g font-family="Consolas, 'Courier New', monospace">
-  <!-- CARD 1: two equal 140px zones; separator intentionally invisible -->
-  <line x1="168" y1="70" x2="168" y2="210" stroke="{card}" stroke-width="1"/>
+  <!-- CARD 1: title centered; bottom split into left metric + right stats -->
   <rect x="28" y="28" width="280" height="214" rx="12" fill="{card}" stroke="{border}"/>
-  <text x="46" y="54" font-size="14" font-weight="700" fill="{green}">F4B0Y GitHub Stats</text>
-  <circle cx="98" cy="135" r="46" fill="none" stroke="{track}" stroke-width="7"/>
-  <circle cx="98" cy="135" r="46" fill="none" stroke="{green}" stroke-width="3"/>
-  <text x="98" y="128" font-size="8" fill="{muted}" text-anchor="middle">COMMITS</text>
-  <text x="98" y="148" font-size="21" font-weight="800" fill="{bright}" text-anchor="middle">{fmt_num(commits)}</text>
-  {''.join(stat_rows)}
-  <text x="98" y="191" font-size="7" fill="{muted}" text-anchor="middle">TOTAL</text>
+  <text x="168" y="55" font-size="14" font-weight="700" fill="{green}" text-anchor="middle">F4B0Y GitHub Stats</text>
+  <line x1="168" y1="70" x2="168" y2="214" stroke="{card}" stroke-width="1"/>
+  <circle cx="94" cy="140" r="46" fill="none" stroke="{track}" stroke-width="7"/>
+  <circle cx="94" cy="140" r="46" fill="none" stroke="{green}" stroke-width="3"/>
+  <text x="94" y="133" font-size="8" fill="{muted}" text-anchor="middle">COMMITS</text>
+  <text x="94" y="154" font-size="21" font-weight="800" fill="{bright}" text-anchor="middle">{fmt_num(commits)}</text>
+  <text x="94" y="198" font-size="7" fill="{muted}" text-anchor="middle">TOTAL</text>
+  {stats_rows}
 
-  <!-- CARD 2: two equal 140px zones; separator intentionally invisible -->
-  <line x1="460" y1="70" x2="460" y2="210" stroke="{card}" stroke-width="1"/>
+  <!-- CARD 2: title centered; bottom split into left metric + right contribution list -->
   <rect x="320" y="28" width="280" height="214" rx="12" fill="{card}" stroke="{border}"/>
-  <text x="338" y="54" font-size="14" font-weight="700" fill="{green}">Contribution Activity</text>
-  {ring(390,122,46,contribution_pct,green,7)}
-  <text x="390" y="117" font-size="21" font-weight="800" fill="{bright}" text-anchor="middle">{fmt_num(contributions)}</text>
-  <text x="390" y="134" font-size="8" fill="{muted}" text-anchor="middle">LAST 365 DAYS</text>
-  <text x="478" y="104" font-size="8" fill="{muted}">CURRENT STREAK</text>
-  <text x="478" y="131" font-size="23" font-weight="800" fill="{bright}">{current}</text>
-  <text x="478" y="149" font-size="8" fill="{muted}">DAYS</text>
-  <text x="338" y="210" font-size="8" fill="{muted}">GitHub contribution calendar</text>
+  <text x="460" y="55" font-size="14" font-weight="700" fill="{green}" text-anchor="middle">Contribution Activity</text>
+  <line x1="460" y1="70" x2="460" y2="214" stroke="{card}" stroke-width="1"/>
+  {ring(392,140,46,contribution_pct,green,7)}
+  <text x="392" y="133" font-size="19" font-weight="800" fill="{bright}" text-anchor="middle">{fmt_num(contributions)}</text>
+  <text x="392" y="153" font-size="7.5" fill="{muted}" text-anchor="middle">CONTRIBUTIONS</text>
+  {contribution_rows}
 
-  <!-- CARD 3: two equal 140px zones; separator intentionally invisible -->
-  <line x1="752" y1="70" x2="752" y2="210" stroke="{card}" stroke-width="1"/>
+  <!-- CARD 3: title centered; bottom split into left metric + right streak list -->
   <rect x="612" y="28" width="280" height="214" rx="12" fill="{card}" stroke="{border}"/>
-  <text x="630" y="54" font-size="14" font-weight="700" fill="{green}">Streak Record</text>
-  {ring(682,122,46,record_pct,bright,7)}
-  <text x="682" y="117" font-size="21" font-weight="800" fill="{bright}" text-anchor="middle">{longest}</text>
-  <text x="682" y="134" font-size="8" fill="{muted}" text-anchor="middle">LONGEST STREAK</text>
-  <text x="770" y="104" font-size="8" fill="{muted}">CONTRIBUTIONS</text>
-  <text x="770" y="131" font-size="23" font-weight="800" fill="{bright}">{fmt_num(contributions)}</text>
-  <text x="770" y="149" font-size="8" fill="{muted}">LAST 365 DAYS</text>
-  <text x="630" y="210" font-size="8" fill="{muted}">Independent streak calculation</text>
+  <text x="752" y="55" font-size="14" font-weight="700" fill="{green}" text-anchor="middle">Streak Record</text>
+  <line x1="752" y1="70" x2="752" y2="214" stroke="{card}" stroke-width="1"/>
+  {ring(684,140,46,record_pct,bright,7)}
+  <text x="684" y="133" font-size="21" font-weight="800" fill="{bright}" text-anchor="middle">{longest}</text>
+  <text x="684" y="153" font-size="7.5" fill="{muted}" text-anchor="middle">LONGEST DAYS</text>
+  {streak_rows}
 
-  <!-- CARD 4: two-column language layout, no divider -->
+  <!-- CARD 4: languages -->
   <rect x="28" y="258" width="864" height="160" rx="12" fill="{card}" stroke="{border}"/>
   <text x="46" y="285" font-size="14" font-weight="700" fill="{green}">Most Used Languages</text>
   <text x="874" y="285" font-size="8" fill="{muted}" text-anchor="end">Repository language bytes</text>
-
   {''.join(lang_rows)}
 </g>
 
@@ -317,6 +335,7 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
       font-family="Consolas, 'Courier New', monospace">F4B0Y Analytics Engine · Updated {esc(updated)}</text>
 </svg>'''
     return svg
+
 def main():
     repos = get_json(f"/users/{OWNER}/repos", query={"per_page":"100", "type":"owner", "sort":"updated"})
     stars = sum(int(repo.get("stargazers_count", 0)) for repo in repos)
@@ -327,6 +346,8 @@ def main():
         calendar_commits,
         calendar_prs,
         calendar_issues,
+        reviews,
+        repo_contributions,
         days,
         start,
         end,
@@ -343,11 +364,15 @@ def main():
         prs = calendar_prs
         issues = calendar_issues
 
-    current, longest = streaks(days)
+    current, longest, active_days, best_day = streaks(days)
     langs = language_percentages(repos)
 
     updated = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
-    svg = build_svg(repo_count, stars, commits, prs, issues, contributions, current, longest, langs, updated)
+    svg = build_svg(
+        repo_count, stars, commits, prs, issues, contributions, current, longest,
+        calendar_prs, calendar_issues, reviews, repo_contributions,
+        active_days, best_day, langs, updated
+    )
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(svg, encoding="utf-8")
@@ -362,6 +387,8 @@ def main():
         "current_streak": current,
         "longest_streak": longest,
         "languages": langs,
+        "active_days": active_days,
+        "best_day": best_day,
         "period": f"{start}..{end}",
         "metric_scope": "GitHub contribution collection for the last year",
     }, indent=2))
