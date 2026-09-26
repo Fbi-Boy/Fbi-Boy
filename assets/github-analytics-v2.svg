@@ -24,7 +24,6 @@
 <circle cx="406" cy="122" r="45" fill="none" stroke="#41ff88" stroke-width="7" stroke-linecap="round" stroke-dasharray="251 282.74" transform="rotate(-90 406 122)"/>
 <text x="406" y="117" font-size="21" font-weight="800" fill="#00ff9a" text-anchor="middle">915</text>
 <text x="406" y="134" font-size="8" fill="#73b88c" text-anchor="middle">LAST 365 DAYS</text>
-<line x1="470" y1="78" x2="470" y2="190" stroke="#284637"/>
 <text x="489" y="104" font-size="8" fill="#73b88c">CURRENT STREAK</text>
 <text x="489" y="132" font-size="23" font-weight="800" fill="#00ff9a">11</text>
 <text x="489" y="150" font-size="8" fill="#73b88c">DAYS</text>
@@ -37,7 +36,6 @@
 <circle cx="697" cy="122" r="45" fill="none" stroke="#00ff9a" stroke-width="7" stroke-linecap="round" stroke-dasharray="103.68 282.74" transform="rotate(-90 697 122)"/>
 <text x="697" y="117" font-size="21" font-weight="800" fill="#00ff9a" text-anchor="middle">11</text>
 <text x="697" y="134" font-size="8" fill="#73b88c" text-anchor="middle">LONGEST STREAK</text>
-<line x1="760" y1="78" x2="760" y2="190" stroke="#284637"/>
 <text x="780" y="104" font-size="8" fill="#73b88c">CONTRIBUTIONS</text>
 <text x="780" y="132" font-size="23" font-weight="800" fill="#00ff9a">915</text>
 <text x="780" y="150" font-size="8" fill="#73b88c">LAST 365 DAYS</text>
