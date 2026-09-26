@@ -243,4 +243,139 @@ Modern Laravel website built around a clean frontend workflow.
 
 <sub><strong>Fbi-Boy</strong> · Software Developer • AI Builder • Web Developer</sub>
 
-</div>
+</div><details>
+<summary>🐍 <strong>Python</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/python.svg" width="390" alt="Python usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• <a href="https://github.com/Fbi-Boy/universal-task-ai">Universal Task AI</a></td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🟨 <strong>JavaScript</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/js.svg" width="390" alt="JavaScript usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• <a href="https://github.com/Fbi-Boy/pt-putra-prananta-website">PT Putra Prananta</a><br>• <a href="https://github.com/Fbi-Boy/madura-mart">Madura Mart</a></td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🟪 <strong>Kotlin</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/kotlin.svg" width="390" alt="Kotlin usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• No tracked project yet</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🎯 <strong>Dart</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/dart.svg" width="390" alt="Dart usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• latihan_flutter</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>⚡ <strong>C++</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/cpp.svg" width="390" alt="C++ usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• No tracked project yet</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🌐 <strong>HTML</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/html.svg" width="390" alt="HTML usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• <a href="https://github.com/Fbi-Boy/pt-putra-prananta-website">PT Putra Prananta</a><br>• <a href="https://github.com/Fbi-Boy/madura-mart">Madura Mart</a></td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🎨 <strong>CSS</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/css.svg" width="390" alt="CSS usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• <a href="https://github.com/Fbi-Boy/pt-putra-prananta-website">PT Putra Prananta</a><br>• <a href="https://github.com/Fbi-Boy/madura-mart">Madura Mart</a></td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>⌨️ <strong>Bash</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/bash.svg" width="390" alt="Bash usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• <a href="https://github.com/Fbi-Boy/universal-task-ai">Universal Task AI</a></td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🗃️ <strong>SQL</strong></summary>
+
+<hr>
+
+<table>
+<tr>
+<td width="20%" align="center" valign="middle"><strong>Level</strong><br><br>Intermediate</td>
+<td width="48%" align="center" valign="middle"><img src="./assets/skills/sql.svg" width="390" alt="SQL usage profile radar"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• <a href="https://github.com/Fbi-Boy/madura-mart">Madura Mart</a><br>• <a href="https://github.com/Fbi-Boy/universal-task-ai">Universal Task AI</a></td>
+</tr>
+</table>
+
+</details>
+
+
