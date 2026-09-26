@@ -32,6 +32,10 @@
 
 ## 👨‍💻 About Me
 
+<table>
+<tr>
+<td width="68%" valign="top">
+
 <p>
   I’m a <strong>Software Developer</strong> focused on building useful digital products across <strong>Web, Mobile, and AI</strong>.
 </p>
@@ -40,17 +44,19 @@
 - 📱 **Mobile Development** — Exploring mobile applications and practical cross-platform experiences.
 - 🤖 **Artificial Intelligence** — Developing AI-powered systems, automation, and intelligent workflows.
 - 🧠 **Software Engineering** — Interested in clean architecture, security, APIs, databases, and reliable systems.
-- 🔬 **Future Focus** — Planning to expand into **Quantum Computing** and explore the intersection of quantum technology, AI, and software engineering.
+- 🔬 **Future Focus** — Planning to expand into <strong>Quantum Computing</strong> and explore the intersection of quantum technology, AI, and software engineering.
 - 🚀 **Builder Mindset** — I enjoy turning ideas into working systems, continuously learning, experimenting, and improving.
 - 🎯 **Goal** — Grow from building applications today toward contributing to the next generation of intelligent and quantum-powered technology.
 
-<p align="center">
-  <img src="./assets/zenitsu-transparent.gif"
-       width="300"
-       alt="Zenitsu pixel art"/>
-</p>
+</td>
 
-<div align="center">
+<td width="32%" align="center" valign="middle">
+
+<img src="./assets/zenitsu-transparent.gif"
+     width="300"
+     alt="Zenitsu pixel art"/>
+
+<br><br>
 
 <strong>Web • Mobile • AI • Quantum</strong>
 
@@ -60,7 +66,9 @@
   <img src="https://img.shields.io/badge/GitHub-111827?style=for-the-badge&logo=github&logoColor=white"/>
 </a>
 
-</div>
+</td>
+</tr>
+</table>
 
 ## 🧰 Languages & Tools
 
