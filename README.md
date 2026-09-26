@@ -32,19 +32,21 @@
 
 ## 👨‍💻 About Me
 
+<p>
+  I’m a <strong>Software Developer</strong> focused on building useful digital products across <strong>Web, Mobile, and AI</strong>.
+</p>
+
 <table>
 <tr>
 <td width="68%" valign="top">
 
-<p>
-  🌟 <strong>Began the Journey with Software Development in 2024.</strong><br><br>
-  🌙 I work on front-end development and web designing when I am focused on building a clean and functional digital experience.<br><br>
-  🌱 I am currently pursuing a degree in Computer Science.<br><br>
-  🎓 I worked on .NET Framework and Hands-on experience in Full Stack development.<br><br>
-  🔎 Ask me about Microsoft .NET framework, Full Stack Development, Python.<br><br>
-  🔥 Interest in Artificial Intelligence, Machine Learning, Deep Learning, Data Science, Automation.<br><br>
-  ✨ I really like perfection.
-</p>
+- 🌐 **Web Development** — Building modern, scalable, and user-focused web applications.
+- 📱 **Mobile Development** — Exploring mobile applications and practical cross-platform experiences.
+- 🤖 **Artificial Intelligence** — Developing AI-powered systems, automation, and intelligent workflows.
+- 🧠 **Software Engineering** — Interested in clean architecture, security, APIs, databases, and reliable systems.
+- 🔬 **Future Focus** — Planning to expand into **Quantum Computing** and explore the intersection of quantum technology, AI, and software engineering.
+- 🚀 **Builder Mindset** — I enjoy turning ideas into working systems, continuously learning, experimenting, and improving.
+- 🎯 **Goal** — Grow from building applications today toward contributing to the next generation of intelligent and quantum-powered technology.
 
 </td>
 
@@ -56,7 +58,9 @@
 
 <br><br>
 
-<p><strong>🌟 Follow Me on:</strong></p>
+<strong>Web • Mobile • AI • Quantum</strong>
+
+<br><br>
 
 <a href="https://github.com/Fbi-Boy">
   <img src="https://img.shields.io/badge/GitHub-111827?style=for-the-badge&logo=github&logoColor=white"/>
