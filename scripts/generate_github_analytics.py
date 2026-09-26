@@ -12,6 +12,7 @@ import datetime as dt
 import json
 import os
 import html
+import re
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -70,8 +71,57 @@ def commit_total() -> int:
     return int(get_json("/search/commits", query={"q": f"author:{OWNER}", "per_page": "1"})["total_count"])
 
 def contribution_data():
-    end = dt.datetime.now(dt.timezone.utc).date()
-    start = end - dt.timedelta(days=365)
+    # The GitHub profile calendar is the authoritative source for the number
+    # displayed as "N contributions in the last year". Using this page keeps
+    # the dashboard total identical to the calendar the user sees.
+    req = urllib.request.Request(
+        f"https://github.com/users/{OWNER}/contributions",
+        headers={
+            "Accept": "text/html",
+            "User-Agent": HEADERS["User-Agent"],
+        },
+    )
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        html_body = resp.read().decode("utf-8", errors="replace")
+
+    total_match = re.search(
+        r"(?:^|>)([0-9][0-9,]*) contributions in the last year(?:<|$)",
+        html_body,
+        flags=re.IGNORECASE,
+    )
+    if not total_match:
+        # Fallback to GraphQL only if GitHub changes the public calendar HTML.
+        end_date = dt.datetime.now(dt.timezone.utc).date()
+        start_date = end_date - dt.timedelta(days=365)
+        return contribution_data_graphql(start_date, end_date)
+
+    total = int(total_match.group(1).replace(",", ""))
+
+    # Daily cells contain data-date/data-count on some GitHub renderings.
+    # When data-count is unavailable, keep the GraphQL daily data for streaks.
+    days = []
+    for match in re.finditer(
+        r'<(?:td|rect)[^>]*data-date=["\'](\\d{4}-\\d{2}-\\d{2})["\'][^>]*data-count=["\'](\\d+)["\'][^>]*>',
+        html_body,
+        flags=re.IGNORECASE,
+    ):
+        days.append({
+            "date": dt.date.fromisoformat(match.group(1)),
+            "count": int(match.group(2)),
+        })
+
+    if days:
+        days.sort(key=lambda x: x["date"])
+        return total, None, None, None, days, days[0]["date"], days[-1]["date"]
+
+    end_date = dt.datetime.now(dt.timezone.utc).date()
+    start_date = end_date - dt.timedelta(days=365)
+    _g_total, g_commits, g_prs, g_issues, g_days, g_start, g_end = contribution_data_graphql(
+        start_date, end_date
+    )
+    return total, g_commits, g_prs, g_issues, g_days, g_start, g_end
+
+def contribution_data_graphql(start: dt.date, end: dt.date):
     query = """
     query($login:String!, $from:DateTime!, $to:DateTime!) {
       user(login:$login) {
@@ -79,8 +129,6 @@ def contribution_data():
           totalCommitContributions
           totalIssueContributions
           totalPullRequestContributions
-          totalPullRequestReviewContributions
-          totalRepositoryContributions
           contributionCalendar {
             totalContributions
             weeks {
@@ -273,13 +321,25 @@ def main():
 
     (
         contributions,
-        commits,
-        prs,
-        issues,
+        calendar_commits,
+        calendar_prs,
+        calendar_issues,
         days,
         start,
         end,
     ) = contribution_data()
+
+    # The profile calendar total is authoritative. Component counts come from
+    # the same GitHub contribution collection when available.
+    if calendar_commits is None:
+        commits = commit_total()
+        prs = search_total(f"author:{OWNER} type:pr")
+        issues = search_total(f"author:{OWNER} type:issue")
+    else:
+        commits = calendar_commits
+        prs = calendar_prs
+        issues = calendar_issues
+
     current, longest = streaks(days)
     langs = language_percentages(repos)
 
