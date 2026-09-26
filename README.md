@@ -97,6 +97,249 @@
 
 </div>
 
+
+## 🎯 Skill Proficiency
+
+<div align="center">
+  <kbd>✨ Pilih untuk mengetahui penguasaan ku</kbd>
+</div>
+
+<br>
+
+<details>
+<summary>🐘 PHP</summary>
+
+<table>
+<tr>
+<td width="22%" align="center"><strong>Level</strong><br><br>Intermediate</td>
+<td width="46%" align="center"><img src="./assets/skill-profile-radar.svg" width="230" alt="PHP skill profile"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• Madura Mart<br>• PT Putra Prananta</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🐍 Python</summary>
+
+<table>
+<tr>
+<td width="22%" align="center"><strong>Level</strong><br><br>Intermediate</td>
+<td width="46%" align="center"><img src="./assets/skill-profile-radar.svg" width="230" alt="Python skill profile"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• Universal Task AI</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🟨 JavaScript</summary>
+
+<table>
+<tr>
+<td width="22%" align="center"><strong>Level</strong><br><br>Intermediate</td>
+<td width="46%" align="center"><img src="./assets/skill-profile-radar.svg" width="230" alt="JavaScript skill profile"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• PT Putra Prananta<br>• Madura Mart</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🟪 Kotlin</summary>
+
+<table>
+<tr>
+<td width="22%" align="center"><strong>Level</strong><br><br>Intermediate</td>
+<td width="46%" align="center"><img src="./assets/skill-profile-radar.svg" width="230" alt="Kotlin skill profile"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• Learning / Experimental</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🎯 Dart</summary>
+
+<table>
+<tr>
+<td width="22%" align="center"><strong>Level</strong><br><br>Intermediate</td>
+<td width="46%" align="center"><img src="./assets/skill-profile-radar.svg" width="230" alt="Dart skill profile"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• latihan_flutter</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>⚡ C++</summary>
+
+<table>
+<tr>
+<td width="22%" align="center"><strong>Level</strong><br><br>Intermediate</td>
+<td width="46%" align="center"><img src="./assets/skill-profile-radar.svg" width="230" alt="C++ skill profile"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• Learning / Experimental</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🚀 Laravel</summary>
+
+<table>
+<tr>
+<td width="22%" align="center"><strong>Level</strong><br><br>Intermediate</td>
+<td width="46%" align="center"><img src="./assets/skill-profile-radar.svg" width="230" alt="Laravel skill profile"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• Madura Mart<br>• PT Putra Prananta</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🧩 CodeIgniter</summary>
+
+<table>
+<tr>
+<td width="22%" align="center"><strong>Level</strong><br><br>Intermediate</td>
+<td width="46%" align="center"><img src="./assets/skill-profile-radar.svg" width="230" alt="CodeIgniter skill profile"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• Learning / Experimental</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🟢 Node.js</summary>
+
+<table>
+<tr>
+<td width="22%" align="center"><strong>Level</strong><br><br>Intermediate</td>
+<td width="46%" align="center"><img src="./assets/skill-profile-radar.svg" width="230" alt="Node.js skill profile"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• Learning / Experimental</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>⚛️ React / Next.js</summary>
+
+<table>
+<tr>
+<td width="22%" align="center"><strong>Level</strong><br><br>Intermediate</td>
+<td width="46%" align="center"><img src="./assets/skill-profile-radar.svg" width="230" alt="React and Next.js skill profile"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• Learning / Experimental</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>📱 Flutter</summary>
+
+<table>
+<tr>
+<td width="22%" align="center"><strong>Level</strong><br><br>Intermediate</td>
+<td width="46%" align="center"><img src="./assets/skill-profile-radar.svg" width="230" alt="Flutter skill profile"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• latihan_flutter</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🎨 Tailwind / Bootstrap / Alpine.js</summary>
+
+<table>
+<tr>
+<td width="22%" align="center"><strong>Level</strong><br><br>Intermediate</td>
+<td width="46%" align="center"><img src="./assets/skill-profile-radar.svg" width="230" alt="Frontend tooling skill profile"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• PT Putra Prananta<br>• Madura Mart</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🔧 Git / GitHub / VS Code</summary>
+
+<table>
+<tr>
+<td width="22%" align="center"><strong>Level</strong><br><br>Intermediate</td>
+<td width="46%" align="center"><img src="./assets/skill-profile-radar.svg" width="230" alt="Developer tools skill profile"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• Universal Task AI<br>• Madura Mart<br>• PT Putra Prananta</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🐳 Docker / Linux / Postman</summary>
+
+<table>
+<tr>
+<td width="22%" align="center"><strong>Level</strong><br><br>Intermediate</td>
+<td width="46%" align="center"><img src="./assets/skill-profile-radar.svg" width="230" alt="DevOps tools skill profile"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• Universal Task AI<br>• Backend / API workflows</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🗄️ MySQL / PostgreSQL / SQLite</summary>
+
+<table>
+<tr>
+<td width="22%" align="center"><strong>Level</strong><br><br>Intermediate</td>
+<td width="46%" align="center"><img src="./assets/skill-profile-radar.svg" width="230" alt="SQL database skill profile"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• Madura Mart<br>• Universal Task AI<br>• PT Putra Prananta</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🍃 MongoDB / Redis</summary>
+
+<table>
+<tr>
+<td width="22%" align="center"><strong>Level</strong><br><br>Intermediate</td>
+<td width="46%" align="center"><img src="./assets/skill-profile-radar.svg" width="230" alt="NoSQL database skill profile"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• Learning / Experimental</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>🔥 Firebase / Supabase</summary>
+
+<table>
+<tr>
+<td width="22%" align="center"><strong>Level</strong><br><br>Intermediate</td>
+<td width="46%" align="center"><img src="./assets/skill-profile-radar.svg" width="230" alt="Backend service skill profile"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• Learning / Experimental</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary>☁️ GitHub Actions / Nginx / Vercel / AWS / Cloudflare</summary>
+
+<table>
+<tr>
+<td width="22%" align="center"><strong>Level</strong><br><br>Intermediate</td>
+<td width="46%" align="center"><img src="./assets/skill-profile-radar.svg" width="230" alt="Cloud and DevOps skill profile"/></td>
+<td width="32%" valign="top"><strong>Projects</strong><br><br>• Universal Task AI<br>• Deployment / CI experiments</td>
+</tr>
+</table>
+
+</details>
+
 ---
 
 ## 📊 GitHub Analytics
