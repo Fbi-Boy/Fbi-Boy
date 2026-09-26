@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>F4B0Y · Languages & Tools</title>
+<style>
+:root{color-scheme:dark;--bg:#0d1117;--panel:#151b23;--line:#30363d;--muted:#8b949e;--text:#f0f6fc;--accent:#a78bfa}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.wrap{max-width:1080px;margin:auto;padding:30px 18px 56px}h1{font-size:28px;margin:0}.sub{color:var(--muted);margin:5px 0 22px}
+.toolbar{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 16px}.group{margin:0 0 20px}.group:last-child{margin-bottom:0}
+.group-title{text-align:center;font-weight:700;margin-bottom:9px}.icons{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.tech{width:46px;height:46px;display:flex;align-items:center;justify-content:center;background:#0f141b;border:1px solid var(--line);border-radius:9px}
+.tech:hover,.tech.active{border-color:var(--accent);background:#1a1424}.tech img{width:30px;height:30px}
+.hint{text-align:center;margin:16px 0 0;color:#c9d1d9}.hint code{background:#30363d;border-radius:6px;padding:4px 8px}
+hr{border:0;border-top:1px solid var(--line);margin:24px 0}.detail{display:grid;grid-template-columns:160px minmax(380px,1fr) 250px;gap:18px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px}
+.level{text-align:center;border-right:1px solid var(--line);padding-right:16px}.level-label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}.level-value{font-size:24px;font-weight:800;margin-top:6px}.type{color:var(--muted);font-size:12px;margin-top:5px}
+.chartbox{text-align:center}.chart-title{font-weight:700;margin-bottom:4px}.chartbox svg{max-width:100%;height:auto}
+.projects{border-left:1px solid var(--line);padding-left:18px}.projects h3{font-size:15px;margin:0 0 10px}.projects ul{margin:0;padding-left:18px}.projects a{color:#58a6ff;text-decoration:none}.projects a:hover{text-decoration:underline}
+.metric-list{display:grid;grid-template-columns:1fr 1fr;gap:5px 12px;margin-top:8px;font-size:12px;color:var(--muted);text-align:left}.metric-list strong{color:var(--text)}
+.note{text-align:center;color:var(--muted);font-size:12px;margin-top:13px}
+@media(max-width:800px){.detail{grid-template-columns:1fr}.level{border:0;border-bottom:1px solid var(--line);padding:0 0 14px}.projects{border:0;border-top:1px solid var(--line);padding:14px 0 0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>🧰 Languages & Tools</h1>
+<p class="sub">Click an icon. One shared detail panel below updates to the selected technology.</p>
+<section class="toolbar" id="toolbox"></section>
+<div class="hint"><code>✨ Click a technology icon to view details below</code></div>
+<hr>
+<section id="detail"></section>
+<p class="note">Radar = real SVG generated from technology-specific repository/project signals. It is a profile visualization, not a formal skills test.</p>
+</div>
+<script>
+const REPO="https://github.com/Fbi-Boy/";
+const S={
+php:{name:"PHP",type:"Language",icon:"php",level:"Intermediate",m:["Project Usage","Code Evidence","Backend Scope","Framework Coverage","Recency"],v:[80,85,90,90,80],p:[["Madura Mart","madura-mart"],["PT Putra Prananta","pt-putra-prananta-website"]]},
+python:{name:"Python",type:"Language",icon:"python",level:"Intermediate",m:["Project Usage","Code Evidence","AI / Automation","Backend Scope","Recency"],v:[45,50,95,75,95],p:[["Universal Task AI","universal-task-ai"]]},
+js:{name:"JavaScript",type:"Language",icon:"js",level:"Intermediate",m:["Project Usage","Code Evidence","Frontend Scope","Toolchain","Recency"],v:[75,80,85,90,85],p:[["PT Putra Prananta","pt-putra-prananta-website"],["Madura Mart","madura-mart"]]},
+kotlin:{name:"Kotlin",type:"Language",icon:"kotlin",level:"Intermediate",m:["Project Usage","Code Evidence","Mobile Scope","Integration","Recency"],v:[20,15,55,20,20],p:[]},
+dart:{name:"Dart",type:"Language",icon:"dart",level:"Intermediate",m:["Project Usage","Code Evidence","Mobile Scope","Flutter Fit","Recency"],v:[35,35,75,75,40],p:[["latihan_flutter","latihan_flutter"]]},
+cpp:{name:"C++",type:"Language",icon:"cpp",level:"Intermediate",m:["Project Usage","Code Evidence","Systems Scope","Ecosystem","Recency"],v:[15,10,45,35,15],p:[]},
+html:{name:"HTML",type:"Language",icon:"html",level:"Intermediate",m:["Project Usage","Code Evidence","UI Scope","Project Breadth","Recency"],v:[75,85,95,85,85],p:[["PT Putra Prananta","pt-putra-prananta-website"],["Madura Mart","madura-mart"]]},
+css:{name:"CSS",type:"Language",icon:"css",level:"Intermediate",m:["Project Usage","Code Evidence","UI Scope","Design","Recency"],v:[75,85,90,80,85],p:[["PT Putra Prananta","pt-putra-prananta-website"],["Madura Mart","madura-mart"]]},
+bash:{name:"Bash",type:"Language",icon:"bash",level:"Intermediate",m:["Project Usage","Code Evidence","Automation","CLI Workflow","Recency"],v:[35,30,55,55,45],p:[["Universal Task AI","universal-task-ai"]]},
+sql:{name:"SQL",type:"Language",icon:"mysql",level:"Intermediate",m:["Project Usage","Data Layer","Schema","Integration","Recency"],v:[60,55,70,75,65],p:[["Madura Mart","madura-mart"],["Universal Task AI","universal-task-ai"]]},
+laravel:{name:"Laravel",type:"Framework",icon:"laravel",level:"Intermediate",m:["Project Usage","Integration","Backend Scope","Ecosystem","Recency"],v:[90,90,95,95,90],p:[["Madura Mart","madura-mart"],["PT Putra Prananta","pt-putra-prananta-website"]]},
+codeigniter:{name:"CodeIgniter",type:"Framework",icon:"codeigniter",level:"Intermediate",m:["Project Usage","Integration","Backend Scope","Ecosystem","Recency"],v:[20,15,45,45,20],p:[]},
+nodejs:{name:"Node.js",type:"Runtime / Framework",icon:"nodejs",level:"Intermediate",m:["Project Usage","Integration","API Scope","Ecosystem","Recency"],v:[30,25,65,70,35],p:[]},
+react:{name:"React",type:"Library",icon:"react",level:"Intermediate",m:["Project Usage","Components","Ecosystem","Integration","Recency"],v:[25,20,55,40,30],p:[]},
+nextjs:{name:"Next.js",type:"Framework",icon:"nextjs",level:"Intermediate",m:["Project Usage","Full-stack Scope","Ecosystem","Integration","Recency"],v:[20,15,50,35,25],p:[]},
+tailwind:{name:"Tailwind CSS",type:"Framework / Utility",icon:"tailwind",level:"Intermediate",m:["Project Usage","UI Scope","Design System","Integration","Recency"],v:[80,85,90,85,85],p:[["PT Putra Prananta","pt-putra-prananta-website"],["Madura Mart","madura-mart"]]},
+bootstrap:{name:"Bootstrap",type:"Framework / UI",icon:"bootstrap",level:"Intermediate",m:["Project Usage","UI Scope","Components","Integration","Recency"],v:[35,35,55,45,30],p:[]},
+alpinejs:{name:"Alpine.js",type:"Library",icon:"alpinejs",level:"Intermediate",m:["Project Usage","Interactivity","Integration","Ecosystem","Recency"],v:[65,70,75,80,75],p:[["PT Putra Prananta","pt-putra-prananta-website"],["Madura Mart","madura-mart"]]},
+flutter:{name:"Flutter",type:"SDK / Framework",icon:"flutter",level:"Intermediate",m:["Project Usage","Mobile Scope","UI Scope","Dart Integration","Recency"],v:[40,45,80,80,45],p:[["latihan_flutter","latihan_flutter"]]},
+git:{name:"Git",type:"Developer Tool",icon:"git",level:"Intermediate",m:["Project Usage","Version Control","Branch Workflow","Collaboration","Recency"],v:[95,95,85,80,95],p:[["Universal Task AI","universal-task-ai"],["Madura Mart","madura-mart"],["PT Putra Prananta","pt-putra-prananta-website"]]},
+github:{name:"GitHub",type:"Developer Tool",icon:"github",level:"Intermediate",m:["Project Usage","Repository Workflow","Collaboration","Automation","Recency"],v:[95,95,85,90,95],p:[["Universal Task AI","universal-task-ai"],["Madura Mart","madura-mart"],["PT Putra Prananta","pt-putra-prananta-website"]]},
+vscode:{name:"VS Code",type:"Developer Tool",icon:"vscode",level:"Intermediate",m:["Project Usage","Editor Workflow","Language Coverage","Extensions","Recency"],v:[85,90,90,85,95],p:[["Universal Task AI","universal-task-ai"],["Madura Mart","madura-mart"],["PT Putra Prananta","pt-putra-prananta-website"]]},
+phpstorm:{name:"PhpStorm",type:"Developer Tool",icon:"phpstorm",level:"Intermediate",m:["Project Usage","PHP Workflow","IDE Coverage","Integration","Recency"],v:[30,35,60,45,35],p:[["Madura Mart","madura-mart"],["PT Putra Prananta","pt-putra-prananta-website"]]},
+pycharm:{name:"PyCharm",type:"Developer Tool",icon:"pycharm",level:"Intermediate",m:["Project Usage","Python Workflow","IDE Coverage","Integration","Recency"],v:[30,35,55,45,40],p:[["Universal Task AI","universal-task-ai"]]},
+docker:{name:"Docker",type:"Developer Tool",icon:"docker",level:"Intermediate",m:["Project Usage","Container Workflow","Environment Coverage","Automation","Recency"],v:[45,45,70,65,55],p:[["Universal Task AI","universal-task-ai"]]},
+linux:{name:"Linux",type:"Developer Tool",icon:"linux",level:"Intermediate",m:["Project Usage","CLI Workflow","Server Concepts","Automation","Recency"],v:[55,55,75,70,65],p:[["Universal Task AI","universal-task-ai"]]},
+postman:{name:"Postman",type:"Developer Tool",icon:"postman",level:"Intermediate",m:["Project Usage","API Workflow","Testing","Integration","Recency"],v:[35,35,65,55,40],p:[]},
+npm:{name:"npm",type:"Developer Tool",icon:"npm",level:"Intermediate",m:["Project Usage","Package Workflow","Frontend Tooling","Integration","Recency"],v:[70,75,80,80,85],p:[["PT Putra Prananta","pt-putra-prananta-website"],["Madura Mart","madura-mart"]]},
+pnpm:{name:"pnpm",type:"Developer Tool",icon:"pnpm",level:"Intermediate",m:["Project Usage","Package Workflow","Workspace","Integration","Recency"],v:[20,20,45,35,25],p:[]},
+vite:{name:"Vite",type:"Build Tool",icon:"vite",level:"Intermediate",m:["Project Usage","Build Workflow","Frontend Integration","Performance","Recency"],v:[65,65,75,80,80],p:[["PT Putra Prananta","pt-putra-prananta-website"],["Madura Mart","madura-mart"]]},
+figma:{name:"Figma",type:"Design Tool",icon:"figma",level:"Intermediate",m:["Project Usage","UI Workflow","Handoff","Components","Recency"],v:[35,30,60,55,35],p:[]},
+mysql:{name:"MySQL",type:"Database",icon:"mysql",level:"Intermediate",m:["Project Usage","Data Layer","Schema","Integration","Recency"],v:[75,75,85,85,80],p:[["Madura Mart","madura-mart"],["PT Putra Prananta","pt-putra-prananta-website"]]},
+postgresql:{name:"PostgreSQL",type:"Database",icon:"postgresql",level:"Intermediate",m:["Project Usage","Data Layer","Schema","Integration","Recency"],v:[25,20,40,35,25],p:[]},
+sqlite:{name:"SQLite",type:"Database",icon:"sqlite",level:"Intermediate",m:["Project Usage","Data Layer","Local Persistence","Integration","Recency"],v:[50,45,65,65,55],p:[["Madura Mart","madura-mart"],["latihan_flutter","latihan_flutter"]]},
+mongodb:{name:"MongoDB",type:"Database",icon:"mongodb",level:"Intermediate",m:["Project Usage","Data Layer","Document Model","Integration","Recency"],v:[20,15,35,30,20],p:[]},
+redis:{name:"Redis",type:"Database / Cache",icon:"redis",level:"Intermediate",m:["Project Usage","Caching","Integration","Backend Fit","Recency"],v:[35,35,65,75,65],p:[["Universal Task AI","universal-task-ai"]]},
+firebase:{name:"Firebase",type:"Backend Service",icon:"firebase",level:"Intermediate",m:["Project Usage","Service Coverage","App Integration","Realtime","Recency"],v:[20,15,45,40,25],p:[]},
+supabase:{name:"Supabase",type:"Backend Service",icon:"supabase",level:"Intermediate",m:["Project Usage","Service Coverage","SQL Integration","App Integration","Recency"],v:[20,15,45,40,25],p:[]},
+githubactions:{name:"GitHub Actions",type:"Cloud / DevOps",icon:"githubactions",level:"Intermediate",m:["Project Usage","CI Coverage","Automation","Repository Integration","Recency"],v:[45,45,65,75,60],p:[["Universal Task AI","universal-task-ai"]]},
+nginx:{name:"Nginx",type:"Cloud / DevOps",icon:"nginx",level:"Intermediate",m:["Project Usage","Web Serving","Reverse Proxy","Deployment","Recency"],v:[30,25,50,50,30],p:[]},
+vercel:{name:"Vercel",type:"Cloud / DevOps",icon:"vercel",level:"Intermediate",m:["Project Usage","Deployment","Integration","Automation","Recency"],v:[25,20,45,45,30],p:[]},
+aws:{name:"AWS",type:"Cloud / DevOps",icon:"aws",level:"Intermediate",m:["Project Usage","Cloud Breadth","Infrastructure","Integration","Recency"],v:[15,10,35,25,15],p:[]},
+cloudflare:{name:"Cloudflare",type:"Cloud / DevOps",icon:"cloudflare",level:"Intermediate",m:["Project Usage","Edge Services","Security","Deployment","Recency"],v:[20,15,35,35,20],p:[]}
+};
+const GROUPS=[
+["Languages",["php","python","js","kotlin","dart","cpp","html","css","bash","sql"]],
+["Frameworks & Libraries",["laravel","codeigniter","nodejs","react","nextjs","tailwind","bootstrap","alpinejs","flutter"]],
+["Developer Tools",["git","github","vscode","phpstorm","pycharm","docker","linux","postman","npm","pnpm","vite","figma"]],
+["Databases",["mysql","postgresql","sqlite","mongodb","redis","firebase","supabase"]],
+["Cloud & DevOps",["githubactions","nginx","vercel","aws","cloudflare"]]
+];
+function icon(id){return "https://skillicons.dev/icons?i="+id}
+function renderGroups(){
+document.getElementById("toolbox").innerHTML=GROUPS.map(function(g){
+let x='<div class="group"><div class="group-title">'+g[0]+'</div><div class="icons">';
+g[1].forEach(function(id){x+='<a class="tech" href="#'+id+'" data-id="'+id+'" title="'+S[id].name+'"><img src="'+icon(S[id].icon)+'" alt="'+S[id].name+'"></a>'});
+return x+"</div></div>";
+}).join("");
+document.querySelectorAll(".tech").forEach(function(a){a.addEventListener("click",function(e){e.preventDefault();selectSkill(a.dataset.id);history.replaceState(null,"","#"+a.dataset.id)})});
+}
+function pts(values,cx,cy,r){
+return values.map(function(v,i){const ang=-Math.PI/2+i*2*Math.PI/5;const rr=r*v/100;return[cx+Math.cos(ang)*rr,cy+Math.sin(ang)*rr]});
+}
+function poly(p){return p.map(function(x){return x[0].toFixed(1)+","+x[1].toFixed(1)}).join(" ")}
+function radar(s){
+const cx=240,cy=160,r=104;
+let html='<svg viewBox="0 0 480 330" role="img" aria-label="'+s.name+' statistics"><rect width="480" height="330" rx="10" fill="#0d1117"/><text x="240" y="25" fill="#f0f6fc" font-family="Arial" font-size="15" font-weight="700" text-anchor="middle">'+s.name+' · Statistics</text><g fill="none" stroke="#30363d">';
+[20,40,60,80,100].forEach(function(v){html+='<polygon points="'+poly(pts([v,v,v,v,v],cx,cy,r))+'"/>'});
+pts([100,100,100,100,100],cx,cy,r).forEach(function(p){html+='<line x1="'+cx+'" y1="'+cy+'" x2="'+p[0]+'" y2="'+p[1]+'"/>'});
+html+='</g><polygon points="'+poly(pts(s.v,cx,cy,r))+'" fill="#8b5cf6" fill-opacity=".25" stroke="#a78bfa" stroke-width="3"/>';
+const outer=pts([118,118,118,118,118],cx,cy,r);const actual=pts(s.v,cx,cy,r);
+s.m.forEach(function(label,i){html+='<circle cx="'+actual[i][0]+'" cy="'+actual[i][1]+'" r="3.5" fill="#a78bfa"/><text x="'+outer[i][0]+'" y="'+outer[i][1]+'" fill="#c9d1d9" font-family="Arial" font-size="10" text-anchor="middle">'+label+'</text><text x="'+outer[i][0]+'" y="'+(outer[i][1]+13)+'" fill="#8b949e" font-family="Arial" font-size="10" text-anchor="middle">'+s.v[i]+'/100</text>'});
+html+='<text x="240" y="312" fill="#8b949e" font-family="Arial" font-size="10" text-anchor="middle">Technology-specific evidence profile · 0–100</text></svg>';
+return html;
+}
+function projects(s){
+if(!s.p.length)return "<li>No tracked project yet</li>";
+return s.p.map(function(p){return '<li><a href="'+REPO+p[1]+'" target="_blank" rel="noreferrer">'+p[0]+"</a></li>"}).join("");
+}
+function selectSkill(id){
+const s=S[id]||S.php;
+document.querySelectorAll(".tech").forEach(function(a){a.classList.toggle("active",a.dataset.id===id)});
+let rows="";
+s.m.forEach(function(m,i){rows+="<div>"+m+"</div><strong>"+s.v[i]+"/100</strong>"});
+document.getElementById("detail").innerHTML='<div class="detail" id="selected-detail"><div class="level"><div class="level-label">Level</div><div class="level-value">'+s.level+'</div><div class="type">'+s.type+"</div></div><div class="chartbox"><div class="chart-title">Statistics</div>"+radar(s)+'<div class="metric-list">'+rows+'</div></div><div class="projects"><h3>Projects</h3><ul>'+projects(s)+"</ul></div></div>";
+document.getElementById("selected-detail").scrollIntoView({behavior:"smooth",block:"nearest"});
+}
+renderGroups();selectSkill(location.hash.slice(1)||"php");
+</script>
+</body>
+</html>
