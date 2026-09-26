@@ -285,7 +285,7 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
   <line x1="460" y1="70" x2="460" y2="210" stroke="{card}" stroke-width="1"/>
   <rect x="320" y="28" width="280" height="214" rx="12" fill="{card}" stroke="{border}"/>
   <text x="338" y="54" font-size="14" font-weight="700" fill="{green}">Contribution Activity</text>
-  {ring(406,122,46,contribution_pct,green,7)}
+  {ring(390,122,46,contribution_pct,green,7)}
   <text x="390" y="117" font-size="21" font-weight="800" fill="{bright}" text-anchor="middle">{fmt_num(contributions)}</text>
   <text x="390" y="134" font-size="8" fill="{muted}" text-anchor="middle">LAST 365 DAYS</text>
   <text x="478" y="104" font-size="8" fill="{muted}">CURRENT STREAK</text>
@@ -297,7 +297,7 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
   <line x1="752" y1="70" x2="752" y2="210" stroke="{card}" stroke-width="1"/>
   <rect x="612" y="28" width="280" height="214" rx="12" fill="{card}" stroke="{border}"/>
   <text x="630" y="54" font-size="14" font-weight="700" fill="{green}">Streak Record</text>
-  {ring(697,122,46,record_pct,bright,7)}
+  {ring(682,122,46,record_pct,bright,7)}
   <text x="682" y="117" font-size="21" font-weight="800" fill="{bright}" text-anchor="middle">{longest}</text>
   <text x="682" y="134" font-size="8" fill="{muted}" text-anchor="middle">LONGEST STREAK</text>
   <text x="770" y="104" font-size="8" fill="{muted}">CONTRIBUTIONS</text>
