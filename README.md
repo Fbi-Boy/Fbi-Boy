@@ -5,11 +5,35 @@
 
 <div align="center">
 
-<p>
-  <img src="https://media1.tenor.com/m/rCaIUO0MP-EAAAAd/mario-pixel-art.gif"
-       width="100%"
-       alt="F4B0Y pixel-art gaming room"/>
-</p>
+<table width="100%">
+<tr>
+<td width="18%" align="center" valign="middle">
+
+<h1>
+S<br>
+U<br>
+P<br>
+E<br>
+R
+</h1>
+
+</td>
+
+<td width="64%" align="center" valign="middle">
+
+<img src="https://media1.tenor.com/m/rCaIUO0MP-EAAAAd/mario-pixel-art.gif"
+     width="62%"
+     alt="F4B0Y pixel-art gaming room"/>
+
+</td>
+
+<td width="18%" align="center" valign="middle">
+
+<h1>FABOY</h1>
+
+</td>
+</tr>
+</table>
 
 <h1>F4B0Y Here !</h1>
 
@@ -34,8 +58,6 @@
 </p>
 
 </div>
-
-## 👨‍💻 About Me
 
 <table>
 <tr>
