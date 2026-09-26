@@ -18,7 +18,7 @@ import urllib.request
 from pathlib import Path
 
 OWNER = "Fbi-Boy"
-OUT = Path("assets/github-analytics-v10.svg")
+OUT = Path("assets/github-analytics-v11.svg")
 API = "https://api.github.com"
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
 
@@ -309,7 +309,18 @@ def language_percentages(repos):
 
     ranked = sorted(totals.items(), key=lambda item: item[1], reverse=True)
     total_bytes = sum(totals.values())
-    return [(name, safe_percent(count, total_bytes)) for name, count in ranked[:5]]
+    if not total_bytes:
+        return []
+
+    top = ranked[:5]
+    remainder = sum(count for _, count in ranked[5:])
+    rows = [(name, safe_percent(count, total_bytes)) for name, count in top]
+
+    # Keep the card stable when new languages are detected: everything outside
+    # the top five is automatically grouped into "Others".
+    if remainder:
+        rows.append(("Others", safe_percent(remainder, total_bytes)))
+    return rows
 
 def pixel_text(text_value, cx, cy, scale=4, fill="#00ff9a"):
     """Render short rank labels as crisp pixel blocks centered on (cx, cy)."""
@@ -409,16 +420,22 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
     ], 754, 810, 876)
 
     lang_rows = []
-    y = 312
-    for name, pct in langs[:5]:
-        label = f"{name}  {pct:.1f}%"
-        bar_width = 570 * pct / 100
+    y = 314
+    for idx, (name, pct) in enumerate(langs[:6], start=1):
+        rank_label = f"{idx:02d}"
+        bar_width = 510 * pct / 100
+        row_y = y - 12
         lang_rows.append(
-            f'<text x="58" y="{y}" font-size="10" fill="{text}">{esc(label)}</text>'
-            f'<rect x="220" y="{y-8}" width="570" height="7" rx="3.5" fill="{track}"/>'
-            f'<rect x="220" y="{y-8}" width="{max(4, bar_width):.1f}" height="7" rx="3.5" fill="{green}"/>'
+            f'<rect x="46" y="{row_y}" width="828" height="20" rx="6" fill="{track}"/>'
+            f'<rect x="56" y="{row_y+3}" width="28" height="14" rx="4" fill="{border}"/>'
+            f'<text x="70" y="{y+1}" font-size="7.5" fill="{muted}" text-anchor="middle">{rank_label}</text>'
+            f'<text x="96" y="{y+1}" font-size="10" font-weight="700" fill="{text}">{esc(name)}</text>'
+            f'<rect x="246" y="{y-6}" width="510" height="8" rx="4" fill="{bg}"/>'
+            f'<rect x="246" y="{y-6}" width="{max(3, bar_width):.1f}" height="8" rx="4" fill="{green}"/>'
+            f'<text x="846" y="{y+1}" font-size="10.5" font-weight="800" fill="{bright}" text-anchor="end">{pct:.1f}%</text>'
         )
-        y += 20
+        y += 18
+
 
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
 <rect width="{W}" height="{H}" rx="18" fill="{bg}"/>
@@ -453,10 +470,12 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
   <text x="684" y="205" font-size="8" fill="{muted}" font-weight="700" text-anchor="middle">LONGEST STREAK</text>
   {streak_rows}
 
-  <!-- CARD 4: languages -->
+  <!-- CARD 4: dynamic language ranking -->
   <rect x="28" y="258" width="864" height="160" rx="12" fill="{card}" stroke="{border}"/>
   <text x="46" y="285" font-size="14" font-weight="700" fill="{green}">Most Used Languages</text>
-  <text x="874" y="285" font-size="8" fill="{muted}" text-anchor="end">Repository language bytes</text>
+  <text x="874" y="284" font-size="8" font-weight="700" fill="{muted}" text-anchor="end">AUTO • TOP 5 + OTHERS</text>
+  <text x="96" y="300" font-size="7.5" fill="{muted}">LANGUAGE</text>
+  <text x="846" y="300" font-size="7.5" fill="{muted}" text-anchor="end">SHARE</text>
   {''.join(lang_rows)}
 </g>
 
