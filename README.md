@@ -30,7 +30,7 @@
   &nbsp;
   <img src="https://img.shields.io/github/stars/Fbi-Boy?style=for-the-badge&label=STARS&color=111827"/>
   &nbsp;
-  <img src="https://img.shields.io/badge/REPOSITORIES-8-111827?style=for-the-badge&logo=github&logoColor=white"/>
+  <img src="https://img.shields.io/github/repos/Fbi-Boy?style=for-the-badge&label=REPOSITORIES&color=111827&logo=github&logoColor=white"/>
 </p>
 
 </div>
