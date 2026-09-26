@@ -76,7 +76,6 @@ def contribution_data():
     query($login:String!, $from:DateTime!, $to:DateTime!) {
       user(login:$login) {
         contributionsCollection(from:$from, to:$to) {
-          totalContributions
           totalCommitContributions
           totalIssueContributions
           totalPullRequestContributions
