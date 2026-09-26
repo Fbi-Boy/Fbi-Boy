@@ -76,31 +76,72 @@
 <div align="center">
 
 <p><strong>Languages</strong><br>
-<img src="https://skillicons.dev/icons?i=php,python,js,kotlin,dart,cpp,html,css,bash,sql&perline=10" height="30" alt="Languages"/>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#php"><img src="https://skillicons.dev/icons?i=php" height="30" alt="php"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#python"><img src="https://skillicons.dev/icons?i=python" height="30" alt="python"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#js"><img src="https://skillicons.dev/icons?i=js" height="30" alt="js"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#kotlin"><img src="https://skillicons.dev/icons?i=kotlin" height="30" alt="kotlin"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#dart"><img src="https://skillicons.dev/icons?i=dart" height="30" alt="dart"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#cpp"><img src="https://skillicons.dev/icons?i=cpp" height="30" alt="cpp"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#html"><img src="https://skillicons.dev/icons?i=html" height="30" alt="html"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#css"><img src="https://skillicons.dev/icons?i=css" height="30" alt="css"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#bash"><img src="https://skillicons.dev/icons?i=bash" height="30" alt="bash"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#sql"><img src="https://skillicons.dev/icons?i=sql" height="30" alt="sql"/></a>
 </p>
 
 <p><strong>Frameworks & Libraries</strong><br>
-<img src="https://skillicons.dev/icons?i=laravel,codeigniter,nodejs,react,nextjs,tailwind,bootstrap,alpinejs,flutter&perline=9" height="30" alt="Frameworks & Libraries"/>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#laravel"><img src="https://skillicons.dev/icons?i=laravel" height="30" alt="laravel"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#codeigniter"><img src="https://skillicons.dev/icons?i=codeigniter" height="30" alt="codeigniter"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#nodejs"><img src="https://skillicons.dev/icons?i=nodejs" height="30" alt="nodejs"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#react"><img src="https://skillicons.dev/icons?i=react" height="30" alt="react"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#nextjs"><img src="https://skillicons.dev/icons?i=nextjs" height="30" alt="nextjs"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#tailwind"><img src="https://skillicons.dev/icons?i=tailwind" height="30" alt="tailwind"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#bootstrap"><img src="https://skillicons.dev/icons?i=bootstrap" height="30" alt="bootstrap"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#alpinejs"><img src="https://skillicons.dev/icons?i=alpinejs" height="30" alt="alpinejs"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#flutter"><img src="https://skillicons.dev/icons?i=flutter" height="30" alt="flutter"/></a>
 </p>
 
 <p><strong>Developer Tools</strong><br>
-<img src="https://skillicons.dev/icons?i=git,github,vscode,phpstorm,pycharm,docker,linux,postman,npm,pnpm,vite,figma&perline=12" height="30" alt="Developer Tools"/>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#git"><img src="https://skillicons.dev/icons?i=git" height="30" alt="git"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#github"><img src="https://skillicons.dev/icons?i=github" height="30" alt="github"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#vscode"><img src="https://skillicons.dev/icons?i=vscode" height="30" alt="vscode"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#phpstorm"><img src="https://skillicons.dev/icons?i=phpstorm" height="30" alt="phpstorm"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#pycharm"><img src="https://skillicons.dev/icons?i=pycharm" height="30" alt="pycharm"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#docker"><img src="https://skillicons.dev/icons?i=docker" height="30" alt="docker"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#linux"><img src="https://skillicons.dev/icons?i=linux" height="30" alt="linux"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#postman"><img src="https://skillicons.dev/icons?i=postman" height="30" alt="postman"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#npm"><img src="https://skillicons.dev/icons?i=npm" height="30" alt="npm"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#pnpm"><img src="https://skillicons.dev/icons?i=pnpm" height="30" alt="pnpm"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#vite"><img src="https://skillicons.dev/icons?i=vite" height="30" alt="vite"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#figma"><img src="https://skillicons.dev/icons?i=figma" height="30" alt="figma"/></a>
 </p>
 
 <p><strong>Databases</strong><br>
-<img src="https://skillicons.dev/icons?i=mysql,postgresql,sqlite,mongodb,redis,firebase,supabase&perline=7" height="30" alt="Databases"/>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#mysql"><img src="https://skillicons.dev/icons?i=mysql" height="30" alt="mysql"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#postgresql"><img src="https://skillicons.dev/icons?i=postgresql" height="30" alt="postgresql"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#sqlite"><img src="https://skillicons.dev/icons?i=sqlite" height="30" alt="sqlite"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#mongodb"><img src="https://skillicons.dev/icons?i=mongodb" height="30" alt="mongodb"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#redis"><img src="https://skillicons.dev/icons?i=redis" height="30" alt="redis"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#firebase"><img src="https://skillicons.dev/icons?i=firebase" height="30" alt="firebase"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#supabase"><img src="https://skillicons.dev/icons?i=supabase" height="30" alt="supabase"/></a>
 </p>
 
 <p><strong>Cloud & DevOps</strong><br>
-<img src="https://skillicons.dev/icons?i=githubactions,nginx,vercel,aws,cloudflare&perline=5" height="30" alt="Cloud & DevOps"/>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#githubactions"><img src="https://skillicons.dev/icons?i=githubactions" height="30" alt="githubactions"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#nginx"><img src="https://skillicons.dev/icons?i=nginx" height="30" alt="nginx"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#vercel"><img src="https://skillicons.dev/icons?i=vercel" height="30" alt="vercel"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#aws"><img src="https://skillicons.dev/icons?i=aws" height="30" alt="aws"/></a>
+<a href="https://fbi-boy.github.io/Fbi-Boy/#cloudflare"><img src="https://skillicons.dev/icons?i=cloudflare" height="30" alt="cloudflare"/></a>
 </p>
 
-<p>
-<code>✨ Click to view my skill details</code>
-</p>
+<p><code>✨ Click a technology icon to open its details</code></p>
 
 </div>
 
+<hr>
+
+<p align="center">
+  <a href="https://fbi-boy.github.io/Fbi-Boy/"><strong>Open Interactive Technology Profile →</strong></a>
+</p>
 
 ---
 
