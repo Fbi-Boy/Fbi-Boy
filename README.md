@@ -75,15 +75,80 @@
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=php,python,js,ts,kotlin,dart,cpp,c,java,cs,go,rust,ruby,swift&perline=14" alt="Languages and tools used"/>
+<img src="https://skillicons.dev/icons?i=php" height="48" alt="php"/>
+<img src="https://skillicons.dev/icons?i=py" height="48" alt="py"/>
+<img src="https://skillicons.dev/icons?i=js" height="48" alt="js"/>
+<img src="https://skillicons.dev/icons?i=ts" height="48" alt="ts"/>
+<img src="https://skillicons.dev/icons?i=kotlin" height="48" alt="kotlin"/>
+<img src="https://skillicons.dev/icons?i=dart" height="48" alt="dart"/>
+<img src="https://skillicons.dev/icons?i=cpp" height="48" alt="cpp"/>
+<img src="https://skillicons.dev/icons?i=c" height="48" alt="c"/>
+<img src="https://skillicons.dev/icons?i=java" height="48" alt="java"/>
+<img src="https://skillicons.dev/icons?i=cs" height="48" alt="cs"/>
+<img src="https://skillicons.dev/icons?i=go" height="48" alt="go"/>
+<img src="https://skillicons.dev/icons?i=rust" height="48" alt="rust"/>
+<img src="https://skillicons.dev/icons?i=ruby" height="48" alt="ruby"/>
+<img src="https://skillicons.dev/icons?i=swift" height="48" alt="swift"/>
 <br>
-<img src="https://skillicons.dev/icons?i=html,css,bash,powershell,sql,laravel,symfony,nodejs,express,react,nextjs,vue,angular,tailwind&perline=14" alt="Languages and tools used"/>
+<img src="https://skillicons.dev/icons?i=html" height="48" alt="html"/>
+<img src="https://skillicons.dev/icons?i=css" height="48" alt="css"/>
+<img src="https://skillicons.dev/icons?i=bash" height="48" alt="bash"/>
+<img src="https://skillicons.dev/icons?i=powershell" height="48" alt="powershell"/>
+<img src="./assets/sql.svg" height="48" alt="SQL"/>
+<img src="https://skillicons.dev/icons?i=laravel" height="48" alt="laravel"/>
+<img src="https://skillicons.dev/icons?i=symfony" height="48" alt="symfony"/>
+<img src="https://skillicons.dev/icons?i=nodejs" height="48" alt="nodejs"/>
+<img src="https://skillicons.dev/icons?i=express" height="48" alt="express"/>
+<img src="https://skillicons.dev/icons?i=react" height="48" alt="react"/>
+<img src="https://skillicons.dev/icons?i=nextjs" height="48" alt="nextjs"/>
+<img src="https://skillicons.dev/icons?i=vue" height="48" alt="vue"/>
+<img src="https://skillicons.dev/icons?i=angular" height="48" alt="angular"/>
+<img src="https://skillicons.dev/icons?i=tailwind" height="48" alt="tailwind"/>
 <br>
-<img src="https://skillicons.dev/icons?i=bootstrap,alpinejs,flutter,androidstudio,spring,dotnet,git,github,gitlab,vscode,pycharm,phpstorm,docker,linux&perline=14" alt="Languages and tools used"/>
+<img src="https://skillicons.dev/icons?i=bootstrap" height="48" alt="bootstrap"/>
+<img src="https://skillicons.dev/icons?i=alpinejs" height="48" alt="alpinejs"/>
+<img src="https://skillicons.dev/icons?i=flutter" height="48" alt="flutter"/>
+<img src="https://skillicons.dev/icons?i=androidstudio" height="48" alt="androidstudio"/>
+<img src="https://skillicons.dev/icons?i=spring" height="48" alt="spring"/>
+<img src="https://skillicons.dev/icons?i=dotnet" height="48" alt="dotnet"/>
+<img src="https://skillicons.dev/icons?i=git" height="48" alt="git"/>
+<img src="https://skillicons.dev/icons?i=github" height="48" alt="github"/>
+<img src="https://skillicons.dev/icons?i=gitlab" height="48" alt="gitlab"/>
+<img src="https://skillicons.dev/icons?i=vscode" height="48" alt="vscode"/>
+<img src="https://skillicons.dev/icons?i=pycharm" height="48" alt="pycharm"/>
+<img src="https://skillicons.dev/icons?i=phpstorm" height="48" alt="phpstorm"/>
+<img src="https://skillicons.dev/icons?i=docker" height="48" alt="docker"/>
+<img src="https://skillicons.dev/icons?i=linux" height="48" alt="linux"/>
 <br>
-<img src="https://skillicons.dev/icons?i=postman,npm,yarn,pnpm,bun,vite,figma,mysql,postgres,sqlite,mongodb,redis,firebase,supabase&perline=14" alt="Languages and tools used"/>
+<img src="https://skillicons.dev/icons?i=postman" height="48" alt="postman"/>
+<img src="https://skillicons.dev/icons?i=npm" height="48" alt="npm"/>
+<img src="https://skillicons.dev/icons?i=yarn" height="48" alt="yarn"/>
+<img src="https://skillicons.dev/icons?i=pnpm" height="48" alt="pnpm"/>
+<img src="https://skillicons.dev/icons?i=bun" height="48" alt="bun"/>
+<img src="https://skillicons.dev/icons?i=vite" height="48" alt="vite"/>
+<img src="https://skillicons.dev/icons?i=figma" height="48" alt="figma"/>
+<img src="https://skillicons.dev/icons?i=mysql" height="48" alt="mysql"/>
+<img src="https://skillicons.dev/icons?i=postgres" height="48" alt="postgres"/>
+<img src="https://skillicons.dev/icons?i=sqlite" height="48" alt="sqlite"/>
+<img src="https://skillicons.dev/icons?i=mongodb" height="48" alt="mongodb"/>
+<img src="https://skillicons.dev/icons?i=redis" height="48" alt="redis"/>
+<img src="https://skillicons.dev/icons?i=firebase" height="48" alt="firebase"/>
+<img src="https://skillicons.dev/icons?i=supabase" height="48" alt="supabase"/>
 <br>
-<img src="https://skillicons.dev/icons?i=ansible,arduino,astro,django,fastapi,pytorch,tensorflow,threejs,unity,unreal,vim,webpack,wordpress,selenium&perline=14" alt="Languages and tools used"/>
+<img src="https://skillicons.dev/icons?i=ansible" height="48" alt="ansible"/>
+<img src="https://skillicons.dev/icons?i=arduino" height="48" alt="arduino"/>
+<img src="https://skillicons.dev/icons?i=astro" height="48" alt="astro"/>
+<img src="https://skillicons.dev/icons?i=django" height="48" alt="django"/>
+<img src="https://skillicons.dev/icons?i=fastapi" height="48" alt="fastapi"/>
+<img src="https://skillicons.dev/icons?i=pytorch" height="48" alt="pytorch"/>
+<img src="https://skillicons.dev/icons?i=tensorflow" height="48" alt="tensorflow"/>
+<img src="https://skillicons.dev/icons?i=threejs" height="48" alt="threejs"/>
+<img src="https://skillicons.dev/icons?i=unity" height="48" alt="unity"/>
+<img src="https://skillicons.dev/icons?i=unreal" height="48" alt="unreal"/>
+<img src="https://skillicons.dev/icons?i=vim" height="48" alt="vim"/>
+<img src="https://skillicons.dev/icons?i=webpack" height="48" alt="webpack"/>
+<img src="https://skillicons.dev/icons?i=wordpress" height="48" alt="wordpress"/>
+<img src="https://skillicons.dev/icons?i=selenium" height="48" alt="selenium"/>
 
 </div>
 
