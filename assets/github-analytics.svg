@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="920" height="352" viewBox="0 0 920 352">
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="374" viewBox="0 0 920 352">
 <rect width="920" height="352" rx="16" fill="#070c0a"/>
-<rect x="12" y="12" width="896" height="328" rx="16" fill="#070c0a" stroke="#284637"/>
+<rect x="12" y="12" width="896" height="350" rx="16" fill="#070c0a" stroke="#284637"/>
 
 <g font-family="Consolas, Courier New, monospace">
   <rect x="28" y="28" width="280" height="208" rx="11" fill="#0c1511" stroke="#284637"/>
@@ -29,7 +29,7 @@
   <text x="816" y="103" font-size="9" fill="#73b88c" text-anchor="middle">365D</text><text x="816" y="130" font-size="20" font-weight="800" fill="#00ff9a" text-anchor="middle">904</text><text x="816" y="149" font-size="9" fill="#73b88c" text-anchor="middle">CONTRIBUTIONS</text>
   <text x="628" y="204" font-size="9" fill="#73b88c">Independent streak calculation</text>
 
-  <rect x="170" y="252" width="580" height="78" rx="11" fill="#0c1511" stroke="#284637"/>
+  <rect x="170" y="252" width="580" height="100" rx="11" fill="#0c1511" stroke="#284637"/>
   <text x="188" y="275" font-size="13" font-weight="700" fill="#41ff88">Most Used Languages</text>
   <text x="292" y="287" font-size="10" fill="#b8ffcc">Blade 57.5%</text><rect x="450" y="279" width="310" height="5" rx="2.5" fill="#183126"/><rect x="450" y="279" width="178.3" height="5" rx="2.5" fill="#41ff88"/>
   <text x="292" y="300" font-size="10" fill="#b8ffcc">PHP 25.3%</text><rect x="450" y="292" width="310" height="5" rx="2.5" fill="#183126"/><rect x="450" y="292" width="78.4" height="5" rx="2.5" fill="#41ff88"/>
@@ -37,5 +37,5 @@
   <text x="292" y="326" font-size="10" fill="#b8ffcc">Dart 2.7%</text><rect x="450" y="318" width="310" height="5" rx="2.5" fill="#183126"/><rect x="450" y="318" width="8.4" height="5" rx="2.5" fill="#41ff88"/>
   <text x="292" y="339" font-size="10" fill="#b8ffcc">JavaScript 1.7%</text><rect x="450" y="331" width="310" height="5" rx="2.5" fill="#183126"/><rect x="450" y="331" width="5.3" height="5" rx="2.5" fill="#41ff88"/>
 </g>
-<text x="892" y="344" font-size="8" fill="#73b88c" text-anchor="end" font-family="Consolas, Courier New, monospace">F4B0Y Analytics Engine · Updated 2026-09-26 14:13 UTC</text>
+<text x="892" y="368" font-size="8" fill="#73b88c" text-anchor="end" font-family="Consolas, Courier New, monospace">F4B0Y Analytics Engine · Updated 2026-09-26 14:13 UTC</text>
 </svg>
