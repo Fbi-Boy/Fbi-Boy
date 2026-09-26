@@ -7,11 +7,10 @@
 <style>
 :root{color-scheme:dark;--bg:#0d1117;--panel:#161b22;--panel2:#0f141b;--border:#30363d;--text:#e6edf3;--muted:#8b949e;--accent:#a78bfa;--accentSoft:#c4b5fd}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-.wrap{max-width:1050px;margin:auto;padding:28px 18px 52px}h1{text-align:center;font-size:24px;margin:0}.lead{text-align:center;color:var(--muted);margin:6px 0 20px}
-.toolbox{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:16px}.group{margin-bottom:15px}.group:last-child{margin-bottom:0}.gt{text-align:center;font-weight:700;font-size:13px;margin-bottom:8px}.icons{display:flex;flex-wrap:wrap;justify-content:center;gap:7px}
+.wrap{max-width:1200px;margin:auto;padding:28px 18px 52px}h1{text-align:center;font-size:24px;margin:0}.lead{text-align:center;color:var(--muted);margin:6px 0 20px}
+.layout{display:grid;grid-template-columns:minmax(300px,390px) minmax(0,1fr);gap:18px;align-items:start}.toolbox{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:16px;position:sticky;top:18px}.group{margin-bottom:15px}.group:last-child{margin-bottom:0}.gt{text-align:center;font-weight:700;font-size:13px;margin-bottom:8px}.icons{display:flex;flex-wrap:wrap;justify-content:center;gap:7px}
 button.tech{appearance:none;border:1px solid transparent;background:var(--panel2);border-radius:8px;width:42px;height:42px;padding:5px;cursor:pointer}.tech:hover{border-color:#566171}.tech.active{border-color:var(--accent);background:#201b2d;box-shadow:0 0 0 1px rgba(167,139,250,.12)}.tech img{width:29px;height:29px;display:block;margin:auto}
 .hint{text-align:center;margin:12px 0;color:#c9d1d9}.hint code{background:var(--border);border-radius:6px;padding:4px 8px}
-hr{border:0;border-top:1px solid var(--border);margin:22px 0}
 .card{border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--panel)}
 .head{display:flex;align-items:center;gap:10px;padding:13px 16px;border-bottom:1px solid var(--border);background:#11161d}.head img{width:30px;height:30px}.head h2{font-size:17px;margin:0}.head p{margin:1px 0 0;font-size:12px;color:var(--muted)}
 .grid{display:grid;grid-template-columns:160px minmax(390px,1fr) 260px;min-height:350px}.col{padding:18px}.left{border-right:1px solid var(--border)}.right{border-left:1px solid var(--border)}
@@ -20,17 +19,20 @@ hr{border:0;border-top:1px solid var(--border);margin:22px 0}
 ul{margin:6px 0 0;padding-left:18px}li{margin:8px 0;font-size:13px}.projects a{color:#58a6ff;text-decoration:none}.projects a:hover{text-decoration:underline}
 .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.chip{border:1px solid var(--border);background:var(--panel2);padding:4px 7px;border-radius:7px;font-size:11px;color:#c9d1d9}
 .note{text-align:center;font-size:11px;color:var(--muted);margin-top:10px}
-@media(max-width:800px){.grid{grid-template-columns:1fr}.left,.right{border:0}.left{border-bottom:1px solid var(--border)}.right{border-top:1px solid var(--border)}}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.toolbox{position:static}.grid{grid-template-columns:1fr}.left,.right{border:0}.left{border-bottom:1px solid var(--border)}.right{border-top:1px solid var(--border)}}
 </style>
 </head>
 <body>
 <main class="wrap">
 <h1>🧰 Languages & Tools That I Used</h1>
 <p class="lead">Select a technology to update one compact statistics panel.</p>
-<section class="toolbox" id="toolbox"></section>
-<div class="hint"><code>✨ Click a technology to view its statistics</code></div>
-<hr>
-<section class="card" id="panel"></section>
+<section class="layout">
+  <div>
+    <section class="toolbox" id="toolbox"></section>
+    <div class="hint"><code>✨ Click a technology to view its statistics</code></div>
+  </div>
+  <section class="card" id="panel"></section>
+</section>
 <p class="note">Single-page interaction: icons are buttons, the panel updates in place, and no new tab is opened.</p>
 </main>
 <script>
