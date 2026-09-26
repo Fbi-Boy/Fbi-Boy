@@ -1,8 +1,3 @@
-<!-- ═══════════════════════════════════════════════════════════════
-     F4B0Y · GitHub Profile
-     Premium developer profile layout
-     ═══════════════════════════════════════════════════════════════ -->
-
 <div align="center">
 
 <p>
@@ -33,95 +28,9 @@
   <img src="https://img.shields.io/github/repos/Fbi-Boy?style=for-the-badge&label=REPOSITORIES&color=111827&logo=github&logoColor=white"/>
 </p>
 
-</div>══════════════════════════════════════════════════════════════
-     F4B0Y · GitHub Profile
-     Premium developer profile layout
-     ═══════════════════════════════════════════════════════════════ -->
-
-<div align="center">
-
-
-
-<h1>F4B0Y Here !</h1>
-
-<p>
-  <code>Software Developer</code>
-  &nbsp;•&nbsp;
-  <code>AI Builder</code>
-  &nbsp;•&nbsp;
-  <code>Web Developer</code>
-</p>
-
-<hr>
-
-<p>
-  &nbsp;
-  <img src="https://img.shields.io/github/followers/Fbi-Boy?style=for-the-badge&label=FOLLOWERS&color=111827"/>
-  &nbsp;
-  <img src="https://img.shields.io/github/stars/Fbi-Boy?style=for-the-badge&label=STARS&color=111827"/>
-  &nbsp;
-  <img src="https://img.shields.io/github/repos/Fbi-Boy?style=for-the-badge&label=REPOSITORIES&color=111827&logo=github&logoColor=white"/>
-</p>
-
-</div>══════════════════════════════════════════════════════════════
-     F4B0Y · GitHub Profile
-     Premium developer profile layout
-     ═══════════════════════════════════════════════════════════════ -->
-
-<div align="center">
-
-<table width="100%">
-<tr>
-<td width="18%" align="center" valign="middle">
-
-<h1>
-S<br>
-U<br>
-P<br>
-E<br>
-R
-</h1>
-
-</td>
-
-<td width="64%" align="center" valign="middle">
-
-<img src="https://media1.tenor.com/m/rCaIUO0MP-EAAAAd/mario-pixel-art.gif"
-     width="62%"
-     alt="F4B0Y pixel-art gaming room"/>
-
-</td>
-
-<td width="18%" align="center" valign="middle">
-
-<h1>FABOY</h1>
-
-</td>
-</tr>
-</table>
-
-<h1>F4B0Y Here !</h1>
-
-<p>
-  <code>Software Developer</code>
-  &nbsp;•&nbsp;
-  <code>AI Builder</code>
-  &nbsp;•&nbsp;
-  <code>Web Developer</code>
-</p>
-
-<hr>
-
-<p>
-  &nbsp;
-  <img src="https://img.shields.io/github/followers/Fbi-Boy?style=for-the-badge&label=FOLLOWERS&color=111827"/>
-  &nbsp;
-  <img src="https://img.shields.io/github/stars/Fbi-Boy?style=for-the-badge&label=STARS&color=111827"/>
-  &nbsp;
-  <img src="https://img.shields.io/github/repos/Fbi-Boy?style=for-the-badge&label=REPOSITORIES&color=111827&logo=github&logoColor=white"/>
-</p>
-
 </div>
+
+## 👨‍💻 About Me
 
 <table>
 <tr>
