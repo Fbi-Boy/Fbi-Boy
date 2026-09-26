@@ -18,7 +18,7 @@ import urllib.request
 from pathlib import Path
 
 OWNER = "Fbi-Boy"
-OUT = Path("assets/github-analytics-v7.svg")
+OUT = Path("assets/github-analytics-v8.svg")
 API = "https://api.github.com"
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
 
@@ -69,6 +69,100 @@ def search_total(q: str) -> int:
 def commit_total() -> int:
     # Search uses the GitHub user identity, not an author-name string.
     return int(get_json("/search/commits", query={"q": f"author:{OWNER}", "per_page": "1"})["total_count"])
+
+# GitHub does not publish an official "expert" score. This transparent
+# reference pool uses well-known, high-impact open-source maintainer accounts
+# and compares the exact profile-style stats shown in this card.
+RANK_BENCHMARK_USERS = ("torvalds", "tj", "sindresorhus", "gaearon")
+
+def benchmark_profile_stats():
+    result = []
+    for login in RANK_BENCHMARK_USERS:
+        profile = get_json(f"/users/{login}")
+        repos_count = int(profile.get("public_repos", 0))
+        total_stars = 0
+        page = 1
+        while True:
+            repos = get_json(
+                f"/users/{login}/repos",
+                query={
+                    "per_page": "100",
+                    "page": str(page),
+                    "type": "owner",
+                    "sort": "updated",
+                },
+            )
+            for repo in repos:
+                if not repo.get("fork") and not repo.get("archived"):
+                    total_stars += int(repo.get("stargazers_count", 0))
+            if len(repos) < 100:
+                break
+            page += 1
+            if page > 20:
+                break
+
+        commits = int(get_json(
+            "/search/commits",
+            query={"q": f"author:{login}", "per_page": "1"}
+        )["total_count"])
+        prs = search_total(f"author:{login} type:pr")
+        issues = search_total(f"author:{login} type:issue")
+
+        result.append({
+            "login": login,
+            "stars": total_stars,
+            "commits": commits,
+            "pull_requests": prs,
+            "issues": issues,
+            "repositories": repos_count,
+        })
+    return result
+
+def rank_developer(stars, commits, prs, issues, repositories, benchmarks):
+    import math
+
+    fields = {
+        "stars": 0.20,
+        "commits": 0.30,
+        "pull_requests": 0.25,
+        "issues": 0.15,
+        "repositories": 0.10,
+    }
+    values = {
+        "stars": stars,
+        "commits": commits,
+        "pull_requests": prs,
+        "issues": issues,
+        "repositories": repositories,
+    }
+    ceilings = {
+        field: max([int(b.get(field, 0)) for b in benchmarks] + [1])
+        for field in fields
+    }
+
+    score = 0.0
+    for field, weight in fields.items():
+        value = max(0, int(values[field]))
+        ceiling = ceilings[field]
+        normalized = min(1.0, math.log1p(value) / math.log1p(ceiling))
+        score += normalized * weight
+    score *= 100.0
+
+    tiers = [
+        (10.0, "-F"), (15.0, "F"), (20.0, "F+"),
+        (25.0, "-D"), (30.0, "D"), (35.0, "D+"),
+        (40.0, "-C"), (45.0, "C"), (50.0, "C+"),
+        (55.0, "-B"), (60.0, "B"), (65.0, "B+"),
+        (70.0, "-A"), (75.0, "A"), (80.0, "A+"),
+        (85.0, "-S"), (88.0, "S"), (92.0, "S+"),
+        (95.0, "SS"), (97.0, "SS+"), (99.0, "SSS"), (100.0, "SSS+"),
+    ]
+    rank = "-F"
+    for threshold, label in tiers:
+        if score >= threshold:
+            rank = label
+
+    return rank, round(score, 2), ceilings
 
 def contribution_data():
     # The GitHub profile calendar is the authoritative source for the number
@@ -230,7 +324,7 @@ def ring(cx, cy, r, percent, stroke, width=7):
 
 def build_svg(repo_count, stars, commits, prs, issues, contributions, current, longest,
               calendar_prs, calendar_issues, reviews, repo_contributions,
-              active_days, best_day, langs, updated):
+              active_days, best_day, langs, updated, rank):
     W, H = 920, 430
     bg = "#070c0a"
     card = "#0b1410"
@@ -302,8 +396,8 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
   <line x1="168" y1="70" x2="168" y2="214" stroke="{card}" stroke-width="1"/>
   <circle cx="94" cy="140" r="46" fill="none" stroke="{track}" stroke-width="7"/>
   <circle cx="94" cy="140" r="46" fill="none" stroke="{green}" stroke-width="3"/>
-  <text x="94" y="147" font-size="22" font-weight="800" fill="{bright}" text-anchor="middle">{fmt_num(commits)}</text>
-  <text x="94" y="205" font-size="8" fill="{muted}" font-weight="700" text-anchor="middle">COMMITS</text>
+  <text x="94" y="151" font-size="23" font-weight="800" fill="{bright}" text-anchor="middle">{esc(rank)}</text>
+  <text x="94" y="205" font-size="8" fill="{muted}" font-weight="700" text-anchor="middle">RANK</text>
   {stats_rows}
 
   <!-- CARD 2: title centered; bottom split into left metric + right contribution list -->
@@ -367,11 +461,16 @@ def main():
     current, longest, active_days, best_day = streaks(days)
     langs = language_percentages(repos)
 
+    benchmarks = benchmark_profile_stats()
+    rank, rank_score, rank_ceilings = rank_developer(
+        stars, commits, prs, issues, repo_count, benchmarks
+    )
+
     updated = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     svg = build_svg(
         repo_count, stars, commits, prs, issues, contributions, current, longest,
         calendar_prs, calendar_issues, reviews, repo_contributions,
-        active_days, best_day, langs, updated
+        active_days, best_day, langs, updated, rank
     )
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
@@ -391,6 +490,10 @@ def main():
         "best_day": best_day,
         "period": f"{start}..{end}",
         "metric_scope": "GitHub contribution collection for the last year",
+        "developer_rank": rank,
+        "rank_score": rank_score,
+        "rank_benchmark_users": list(RANK_BENCHMARK_USERS),
+        "rank_benchmark_ceilings": rank_ceilings,
     }, indent=2))
 
 if __name__ == "__main__":
