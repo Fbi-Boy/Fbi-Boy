@@ -2,10 +2,6 @@ name: Update GitHub Analytics
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - "scripts/generate_github_analytics.py"
-      - ".github/workflows/update-analytics.yml"
   schedule:
     - cron: "17 */6 * * *"
 
@@ -30,28 +26,14 @@ jobs:
           set -e
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          for attempt in 1 2 3 4 5; do
-            git fetch origin main
-            git reset --hard origin/main
-            python3 scripts/generate_github_analytics.py
-            git add assets/github-analytics-v2.svg
-
-            if git diff --cached --quiet; then
-              echo "Analytics unchanged."
-              exit 0
-            fi
-
-            git commit -m "chore: update GitHub analytics"
-
-            if git push origin HEAD:main; then
-              echo "Analytics published on attempt $attempt."
-              exit 0
-            fi
-
-            echo "Push race detected; retrying from latest main."
-            git reset --hard origin/main
-          done
-
-          echo "Unable to publish analytics after retries."
-          exit 1
+          git fetch origin main
+          git reset --hard origin/main
+          python3 scripts/generate_github_analytics.py
+          git add assets/github-analytics-v2.svg
+          if git diff --cached --quiet; then
+            echo "Analytics unchanged."
+            exit 0
+          fi
+          git commit -m "chore: update GitHub analytics"
+          git pull --rebase origin main
+          git push origin HEAD:main
