@@ -75,19 +75,15 @@
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=php,python,js,ts,kotlin,dart,cpp,c,java,cs,go,rust,ruby,swift&perline=14" alt="Languages used"/>
+<img src="https://skillicons.dev/icons?i=php,python,js,ts,kotlin,dart,cpp,c,java,cs,go,rust,ruby,swift&perline=14" alt="Languages and tools"/>
 <br>
-<img src="https://skillicons.dev/icons?i=html,css,bash,powershell,sql,laravel,codeigniter,symfony,nodejs,express,react,nextjs,vue,angular&perline=14" alt="Languages and web technologies used"/>
+<img src="https://skillicons.dev/icons?i=html,css,bash,powershell,sql,laravel,symfony,nodejs,express,react,nextjs,vue,angular,tailwind&perline=14" alt="Languages and frameworks"/>
 <br>
-<img src="https://skillicons.dev/icons?i=tailwind,bootstrap,alpinejs,flutter,android,spring,dotnet&perline=14" alt="Frameworks and libraries used"/>
+<img src="https://skillicons.dev/icons?i=bootstrap,alpinejs,flutter,androidstudio,spring,dotnet,git,github,gitlab,vscode,pycharm,phpstorm,docker,linux&perline=14" alt="Frameworks and developer tools"/>
 <br>
-<img src="https://skillicons.dev/icons?i=git,github,gitlab,vscode,androidstudio,intellij,pycharm,phpstorm,docker,linux,postman,insomnia,npm,yarn&perline=14" alt="Developer tools used"/>
+<img src="https://skillicons.dev/icons?i=postman,npm,yarn,pnpm,bun,vite,figma,mysql,postgres,sqlite,mongodb,redis,firebase,supabase&perline=14" alt="Developer tools and databases"/>
 <br>
-<img src="https://skillicons.dev/icons?i=pnpm,bun,vite,figma,jira&perline=14" alt="Development tools used"/>
-<br>
-<img src="https://skillicons.dev/icons?i=mysql,postgresql,sqlite,mongodb,redis,mariadb,firebase,supabase,oracle&perline=14" alt="Databases used"/>
-<br>
-<img src="https://skillicons.dev/icons?i=githubactions,jenkins,nginx,kubernetes,terraform,aws,vercel,cloudflare&perline=14" alt="Cloud and DevOps tools used"/>
+<img src="https://skillicons.dev/icons?i=ansible,arduino,astro,django,fastapi,pytorch,tensorflow,threejs,unity,unreal,vim,webpack,wordpress,selenium&perline=14" alt="Additional technologies"/>
 
 </div>
 
