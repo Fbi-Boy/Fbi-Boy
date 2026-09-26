@@ -40,41 +40,7 @@
 
 <div align="center">
 
-<table width="100%" cellspacing="0" cellpadding="0" style="border: none;">
-<tr>
-<td width="12%" align="center" valign="middle" style="border: none;">
 
-<h3>
-S<br>
-U<br>
-P<br>
-E<br>
-R
-</h3>
-
-</td>
-
-<td width="76%" align="center" valign="middle" style="border: none;">
-
-<img src="https://media1.tenor.com/m/rCaIUO0MP-EAAAAd/mario-pixel-art.gif"
-     width="54%"
-     alt="F4B0Y pixel-art gaming room"/>
-
-</td>
-
-<td width="12%" align="center" valign="middle" style="border: none;">
-
-<h3>
-F<br>
-A<br>
-B<br>
-O<br>
-Y
-</h3>
-
-</td>
-</tr>
-</table>
 
 <h1>F4B0Y Here !</h1>
 
@@ -89,7 +55,6 @@ Y
 <hr>
 
 <p>
-  <img src="https://komarev.com/ghpvc/?username=Fbi-Boy&style=for-the-badge&color=111827&label=PROFILE+VIEWS"/>
   &nbsp;
   <img src="https://img.shields.io/github/followers/Fbi-Boy?style=for-the-badge&label=FOLLOWERS&color=111827"/>
   &nbsp;
@@ -148,7 +113,6 @@ R
 <hr>
 
 <p>
-  <img src="https://komarev.com/ghpvc/?username=Fbi-Boy&style=for-the-badge&color=111827&label=PROFILE+VIEWS"/>
   &nbsp;
   <img src="https://img.shields.io/github/followers/Fbi-Boy?style=for-the-badge&label=FOLLOWERS&color=111827"/>
   &nbsp;
