@@ -18,7 +18,7 @@ import urllib.request
 from pathlib import Path
 
 OWNER = "Fbi-Boy"
-OUT = Path("assets/github-analytics-v16.svg")
+OUT = Path("assets/github-analytics-v17.svg")
 API = "https://api.github.com"
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
 
@@ -474,22 +474,18 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
 
   <!-- CARD 4: dynamic language ranking -->
   <rect x="28" y="258" width="864" height="210" rx="12" fill="{card}" stroke="{border}"/>
-  <rect x="46" y="272" width="5" height="18" rx="2" fill="#60a5fa"/>
-  <text x="62" y="285" font-size="14" font-weight="700" fill="{text}">Most Used Languages</text>
+  <rect x="46" y="271" width="24" height="22" rx="6" fill="#1b2430" stroke="#60a5fa"/>
+  <text x="58" y="286" font-size="11" font-weight="800" fill="#60a5fa" text-anchor="middle">&lt;/&gt;</text>
+  <text x="82" y="285" font-size="14" font-weight="700" fill="{text}">Most Used Languages</text>
   <rect x="704" y="271" width="170" height="22" rx="8" fill="#1b2430" stroke="{border}"/>
   <circle cx="718" cy="282" r="3" fill="#a78bfa"/>
   <text x="729" y="285" font-size="8" font-weight="700" fill="{muted}">AUTO • TOP 5 + OTHERS</text>
-  <line x1="46" y1="305" x2="874" y2="305" stroke="#2d3744" stroke-width="1"/>
   <text x="874" y="284" font-size="8" font-weight="700" fill="{muted}" text-anchor="end">AUTO • TOP 5 + OTHERS</text>
   <text x="96" y="300" font-size="7.5" fill="{muted}">LANGUAGE</text>
   <text x="846" y="300" font-size="7.5" fill="{muted}" text-anchor="end">SHARE</text>
   {''.join(lang_rows)}
 </g>
 
-<line x1="46" y1="466" x2="360" y2="466" stroke="{border}" stroke-width="1"/>
-<text x="460" y="470" font-size="8.5" fill="{muted}" text-anchor="middle"
-      font-family="Consolas, 'Courier New', monospace">F4B0Y Analytics Engine · Updated {esc(updated)}</text>
-<line x1="560" y1="466" x2="874" y2="466" stroke="{border}" stroke-width="1"/>
 </svg>'''
     return svg
 
