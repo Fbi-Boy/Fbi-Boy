@@ -18,7 +18,7 @@ import urllib.request
 from pathlib import Path
 
 OWNER = "Fbi-Boy"
-OUT = Path("assets/github-analytics-v23.svg")
+OUT = Path("assets/github-analytics-v24.svg")
 API = "https://api.github.com"
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
 
@@ -427,14 +427,17 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
             weekly.append(sum(bucket))
     weekly = weekly[-52:] or [0]
 
-    chart_x, chart_y, chart_w, chart_h = 338, 94, 246, 112
-    max_week = max(weekly) or 1
-    min_week = min(weekly)
-    span = max(1, max_week - min_week)
+    chart_x, chart_y, chart_w, chart_h = 338, 101, 246, 101
+    # Log scaling keeps the trading-style trend readable even when one week
+    # has an unusually large contribution spike.
+    scaled = [__import__("math").log1p(max(0, value)) for value in weekly]
+    max_scaled = max(scaled) if scaled else 1
+    min_scaled = min(scaled) if scaled else 0
+    span = max(0.001, max_scaled - min_scaled)
     points = []
-    for i, value in enumerate(weekly):
-        px = chart_x + (chart_w * i / max(1, len(weekly) - 1))
-        py = chart_y + chart_h - ((value - min_week) / span) * chart_h
+    for i, value in enumerate(scaled):
+        px = chart_x + (chart_w * i / max(1, len(scaled) - 1))
+        py = chart_y + chart_h - ((value - min_scaled) / span) * chart_h
         points.append((px, py))
 
     polyline = " ".join(f"{px:.1f},{py:.1f}" for px, py in points)
@@ -453,7 +456,7 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
       <polyline points="{polyline}" fill="none" stroke="{green}" stroke-width="2.4"
                 stroke-linecap="round" stroke-linejoin="round"/>
       <circle cx="{last_x:.1f}" cy="{last_y:.1f}" r="3.5" fill="{card}" stroke="{bright}" stroke-width="2"/>
-      <text x="{chart_x}" y="{chart_y-7}" font-size="7.5" fill="{muted}">WEEKLY CONTRIBUTIONS</text>
+      <text x="{chart_x}" y="{chart_y-7}" font-size="7.5" fill="{muted}">CONTRIBUTION TREND • LOG SCALE</text>
       <text x="{chart_x+chart_w}" y="{chart_y-7}" font-size="7.5" fill="{bright}" text-anchor="end">{fmt_num(last_value)} LAST</text>
       <text x="{chart_x}" y="{chart_y+chart_h+14}" font-size="7" fill="{muted}">-52W</text>
       <text x="{chart_x+chart_w}" y="{chart_y+chart_h+14}" font-size="7" fill="{muted}" text-anchor="end">NOW</text>
