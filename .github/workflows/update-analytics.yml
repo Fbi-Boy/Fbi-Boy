@@ -38,7 +38,7 @@ jobs:
 
           python3 scripts/generate_github_analytics.py
 
-          git add assets/github-analytics-v24.svg assets/contribution-activity.svg
+          git add assets/github-analytics-v25.svg assets/contribution-activity.svg
           if git diff --cached --quiet; then
             echo "Analytics unchanged."
             exit 0

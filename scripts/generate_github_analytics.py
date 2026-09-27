@@ -549,13 +549,13 @@ def build_contribution_activity_svg(days, contributions, updated):
     border = "#4b5563"
     bright = "#e5e7eb"
     muted = "#8f99a8"
-    line = "#9ca3af"
+    pink = "#ec4899"
     weekly = weekly_contributions(days)
     import math
     scaled = [math.log1p(max(0, value)) for value in weekly]
     lo, hi = min(scaled), max(scaled)
     span = max(0.001, hi - lo)
-    x, y, w, h = 52, 76, 816, 238
+    x, y, w, h = 52, 145, 816, 155
     points = []
     for i, value in enumerate(scaled):
         px = x + w * i / max(1, len(scaled)-1)
@@ -576,14 +576,14 @@ def build_contribution_activity_svg(days, contributions, updated):
   <text x="46" y="49" font-size="17" font-weight="700" fill="{bright}">📈 Contribution Activity</text>
   <text x="874" y="49" font-size="9" fill="{muted}" text-anchor="end">LAST 365 DAYS • LIVE DATA</text>
   <rect x="28" y="64" width="864" height="286" rx="12" fill="{card}" stroke="{border}"/>
-  <text x="52" y="93" font-size="28" font-weight="800" fill="{bright}">{fmt_num(contributions)}</text>
-  <text x="52" y="108" font-size="8" fill="{muted}">TOTAL CONTRIBUTIONS</text>
+  <text x="52" y="94" font-size="28" font-weight="800" fill="{bright}">{fmt_num(contributions)}</text>
+  <text x="52" y="109" font-size="8" fill="{muted}">TOTAL CONTRIBUTIONS</text>
+  <text x="52" y="130" font-size="8" fill="{muted}">CONTRIBUTION TREND • LOG SCALE</text>
+  <text x="868" y="130" font-size="8" fill="{bright}" text-anchor="end">{fmt_num(last)} LAST WEEK</text>
   {grid}
-  <polygon points="{area}" fill="{line}" opacity="0.08"/>
-  <polyline points="{poly}" fill="none" stroke="{line}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="{last_x:.1f}" cy="{last_y:.1f}" r="5" fill="{card}" stroke="{bright}" stroke-width="2"/>
-  <text x="{x}" y="{y-12}" font-size="8" fill="{muted}">CONTRIBUTION TREND • LOG SCALE</text>
-  <text x="{x+w}" y="{y-12}" font-size="8" fill="{bright}" text-anchor="end">{fmt_num(last)} LAST WEEK</text>
+  <polygon points="{area}" fill="{pink}" opacity="0.10"/>
+  <polyline points="{poly}" fill="none" stroke="{pink}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="{last_x:.1f}" cy="{last_y:.1f}" r="5" fill="{card}" stroke="{pink}" stroke-width="2"/>
   <text x="{x}" y="{y+h+18}" font-size="8" fill="{muted}">-52W</text>
   <text x="{x+w}" y="{y+h+18}" font-size="8" fill="{muted}" text-anchor="end">NOW</text>
   <text x="52" y="337" font-size="7" fill="{muted}">UPDATED {updated}</text>
