@@ -370,7 +370,7 @@ def ring(cx, cy, r, percent, stroke, width=7):
 
 def build_svg(repo_count, stars, commits, prs, issues, contributions, current, longest,
               calendar_prs, calendar_issues, reviews, repo_contributions,
-              active_days, best_day, langs, updated, rank):
+              active_days, best_day, langs, updated, rank, days):
     W, H = 920, 510
     bg = "#0b0f14"
     card = "#121820"
@@ -410,6 +410,54 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
         ("Reviews", fmt_num(reviews if reviews is not None else 0)),
         ("Repos", fmt_num(repo_contributions if repo_contributions is not None else 0)),
     ], 462, 518, 584)
+
+    # Trading-style contribution line: aggregate the last 365 days into 52 weekly points.
+    weekly = []
+    if days:
+        ordered = sorted(days, key=lambda item: item["date"])
+        bucket = []
+        week_start = ordered[0]["date"]
+        for item in ordered:
+            if (item["date"] - week_start).days >= 7:
+                weekly.append(sum(bucket))
+                bucket = []
+                week_start = item["date"]
+            bucket.append(int(item["count"]))
+        if bucket:
+            weekly.append(sum(bucket))
+    weekly = weekly[-52:] or [0]
+
+    chart_x, chart_y, chart_w, chart_h = 338, 94, 246, 112
+    max_week = max(weekly) or 1
+    min_week = min(weekly)
+    span = max(1, max_week - min_week)
+    points = []
+    for i, value in enumerate(weekly):
+        px = chart_x + (chart_w * i / max(1, len(weekly) - 1))
+        py = chart_y + chart_h - ((value - min_week) / span) * chart_h
+        points.append((px, py))
+
+    polyline = " ".join(f"{px:.1f},{py:.1f}" for px, py in points)
+    area = f"{chart_x},{chart_y+chart_h} " + polyline + f" {chart_x+chart_w},{chart_y+chart_h}"
+    grid = "".join(
+        f'<line x1="{chart_x}" y1="{chart_y + chart_h*i/4:.1f}" '
+        f'x2="{chart_x+chart_w}" y2="{chart_y + chart_h*i/4:.1f}" '
+        f'stroke="#202833" stroke-width="1"/>'
+        for i in range(5)
+    )
+    last_value = weekly[-1]
+    last_x, last_y = points[-1]
+    contribution_chart = f'''
+      {grid}
+      <polygon points="{area}" fill="{green}" opacity="0.08"/>
+      <polyline points="{polyline}" fill="none" stroke="{green}" stroke-width="2.4"
+                stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="{last_x:.1f}" cy="{last_y:.1f}" r="3.5" fill="{card}" stroke="{bright}" stroke-width="2"/>
+      <text x="{chart_x}" y="{chart_y-7}" font-size="7.5" fill="{muted}">WEEKLY CONTRIBUTIONS</text>
+      <text x="{chart_x+chart_w}" y="{chart_y-7}" font-size="7.5" fill="{bright}" text-anchor="end">{fmt_num(last_value)} LAST</text>
+      <text x="{chart_x}" y="{chart_y+chart_h+14}" font-size="7" fill="{muted}">-52W</text>
+      <text x="{chart_x+chart_w}" y="{chart_y+chart_h+14}" font-size="7" fill="{muted}" text-anchor="end">NOW</text>
+    '''
 
     streak_rows = list_rows([
         ("Current", f"{current} d"),
@@ -484,14 +532,12 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
   <text x="94" y="205" font-size="8" fill="{muted}" font-weight="700" text-anchor="middle">RANK</text>
   {stats_rows}
 
-  <!-- CARD 2: title centered; bottom split into left metric + right contribution list -->
+  <!-- CARD 2: trading-style contribution line chart -->
   <rect x="320" y="28" width="280" height="214" rx="12" fill="{card}" stroke="{border}"/>
   <text x="460" y="55" font-size="14" font-weight="700" fill="{green}" text-anchor="middle">Contribution Activity</text>
-  <line x1="460" y1="70" x2="460" y2="214" stroke="{card}" stroke-width="1"/>
-  {ring(392,140,46,contribution_pct,green,7)}
-  <text x="392" y="147" font-size="21" font-weight="800" fill="{bright}" text-anchor="middle">{fmt_num(contributions)}</text>
-  <text x="392" y="205" font-size="8" fill="{muted}" font-weight="700" text-anchor="middle">CONTRIBUTIONS</text>
-  {contribution_rows}
+  <text x="336" y="78" font-size="18" font-weight="800" fill="{bright}">{fmt_num(contributions)}</text>
+  <text x="336" y="88" font-size="7" fill="{muted}">TOTAL • LAST 365 DAYS</text>
+  {contribution_chart}
 
   <!-- CARD 3: title centered; bottom split into left metric + right streak list -->
   <rect x="612" y="28" width="280" height="214" rx="12" fill="{card}" stroke="{border}"/>
@@ -554,7 +600,7 @@ def main():
     svg = build_svg(
         repo_count, stars, commits, prs, issues, contributions, current, longest,
         calendar_prs, calendar_issues, reviews, repo_contributions,
-        active_days, best_day, langs, updated, rank
+        active_days, best_day, langs, updated, rank, days
     )
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
