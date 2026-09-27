@@ -6,9 +6,10 @@ on:
     branches:
       - main
     paths-ignore:
-      - "assets/github-analytics-v23.svg"
+      - "assets/github-analytics-v24.svg"
+      - "assets/contribution-activity.svg"
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "17 */6 * * *"
 
 permissions:
   contents: write
@@ -37,7 +38,7 @@ jobs:
 
           python3 scripts/generate_github_analytics.py
 
-          git add assets/github-analytics-v23.svg
+          git add assets/github-analytics-v24.svg assets/contribution-activity.svg
           if git diff --cached --quiet; then
             echo "Analytics unchanged."
             exit 0
