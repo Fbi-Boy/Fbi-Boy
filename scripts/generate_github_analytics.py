@@ -18,7 +18,7 @@ import urllib.request
 from pathlib import Path
 
 OWNER = "Fbi-Boy"
-OUT = Path("assets/github-analytics-v20.svg")
+OUT = Path("assets/github-analytics-v21.svg")
 API = "https://api.github.com"
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
 
@@ -420,26 +420,39 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
     ], 754, 810, 876)
 
     lang_rows = []
-    language_colors = ["#41ff88", "#00ff9a", "#5eead4", "#60a5fa", "#a78bfa", "#f472b6"]
-    language_marks = {
-        "Blade": "B", "PHP": "PHP", "Python": "Py", "Dart": "D",
-        "JavaScript": "JS", "TypeScript": "TS", "C++": "C++", "C": "C",
-        "Java": "J", "Go": "Go", "Rust": "Rs", "Ruby": "Rb", "Kotlin": "K",
-        "HTML": "5", "CSS": "#", "SQL": "DB", "Shell": "$"
+    # Language accents follow each language's recognizable brand/logo color.
+    language_styles = {
+        "Blade": ("#FF2D20", "laravel"),
+        "PHP": ("#777BB4", "php"),
+        "Python": ("#3776AB", "python"),
+        "Dart": ("#0175C2", "dart"),
+        "JavaScript": ("#F7DF1E", "javascript"),
+        "TypeScript": ("#3178C6", "typescript"),
+        "C++": ("#00599C", "cplusplus"),
+        "C": ("#A8B9CC", "c"),
+        "Java": ("#ED8B00", "openjdk"),
+        "Go": ("#00ADD8", "go"),
+        "Rust": ("#DEA584", "rust"),
+        "Ruby": ("#CC342D", "ruby"),
+        "Kotlin": ("#7F52FF", "kotlin"),
+        "HTML": ("#E34F26", "html5"),
+        "CSS": ("#1572B6", "css3"),
+        "SQL": ("#4479A1", "mysql"),
+        "Shell": ("#89E051", "gnubash"),
     }
-    y = 327
+    y = 326
     for idx, (name, pct) in enumerate(langs[:6], start=1):
-        accent = language_colors[idx - 1]
+        accent, icon_name = language_styles.get(name, ("#9CA3AF", "code"))
         rank_label = f"{idx:02d}"
-        mark = language_marks.get(name, esc(name[:2].upper()))
         bar_width = 500 * pct / 100
         row_y = y - 13
+        logo_url = f"https://cdn.simpleicons.org/{icon_name}/{accent[1:]}"
         lang_rows.append(
             f'<rect x="46" y="{row_y}" width="828" height="24" rx="8" fill="{track}"/>'
-            f'<rect x="54" y="{row_y+3}" width="30" height="18" rx="6" fill="{accent}" opacity="0.16" stroke="{accent}"/>'
-            f'<text x="69" y="{y+2}" font-size="7.5" font-weight="800" fill="{accent}" text-anchor="middle">{rank_label}</text>'
-            f'<rect x="92" y="{row_y+3}" width="30" height="18" rx="6" fill="#171d26" stroke="{accent}" stroke-width="1"/>'
-            f'<text x="107" y="{y+2}" font-size="7" font-weight="800" fill="{accent}" text-anchor="middle">{mark}</text>'
+            f'<rect x="54" y="{row_y+3}" width="30" height="18" rx="6" fill="#252c36"/>'
+            f'<text x="69" y="{y+2}" font-size="7.5" font-weight="800" fill="#c7cdd5" text-anchor="middle">{rank_label}</text>'
+            f'<rect x="92" y="{row_y+3}" width="30" height="18" rx="6" fill="#171d26" stroke="#3f4854" stroke-width="1"/>'
+            f'<image href="{logo_url}" x="98" y="{row_y+5}" width="18" height="14" preserveAspectRatio="xMidYMid meet"/>'
             f'<text x="136" y="{y+2}" font-size="10" font-weight="700" fill="{text}">{esc(name)}</text>'
             f'<rect x="260" y="{y-6}" width="500" height="8" rx="4" fill="{bg}"/>'
             f'<rect x="260" y="{y-6}" width="{max(3, bar_width):.1f}" height="8" rx="4" fill="{accent}"/>'
@@ -482,13 +495,11 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
   {streak_rows}
 
   <!-- CARD 4: dynamic language ranking -->
-  <rect x="28" y="258" width="864" height="215" rx="12" fill="#141922" stroke="#596273"/>
-  <rect x="46" y="271" width="28" height="24" rx="7" fill="#202631" stroke="#737b88"/>
+  <rect x="28" y="258" width="864" height="215" rx="12" fill="{card}" stroke="{border}"/>
+  <rect x="46" y="271" width="28" height="24" rx="7" fill="#202631" stroke="#4b5563"/>
   <text x="60" y="288" font-size="12" font-weight="800" fill="#d6dbe3" text-anchor="middle">&lt;/&gt;</text>
   <text x="86" y="285" font-size="14" font-weight="700" fill="#e1e5ea">Most Used Languages</text>
   <text x="874" y="285" font-size="8" font-weight="700" fill="#8f99a8" text-anchor="end">AUTO • TOP 5 + OTHERS</text>
-  <text x="96" y="300" font-size="7.5" fill="#8f99a8">LANGUAGE</text>
-  <text x="846" y="300" font-size="7.5" fill="#8f99a8" text-anchor="end">SHARE</text>
   {''.join(lang_rows)}
 </g>
 
