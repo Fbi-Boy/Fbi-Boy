@@ -6,7 +6,7 @@ on:
     branches:
       - main
     paths-ignore:
-      - "assets/github-analytics-v24.svg"
+      - "assets/github-analytics-v25.svg"
       - "assets/contribution-activity.svg"
   schedule:
     - cron: "17 */6 * * *"
