@@ -454,7 +454,7 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
         bar_width = 500 * pct / 100
         row_y = y - 13
         icon_path = language_icon_paths.get(icon_name, "")
-        logo_svg = f'<path d="{icon_path}" fill="{accent}"/>' if icon_path else f'<text x="107" y="{y+2}" font-size="9" font-weight="800" fill="{accent}" text-anchor="middle">?</text>'
+        logo_svg = f'<path d="{icon_path}" fill="{accent}"/>' if icon_path else f'<circle cx="103" cy="{y-2}" r="1.7" fill="{accent}"/><circle cx="107" cy="{y-2}" r="1.7" fill="{accent}"/><circle cx="111" cy="{y-2}" r="1.7" fill="{accent}"/>'
         lang_rows.append(
             f'<rect x="46" y="{row_y}" width="828" height="24" rx="8" fill="{track}"/>'
             f'<rect x="54" y="{row_y+3}" width="30" height="18" rx="6" fill="#252c36"/>'
