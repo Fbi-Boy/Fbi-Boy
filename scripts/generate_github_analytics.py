@@ -508,7 +508,7 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
             f'<rect x="54" y="{row_y+3}" width="30" height="18" rx="6" fill="#252c36"/>'
             f'<text x="69" y="{y+2}" font-size="7.5" font-weight="800" fill="#c7cdd5" text-anchor="middle">{rank_label}</text>'
             f'<rect x="92" y="{row_y+3}" width="30" height="18" rx="6" fill="#171d26" stroke="#3f4854" stroke-width="1"/>'
-            logo_svg
+            f'{logo_svg}'
             f'<text x="136" y="{y+2}" font-size="10" font-weight="700" fill="{text}">{esc(name)}</text>'
             f'<rect x="260" y="{y-6}" width="500" height="8" rx="4" fill="{bg}"/>'
             f'<rect x="260" y="{y-6}" width="{max(3, bar_width):.1f}" height="8" rx="4" fill="{accent}"/>'
