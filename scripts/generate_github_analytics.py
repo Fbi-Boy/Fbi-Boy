@@ -563,6 +563,72 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
 </svg>'''
     return svg
 
+def weekly_contributions(days):
+    if not days:
+        return [0]
+    ordered = sorted(days, key=lambda item: item["date"])
+    weekly = []
+    bucket = []
+    week_start = ordered[0]["date"]
+    for item in ordered:
+        if (item["date"] - week_start).days >= 7:
+            weekly.append(sum(bucket))
+            bucket = []
+            week_start = item["date"]
+        bucket.append(int(item["count"]))
+    if bucket:
+        weekly.append(sum(bucket))
+    return weekly[-52:] or [0]
+
+
+def build_contribution_activity_svg(days, contributions, updated):
+    bg = "#0b0f14"
+    card = "#121820"
+    border = "#4b5563"
+    bright = "#e5e7eb"
+    muted = "#8f99a8"
+    line = "#9ca3af"
+    weekly = weekly_contributions(days)
+    import math
+    scaled = [math.log1p(max(0, value)) for value in weekly]
+    lo, hi = min(scaled), max(scaled)
+    span = max(0.001, hi - lo)
+    x, y, w, h = 52, 76, 816, 238
+    points = []
+    for i, value in enumerate(scaled):
+        px = x + w * i / max(1, len(scaled)-1)
+        py = y + h - ((value-lo)/span) * h
+        points.append((px, py))
+    poly = " ".join(f"{px:.1f},{py:.1f}" for px, py in points)
+    area = f"{x},{y+h} {poly} {x+w},{y+h}"
+    grid = "".join(
+        f'<line x1="{x}" y1="{y+h*i/4:.1f}" x2="{x+w}" y2="{y+h*i/4:.1f}" stroke="#202833" stroke-width="1"/>'
+        for i in range(5)
+    )
+    last = weekly[-1]
+    last_x, last_y = points[-1]
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="920" height="390" viewBox="0 0 920 390">
+<rect width="920" height="390" rx="18" fill="{bg}"/>
+<rect x="12" y="12" width="896" height="366" rx="18" fill="{bg}" stroke="{border}"/>
+<g font-family="Consolas, 'Courier New', monospace">
+  <text x="46" y="49" font-size="17" font-weight="700" fill="{bright}">📈 Contribution Activity</text>
+  <text x="874" y="49" font-size="9" fill="{muted}" text-anchor="end">LAST 365 DAYS • LIVE DATA</text>
+  <rect x="28" y="64" width="864" height="286" rx="12" fill="{card}" stroke="{border}"/>
+  <text x="52" y="93" font-size="28" font-weight="800" fill="{bright}">{fmt_num(contributions)}</text>
+  <text x="52" y="108" font-size="8" fill="{muted}">TOTAL CONTRIBUTIONS</text>
+  {grid}
+  <polygon points="{area}" fill="{line}" opacity="0.08"/>
+  <polyline points="{poly}" fill="none" stroke="{line}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="{last_x:.1f}" cy="{last_y:.1f}" r="5" fill="{card}" stroke="{bright}" stroke-width="2"/>
+  <text x="{x}" y="{y-12}" font-size="8" fill="{muted}">CONTRIBUTION TREND • LOG SCALE</text>
+  <text x="{x+w}" y="{y-12}" font-size="8" fill="{bright}" text-anchor="end">{fmt_num(last)} LAST WEEK</text>
+  <text x="{x}" y="{y+h+18}" font-size="8" fill="{muted}">-52W</text>
+  <text x="{x+w}" y="{y+h+18}" font-size="8" fill="{muted}" text-anchor="end">NOW</text>
+  <text x="52" y="337" font-size="7" fill="{muted}">UPDATED {updated}</text>
+</g>
+</svg>'''
+
+
 def main():
     repos = get_json(f"/users/{OWNER}/repos", query={"per_page":"100", "type":"owner", "sort":"updated"})
     stars = sum(int(repo.get("stargazers_count", 0)) for repo in repos)
@@ -608,6 +674,8 @@ def main():
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(svg, encoding="utf-8")
+    contribution_svg = build_contribution_activity_svg(days, contributions, updated)
+    Path("assets/contribution-activity.svg").write_text(contribution_svg, encoding="utf-8")
 
     print(json.dumps({
         "repositories": repo_count,

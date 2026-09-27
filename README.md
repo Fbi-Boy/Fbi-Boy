@@ -168,17 +168,8 @@
 ## 📈 Contribution Activity
 
 <p align="center">
-  <img src="https://ssr-contributions-svg.vercel.app/_/Fbi-Boy?chart=calendar&format=svg&theme=purple&dark=true&weeks=52"
-       width="100%"
-       alt="Purple GitHub contribution calendar"/>
+  <img src="./assets/contribution-activity.svg" width="100%" alt="F4B0Y contribution activity trading chart"/>
 </p>
-
-<p align="center">
-  <sub>Purple contribution calendar powered by live GitHub contribution data.</sub>
-</p>
-
-
----
 
 ## 🏗️ Tech Stack
 
