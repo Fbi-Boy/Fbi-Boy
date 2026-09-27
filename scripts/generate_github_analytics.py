@@ -454,7 +454,7 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
         bar_width = 500 * pct / 100
         row_y = y - 13
         icon_path = language_icon_paths.get(icon_name, "")
-        logo_svg = f'<path d="{icon_path}" fill="{accent}"/>' if icon_path else f'<circle cx="103" cy="{y-2}" r="1.7" fill="{accent}"/><circle cx="107" cy="{y-2}" r="1.7" fill="{accent}"/><circle cx="111" cy="{y-2}" r="1.7" fill="{accent}"/>'
+        logo_svg = f'<path d="{icon_path}" fill="{accent}"/>' if icon_path else f'<circle cx="103" cy="{y-2}" r="1.8" fill="{accent}"/><circle cx="107" cy="{y-2}" r="1.8" fill="{accent}"/><circle cx="111" cy="{y-2}" r="1.8" fill="{accent}"/>'
         lang_rows.append(
             f'<rect x="46" y="{row_y}" width="828" height="24" rx="8" fill="{track}"/>'
             f'<rect x="54" y="{row_y+3}" width="30" height="18" rx="6" fill="#252c36"/>'
@@ -503,7 +503,7 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
   {streak_rows}
 
   <!-- CARD 4: dynamic language ranking -->
-  <rect x="28" y="258" width="864" height="215" rx="12" fill="{card}" stroke="{border}"/>
+  <rect x="28" y="258" width="864" height="230" rx="12" fill="{card}" stroke="{border}"/>
   <rect x="46" y="271" width="28" height="24" rx="7" fill="#202631" stroke="#4b5563"/>
   <text x="60" y="288" font-size="12" font-weight="800" fill="#d6dbe3" text-anchor="middle">&lt;/&gt;</text>
   <text x="86" y="285" font-size="14" font-weight="700" fill="#e1e5ea">Most Used Languages</text>
