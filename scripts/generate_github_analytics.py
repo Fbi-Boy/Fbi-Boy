@@ -18,7 +18,7 @@ import urllib.request
 from pathlib import Path
 
 OWNER = "Fbi-Boy"
-OUT = Path("assets/github-analytics-v22.svg")
+OUT = Path("assets/github-analytics-v23.svg")
 API = "https://api.github.com"
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
 
@@ -454,13 +454,13 @@ def build_svg(repo_count, stars, commits, prs, issues, contributions, current, l
         bar_width = 500 * pct / 100
         row_y = y - 13
         icon_path = language_icon_paths.get(icon_name, "")
-        logo_svg = f'<path d="{icon_path}" fill="{accent}"/>' if icon_path else f'<circle cx="103" cy="{y-2}" r="1.8" fill="{accent}"/><circle cx="107" cy="{y-2}" r="1.8" fill="{accent}"/><circle cx="111" cy="{y-2}" r="1.8" fill="{accent}"/>'
+        logo_svg = (f'<g transform="translate(98 {row_y+5}) scale(0.75)"><path d="{icon_path}" fill="{accent}"/></g>' if icon_path else f'<circle cx="103" cy="{y-2}" r="2.2" fill="{accent}"/><circle cx="107" cy="{y-2}" r="2.2" fill="{accent}"/><circle cx="111" cy="{y-2}" r="2.2" fill="{accent}"/>')
         lang_rows.append(
             f'<rect x="46" y="{row_y}" width="828" height="24" rx="8" fill="{track}"/>'
             f'<rect x="54" y="{row_y+3}" width="30" height="18" rx="6" fill="#252c36"/>'
             f'<text x="69" y="{y+2}" font-size="7.5" font-weight="800" fill="#c7cdd5" text-anchor="middle">{rank_label}</text>'
             f'<rect x="92" y="{row_y+3}" width="30" height="18" rx="6" fill="#171d26" stroke="#3f4854" stroke-width="1"/>'
-            f'<svg x="98" y="{row_y+5}" width="18" height="14" viewBox="0 0 24 24" aria-label="{esc(name)}">{logo_svg}</svg>'
+            logo_svg
             f'<text x="136" y="{y+2}" font-size="10" font-weight="700" fill="{text}">{esc(name)}</text>'
             f'<rect x="260" y="{y-6}" width="500" height="8" rx="4" fill="{bg}"/>'
             f'<rect x="260" y="{y-6}" width="{max(3, bar_width):.1f}" height="8" rx="4" fill="{accent}"/>'
